@@ -1,0 +1,36 @@
+﻿program SDL2_Tutorials;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF UNIX}
+  cthreads,
+  GL,
+  {$ENDIF}
+  Classes,
+  SysUtils,
+  DeepStar.Utils,
+  sdl2_loader,
+  SDL2_Tutorials.Main,
+  Case01_hello_SDL,
+  Case02_getting_an_image_on_the_screen;
+
+var
+  _LoaderSDL2: TLoaderSDL2;
+
+begin
+  _LoaderSDL2 := TLoaderSDL2.Create(nil);
+  try
+    _LoaderSDL2.Active := true;
+
+    try
+      Run;
+    except
+      on E: Exception do
+        WriteLn(E.ClassName, ': ', E.Message);
+    end;
+  finally
+    _LoaderSDL2.Free;
+  end;
+end.
+
