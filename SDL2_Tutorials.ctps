@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="12"/>
-    <BuildModes Active="Release"/>
+    <BuildModes Active="Debug"/>
     <Units>
       <Unit>
         <Filename Value="SDL2_Tutorials.ppr"/>
@@ -11,9 +11,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="12"/>
-        <CursorPos X="32" Y="28"/>
-        <UsageCount Value="84"/>
+        <TopLine Value="4"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="97"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -21,9 +21,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="4"/>
-        <CursorPos X="8" Y="19"/>
-        <UsageCount Value="84"/>
+        <TopLine Value="3"/>
+        <CursorPos X="24" Y="30"/>
+        <UsageCount Value="97"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -33,7 +33,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="37" Y="30"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="97"/>
       </Unit>
       <Unit>
         <Filename Value="README.md"/>
@@ -41,9 +41,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="7"/>
-        <CursorPos X="122" Y="13"/>
-        <UsageCount Value="84"/>
+        <TopLine Value="88"/>
+        <CursorPos X="34" Y="90"/>
+        <UsageCount Value="97"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -54,7 +54,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="39"/>
         <CursorPos X="5" Y="70"/>
-        <UsageCount Value="82"/>
+        <UsageCount Value="95"/>
       </Unit>
       <Unit>
         <Filename Value="Source\03_event_driven_programming\Case03_event_driven_programming.pas"/>
@@ -63,7 +63,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="39" Y="51"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="82"/>
       </Unit>
       <Unit>
         <Filename Value="Source\04_key_presses\Case04_key_presses.pas"/>
@@ -72,7 +72,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="82"/>
         <CursorPos X="32" Y="100"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="81"/>
       </Unit>
       <Unit>
         <Filename Value="Source\05_optimized_surface_loading_and_soft_stretching\Case05_optimized_surface_loading_and_soft_stretching.pas"/>
@@ -81,7 +81,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="108"/>
         <CursorPos X="59" Y="68"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="47"/>
       </Unit>
       <Unit>
         <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
@@ -90,17 +90,34 @@
         <WindowIndex Value="0"/>
         <TopLine Value="70"/>
         <CursorPos X="60" Y="110"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="40"/>
       </Unit>
       <Unit>
         <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="172"/>
-        <CursorPos Y="60"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="53"/>
+        <CursorPos X="37" Y="69"/>
+        <UsageCount Value="37"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\08_geometry_rendering\Case08_geometry_rendering.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="82"/>
+        <CursorPos X="26" Y="113"/>
+        <UsageCount Value="33"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\09_the_viewport\Case09_the_viewport.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="108"/>
+        <CursorPos X="45" Y="117"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -110,7 +127,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4182"/>
         <CursorPos X="6" Y="4190"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_gfx.pas"/>
@@ -118,7 +135,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_image.pas"/>
@@ -126,7 +143,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_mixer.pas"/>
@@ -134,7 +151,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_net.pas"/>
@@ -142,7 +159,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_ttf.pas"/>
@@ -150,7 +167,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\sdl2_loader.pas"/>
@@ -158,14 +175,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="28" Y="58"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Tutorials.Run.pas"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="22" Y="4"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="14"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
@@ -173,16 +190,16 @@
         <UnitName Value="libSDL2"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1524"/>
-        <CursorPos X="4" Y="1542"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="1008"/>
+        <CursorPos X="86" Y="1034"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\objpas.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
@@ -192,7 +209,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="404"/>
         <CursorPos X="12" Y="407"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\sdl2_loader.pas"/>
@@ -201,7 +218,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="47"/>
         <CursorPos X="55" Y="82"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\System\sysloader.pas"/>
@@ -211,7 +228,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="42"/>
         <CursorPos X="4" Y="48"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
@@ -220,14 +237,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="333"/>
         <CursorPos Y="347"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelps.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\unix\sysutils.pp"/>
@@ -236,14 +253,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1422"/>
         <CursorPos X="3" Y="1396"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\linux\system.pp"/>
@@ -253,14 +270,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="545"/>
         <CursorPos X="3" Y="561"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelps.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="6"/>
+        <TopLine Value="1352"/>
+        <CursorPos X="16" Y="1354"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
@@ -268,18 +287,18 @@
         <UnitName Value="SysUtils"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1389"/>
-        <CursorPos X="3" Y="1396"/>
-        <UsageCount Value="6"/>
+        <TopLine Value="320"/>
+        <CursorPos X="33" Y="338"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="141"/>
-        <CursorPos X="3" Y="149"/>
-        <UsageCount Value="6"/>
+        <TopLine Value="38"/>
+        <CursorPos X="28" Y="49"/>
+        <UsageCount Value="11"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_image.pas"/>
@@ -287,130 +306,191 @@
         <UnitName Value="libSDL2_image"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
         <CursorPos X="26" Y="17"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_gfx.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="libSDL2_gfx"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="264"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_mixer.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="libSDL2_mixer"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="19"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Colors\colorstransforms.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="ColorsTransforms"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="16"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\BaseEngines\PolygonEngine\peclipper3d.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="peClipper3D"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="34"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelph.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="488"/>
+        <CursorPos X="20" Y="493"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysunih.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysencodingh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysstrh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="321"/>
+        <CursorPos X="33" Y="338"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="14" Y="15"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="59"/>
+        <CursorPos X="36" Y="52"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="22">
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="121" TopLine="110"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="23" Column="14"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="122" TopLine="110"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="23" Column="11"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="87" TopLine="77"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="25" Column="12"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="122" TopLine="113"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" TopLine="19"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="124" TopLine="113"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="25" Column="9" TopLine="19"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="120" TopLine="111"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" TopLine="19"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="121" TopLine="111"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="27" Column="9" TopLine="7"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="122" Column="17" TopLine="111"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="28" TopLine="22"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="120" TopLine="111"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="23" Column="53" TopLine="6"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="121" TopLine="111"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="28" Column="25" TopLine="11"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="122" Column="43" TopLine="108"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="28" Column="15" TopLine="19"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="48" TopLine="37"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="29" Column="13" TopLine="13"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="50" TopLine="37"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="28" Column="21" TopLine="23"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="48" TopLine="37"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="10" Column="14" TopLine="4"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="87" TopLine="74"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="28" Column="14" TopLine="13"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="89" TopLine="74"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="23" Column="29" TopLine="23"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="96" TopLine="87"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="21" Column="6" TopLine="5"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="100" TopLine="87"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="18" Column="55" TopLine="7"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="102" TopLine="87"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="25" TopLine="18"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="109" TopLine="100"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" TopLine="18"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="110" TopLine="100"/>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
+        <Caret Line="15" Column="14"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="117" TopLine="101"/>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
+        <Caret Line="21" Column="39"/>
       </Position>
       <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="120" TopLine="111"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="121" TopLine="111"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="122" TopLine="111"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="128" TopLine="112"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="60" TopLine="45"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="61" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="63" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
-        <Caret Line="65" TopLine="51"/>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
+        <Caret Line="22" Column="19" TopLine="18"/>
       </Position>
     </JumpHistory>
     <RunParams>

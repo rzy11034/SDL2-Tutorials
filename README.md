@@ -25,10 +25,12 @@ SDL2教程
 8. Geometry Rendering
 	- Render hardware accelerated shapes with SDL2.
 
-The Viewport
-	Control your SDL rendering area with the viewport.
-Color Keying
-	Render images with transparent backgrounds using color keying.
+9. The Viewport
+	- Control your SDL rendering area with the viewport.
+
+10. Color Keying
+	- Render images with transparent backgrounds using color keying.
+
 Clip Rendering and Sprite Sheets
 	Render parts of textures to use sprite sheets.
 Color Modulation

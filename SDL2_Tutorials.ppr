@@ -5,19 +5,21 @@
 uses
   {$IFDEF UNIX}
   cthreads,
-  GL,
   {$ENDIF}
   Classes,
   SysUtils,
+  GL,
   DeepStar.Utils,
-  sdl2_loader,
+  SDL2_Loader,
   SDL2_Tutorials.Main,
   Case01_hello_SDL,
   Case02_getting_an_image_on_the_screen,
   Case03_event_driven_programming,
   Case04_key_presses,
   Case05_optimized_surface_loading_and_soft_stretching,
-  Case06_extension_libraries_and_loading_other_image_formats, Case07_texture_loading_and_rendering;
+  Case06_extension_libraries_and_loading_other_image_formats,
+  Case07_texture_loading_and_rendering,
+  Case08_geometry_rendering, Case09_the_viewport, Case10_color_keying, Case10_color_keying.LTexture;
 
 var
   gLoaderSDL2: TLoaderSDL2;

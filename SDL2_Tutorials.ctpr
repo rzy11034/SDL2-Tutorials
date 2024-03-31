@@ -25,7 +25,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering"/>
+            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -102,6 +102,22 @@
         <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\08_geometry_rendering\Case08_geometry_rendering.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\09_the_viewport\Case09_the_viewport.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -112,7 +128,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering"/>
+      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
