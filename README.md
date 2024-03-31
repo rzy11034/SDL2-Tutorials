@@ -22,8 +22,9 @@ SDL2教程
 7. Texture Loading and Rendering
 	- Render Hardware Accelerated Textures With SDL2.
 
-Geometry Rendering
-	Render hardware accelerated shapes with SDL2.
+8. Geometry Rendering
+	- Render hardware accelerated shapes with SDL2.
+
 The Viewport
 	Control your SDL rendering area with the viewport.
 Color Keying

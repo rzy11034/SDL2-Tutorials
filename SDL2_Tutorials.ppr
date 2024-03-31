@@ -17,7 +17,7 @@ uses
   Case03_event_driven_programming,
   Case04_key_presses,
   Case05_optimized_surface_loading_and_soft_stretching,
-  Case06_extension_libraries_and_loading_other_image_formats;
+  Case06_extension_libraries_and_loading_other_image_formats, Case07_texture_loading_and_rendering;
 
 var
   gLoaderSDL2: TLoaderSDL2;

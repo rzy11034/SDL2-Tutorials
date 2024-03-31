@@ -13,7 +13,7 @@ procedure Run;
 implementation
 
 uses
-  Case06_extension_libraries_and_loading_other_image_formats;
+  Case07_texture_loading_and_rendering;
 
 procedure Text;
 begin
