@@ -1,4 +1,4 @@
-﻿unit Case02_getting_an_image_on_the_screen;
+﻿unit Case03_event_driven_programming;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -28,7 +28,7 @@ var
   //The surface contained by the window
   gScreenSurface: PSDL_Surface = nil;
   //The image we will load and show on the screen
-  gHelloWorld: PSDL_Surface = nil;
+  gXOut: PSDL_Surface = nil;
 
 //Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -46,24 +46,30 @@ begin
   if not Init then
     WriteLn('Failed to initialize!')
   else
-  if not LoadMedia then
-    WriteLn('Failed to load media!')
-  else
   begin
-    // Apply the image
-    SDL_UpperBlit(gHelloWorld, nil, gScreenSurface, nil);
+    if not LoadMedia then
+      WriteLn('Failed to load media!')
+    else
+    begin
+      // Hack to get window to stay up
+      e := Default(TSDL_Event);
+      quit := boolean(false);
 
-    // Update the surface
-    SDL_UpdateWindowSurface(gWindow);
+      while not quit do
+      begin
+        while SDL_PollEvent(@e) <> 0 do
+        begin
+          if e.type_ = SDL_QUIT_EVENT then
+            quit := true;
+        end;
 
-    // Hack to get window to stay up
-    e := Default(TSDL_Event);
-    quit := boolean(false);
+        // Apply the image
+        SDL_UpperBlit(gXOut, nil, gScreenSurface, nil);
 
-    while quit = false do
-      while SDL_PollEvent(@e) <> 0 do
-        if e.type_ = SDL_QUIT_EVENT then
-          quit := true;
+        // Update the surface
+        SDL_UpdateWindowSurface(gWindow);
+      end;
+    end;
   end;
 
   Close;
@@ -101,14 +107,14 @@ end;
 
 function LoadMedia: boolean;
 const
-  filename = '../Source/02_getting_an_image_on_the_screen/hello_world.bmp';
+  filename = '../Source/03_event_driven_programming/x.bmp';
 var
   success: boolean;
 begin
   success := boolean(true);
-  gHelloWorld := SDL_LoadBMP(CrossFixFileName(filename).ToPAnsiChar);
+  gXOut := SDL_LoadBMP(CrossFixFileName(filename).ToPAnsiChar);
 
-  if gHelloWorld = nil then
+  if gXOut = nil then
   begin
     WriteLnF('Unable to load image %s! SDL Error: %s', [SDL_GetError(), SDL_GetError()]);
     WriteLn(filename);
@@ -120,15 +126,15 @@ end;
 
 procedure Close();
 begin
-  //Deallocate surface
-  SDL_FreeSurface(gHelloWorld);
-  gHelloWorld := nil;
+  // Deallocate surface
+  SDL_FreeSurface(gXOut);
+  gXOut := nil;
 
-  //Destroy window
+  // Destroy window
   SDL_DestroyWindow(gWindow);
   gWindow := nil;
 
-  //Quit SDL subsystems
+  // Quit SDL subsystems
   SDL_Quit();
 end;
 

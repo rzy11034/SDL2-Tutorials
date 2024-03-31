@@ -25,7 +25,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen"/>
+            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -82,6 +82,22 @@
         <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\03_event_driven_programming\Case03_event_driven_programming.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\04_key_presses\Case04_key_presses.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\05_optimized_surface_loading_and_soft_stretching\Case05_optimized_surface_loading_and_soft_stretching.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -92,7 +108,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen"/>
+      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

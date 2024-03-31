@@ -11,9 +11,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3"/>
-        <CursorPos Y="30"/>
-        <UsageCount Value="35"/>
+        <TopLine Value="12"/>
+        <CursorPos X="33" Y="28"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -21,8 +21,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <CursorPos Y="20"/>
-        <UsageCount Value="35"/>
+        <TopLine Value="7"/>
+        <CursorPos X="61" Y="16"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -30,9 +31,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="29"/>
-        <CursorPos X="77" Y="46"/>
-        <UsageCount Value="35"/>
+        <TopLine Value="25"/>
+        <CursorPos X="37" Y="30"/>
+        <UsageCount Value="80"/>
       </Unit>
       <Unit>
         <Filename Value="README.md"/>
@@ -40,21 +41,46 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="27" Y="11"/>
-        <UsageCount Value="35"/>
+        <CursorPos Y="24"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="88"/>
-        <CursorPos X="27" Y="109"/>
-        <UsageCount Value="33"/>
-        <Loaded Value="True"/>
+        <TopLine Value="39"/>
+        <CursorPos X="5" Y="70"/>
+        <UsageCount Value="78"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\03_event_driven_programming\Case03_event_driven_programming.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="36"/>
+        <CursorPos X="39" Y="51"/>
+        <UsageCount Value="65"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\04_key_presses\Case04_key_presses.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="82"/>
+        <CursorPos X="32" Y="100"/>
+        <UsageCount Value="64"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\05_optimized_surface_loading_and_soft_stretching\Case05_optimized_surface_loading_and_soft_stretching.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="108"/>
+        <CursorPos X="59" Y="68"/>
+        <UsageCount Value="30"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2.pas"/>
@@ -63,7 +89,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4182"/>
         <CursorPos X="6" Y="4190"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_gfx.pas"/>
@@ -71,7 +97,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_image.pas"/>
@@ -79,7 +105,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_mixer.pas"/>
@@ -87,7 +113,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_net.pas"/>
@@ -95,7 +121,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_ttf.pas"/>
@@ -103,7 +129,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\sdl2_loader.pas"/>
@@ -111,14 +137,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="28" Y="58"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Tutorials.Run.pas"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="22" Y="4"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="15"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
@@ -126,16 +152,16 @@
         <UnitName Value="libSDL2"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3350"/>
-        <CursorPos X="13" Y="3368"/>
-        <UsageCount Value="11"/>
+        <TopLine Value="78"/>
+        <CursorPos X="5" Y="95"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\objpas.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
@@ -143,18 +169,18 @@
         <UnitName Value="System"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="405"/>
+        <TopLine Value="404"/>
         <CursorPos X="12" Y="407"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\sdl2_loader.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="38"/>
-        <CursorPos X="13" Y="94"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="47"/>
+        <CursorPos X="55" Y="82"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\System\sysloader.pas"/>
@@ -163,8 +189,8 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="42"/>
-        <CursorPos X="17" Y="60"/>
-        <UsageCount Value="9"/>
+        <CursorPos X="4" Y="48"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
@@ -173,14 +199,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="333"/>
         <CursorPos Y="347"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelps.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\unix\sysutils.pp"/>
@@ -189,14 +215,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1422"/>
         <CursorPos X="3" Y="1396"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\rtl\linux\system.pp"/>
@@ -206,14 +232,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="545"/>
         <CursorPos X="3" Y="561"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelps.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
@@ -223,7 +249,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1389"/>
         <CursorPos X="3" Y="1396"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
@@ -232,117 +258,109 @@
         <WindowIndex Value="0"/>
         <TopLine Value="141"/>
         <CursorPos X="3" Y="149"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="48"/>
+        <CursorPos Y="47"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_image.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="libSDL2_image"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="26" Y="17"/>
+        <UsageCount Value="11"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="26">
+    <JumpHistory HistoryIndex="19">
       <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="111" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" Column="27" TopLine="97"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" Column="23" TopLine="88"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="111" TopLine="103"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" TopLine="103"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="111" TopLine="103"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" TopLine="103"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="114" TopLine="90"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="111" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="113" Column="83" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="111" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="113" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="113" Column="99" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="111" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="113" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="116" Column="63" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="106" Column="7" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="114" Column="11" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="106" Column="13" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="114" Column="25" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" TopLine="97"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="114" Column="7" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="116" Column="87" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="112" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\02_getting_an_image_on_the_screen\Case02_getting_an_image_on_the_screen.pas"/>
-        <Caret Line="116" TopLine="101"/>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="20" Column="16"/>
       </Position>
       <Position>
         <Filename Value="SDL2_Tutorials.ppr"/>
-        <Caret Line="30" TopLine="3"/>
+        <Caret Line="23" Column="14" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="35" Column="10" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="78" Column="74" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="101" Column="17" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="SDL2_Tutorials.ppr"/>
+        <Caret Line="23" Column="3" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="122" Column="11" TopLine="102"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="114" Column="14" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="134" TopLine="128"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="135" TopLine="128"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="165" TopLine="158"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="166" TopLine="158"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="127" Column="94" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="164" Column="14" TopLine="153"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="165" TopLine="153"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="166" TopLine="154"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="172" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="173" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="116" Column="13" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
+        <Caret Line="74" Column="62" TopLine="53"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -353,24 +371,29 @@
     </RunParams>
     <HistoryLists>
       <List Name="LaunchingApplication" Type="File" Count="6">
-        <Item1 Value="/usr/bin/xterm -T &apos;Typhon Run Output&apos; -e $(TargetCmdLine)"/>
-        <Item2 Value="C:\Windows\system32\cmd.exe /C ${TargetCmdLine}"/>
+        <Item1 Value="C:\Windows\system32\cmd.exe /C ${TargetCmdLine}"/>
+        <Item2 Value="/usr/bin/xterm -T &apos;Typhon Run Output&apos; -e $(TargetCmdLine)"/>
         <Item3 Value="${CmdExe} ${TargetCmdLine}"/>
         <Item4 Value="&quot;$(Pas2JSBrowser)&quot; &quot;$(Pas2JSProjectURL)&quot;"/>
         <Item5 Value="$(Pas2JSBrowser) &quot;$(Pas2JSProjectURL)&quot;"/>
         <Item6 Value="/usr/bin/gnome-terminal -t &apos;Typhon Run Output&apos; -e &apos;$(TargetCmdLine)&apos;"/>
       </List>
-      <List Name="WorkingDirectory" Type="File" Count="3">
+      <List Name="WorkingDirectory" Type="File" Count="2">
         <Item1 Value="bin"/>
         <Item2 Value="/"/>
       </List>
-      <List Name="CommandLineParameters" Count="1"/>
     </HistoryLists>
   </ProjectSession>
   <Debugging>
     <Watches>
       <Item ClassAutoCast="True">
+        <Expression Value="gWindow"/>
+      </Item>
+      <Item ClassAutoCast="True">
         <Expression Value="s"/>
+      </Item>
+      <Item ClassAutoCast="True">
+        <Expression Value="gKeyPressSurfaces"/>
       </Item>
     </Watches>
   </Debugging>

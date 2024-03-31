@@ -13,10 +13,16 @@ procedure Run;
 implementation
 
 uses
-  Case02_getting_an_image_on_the_screen;
+  Case06_extension_libraries_and_loading_other_image_formats;
+
+procedure Text;
+begin
+  Exit;
+end;
 
 procedure Run;
 begin
+  Text;
   Main;
 end;
 

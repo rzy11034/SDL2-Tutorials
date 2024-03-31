@@ -2,23 +2,26 @@
 SDL2教程
 
 1. Hello SDL
-	Get started making games with your first SDL App.
+  - Get started making games with your first SDL App.
 
 2. Getting an Image on the Screen
-	Show images on the screen with SDL2.
+  - Show images on the screen with SDL2.
 
 3. Event Driven Programming
-	Handle events with SDL2.
+  - Handle events with SDL2.
 
 4. Key Presses
-	Handle keys with SDL2.
+  - Handle keys with SDL2.
 
-Optimized Surface Loading and Soft Stretching
-	Optimize your loaded surfaces and stretch them with SDL2.
-Extension Libraries and Loading Other Image Formats
-	Use SDL extension libraries like SDL_image, SDL_ttf, and SDL_mixer to add functionality to SDL.
-Texture Loading and Rendering
-	Render Hardware Accelerated Textures With SDL2.
+5. Optimized Surface Loading and Soft Stretching
+  - Optimize your loaded surfaces and stretch them with SDL2.
+
+6. Extension Libraries and Loading Other Image Formats
+  - Use SDL extension libraries like SDL_image, SDL_ttf, and SDL_mixer to add functionality to SDL.
+
+7. Texture Loading and Rendering
+	- Render Hardware Accelerated Textures With SDL2.
+
 Geometry Rendering
 	Render hardware accelerated shapes with SDL2.
 The Viewport

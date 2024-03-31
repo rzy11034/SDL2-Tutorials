@@ -13,15 +13,19 @@ uses
   sdl2_loader,
   SDL2_Tutorials.Main,
   Case01_hello_SDL,
-  Case02_getting_an_image_on_the_screen;
+  Case02_getting_an_image_on_the_screen,
+  Case03_event_driven_programming,
+  Case04_key_presses,
+  Case05_optimized_surface_loading_and_soft_stretching,
+  Case06_extension_libraries_and_loading_other_image_formats;
 
 var
-  _LoaderSDL2: TLoaderSDL2;
+  gLoaderSDL2: TLoaderSDL2;
 
 begin
-  _LoaderSDL2 := TLoaderSDL2.Create(nil);
+  gLoaderSDL2 := TLoaderSDL2.Create(nil);
   try
-    _LoaderSDL2.Active := true;
+    gLoaderSDL2.Active := true;
 
     try
       Run;
@@ -30,7 +34,7 @@ begin
         WriteLn(E.ClassName, ': ', E.Message);
     end;
   finally
-    _LoaderSDL2.Free;
+    gLoaderSDL2.Free;
   end;
 end.
 
