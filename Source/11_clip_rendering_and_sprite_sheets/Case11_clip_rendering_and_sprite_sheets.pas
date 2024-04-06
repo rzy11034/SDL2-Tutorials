@@ -1,4 +1,4 @@
-﻿unit Case10_color_keying;
+﻿unit Case11_clip_rendering_and_sprite_sheets;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -37,7 +37,7 @@ type
     procedure Clean;
 
     // Renders texture at given point
-    procedure render(x, y: integer);
+    procedure Render(x, y: integer; clip: PSDL_Rect = nil);
 
     property Width: integer read _width;
     property Height: integer read _height;
@@ -50,12 +50,13 @@ const
 var
   // The window we'll be rendering to
   gWindow: PSDL_Window = nil;
+
   // The window renderer
   gRenderer: PSDL_Renderer = nil;
-  // Current displayed texture
-  gTexture:PSDL_Texture = nil;
-  // Scene textures
-  gFooTexture, gBackgroundTexture: TTexture;
+
+  // Scene sprites
+  gSpriteClips: array[0..3] of TSDL_Rect;
+  gSpriteSheetTexture: TTexture;
 
 // Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -76,8 +77,7 @@ begin
   end
   else
   begin
-    gFooTexture := TTexture.Create;
-    gBackgroundTexture := TTexture.Create;
+    gSpriteSheetTexture := TTexture.Create;
     try
       // Load media
       if not loadMedia then
@@ -107,19 +107,25 @@ begin
           SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
           SDL_RenderClear(gRenderer);
 
-          //Render background texture to screen
-          gBackgroundTexture.render(0, 0);
+          // Render top left sprite
+          gSpriteSheetTexture.Render(0, 0, @gSpriteClips[0]);
 
-          //Render Foo' to the screen
-          gFooTexture.render(240, 190);
+          // Render top right sprite
+          gSpriteSheetTexture.Render(SCREEN_WIDTH - gSpriteClips[1].w, 0, @gSpriteClips[1]);
+
+          // Render bottom left sprite
+          gSpriteSheetTexture.Render(0, SCREEN_HEIGHT - gSpriteClips[2].h, @gSpriteClips[2]);
+
+          // Render bottom right sprite
+          gSpriteSheetTexture.Render(SCREEN_WIDTH - gSpriteClips[3].w,
+            SCREEN_HEIGHT - gSpriteClips[3].h, @gSpriteClips[3]);
 
           //Update screen
           SDL_RenderPresent(gRenderer);
         end;
       end;
     finally
-      gFooTexture.Free;
-      gBackgroundTexture.Free;
+      gSpriteSheetTexture.Free;
     end;
   end;
 
@@ -137,40 +143,48 @@ begin
   if SDL_Init(SDL_INIT_VIDEO) < 0 then
   begin
     WriteLnF('SDL could not initialize! SDL_Error: %s', [SDL_GetError()]);
-    Exit(false);
-  end;
-
-  // Set texture filtering to linear
-  if not SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, '1') then
-    WriteLn('Warning: Linear texture filtering not enabled!');
-
-  // Create window
-  gWindow := SDL_CreateWindow('SDL Tutorial', SDL_WINDOWPOS_UNDEFINED,
-    SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-  if gWindow = nil then
+    success := false;
+  end
+  else
   begin
-    WriteLn('Window could not be created! SDL_Error: ', SDL_GetError);
-    Exit(false);
-  end;
+    // Set texture filtering to linear
+    if not SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, '1') then
+    begin
+      WriteLn('Warning: Linear texture filtering not enabled!');
+    end;
 
-  // Create renderer for window
-  gRenderer := SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
-  if gRenderer = nil then
-  begin
-    WriteLn('Renderer could not be created! SDL Error:', SDL_GetError);
-    Exit(false);
-  end;
+    // Create window
+    gWindow := SDL_CreateWindow('SDL Tutorial', SDL_WINDOWPOS_UNDEFINED,
+      SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    if gWindow = nil then
+    begin
+      WriteLn('Window could not be created! SDL_Error: ', SDL_GetError);
+      success := false;
+    end
+    else
+    begin
+      // Create renderer for window
+      gRenderer := SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+      if gRenderer = nil then
+      begin
+        WriteLn('Renderer could not be created! SDL Error:', SDL_GetError);
+        success := false;
+      end
+      else
+      begin
+        // Initialize renderer color
+        SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
 
-  // Initialize renderer color
-  SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
-
-  //Initialize PNG loading
-  imgFlags := integer(0);
-  imgFlags := IMG_INIT_PNG;
-  if not (IMG_Init(imgFlags) and imgFlags).ToBoolean then
-  begin
-    WriteLn('SDL_image could not initialize! SDL_image Error.');
-    Exit(false);
+        //Initialize PNG loading
+        imgFlags := integer(0);
+        imgFlags := IMG_INIT_PNG;
+        if not (IMG_Init(imgFlags) and imgFlags).ToBoolean then
+        begin
+          WriteLn('SDL_image could not initialize! SDL_image Error.');
+          success := false;
+        end;
+      end;
+    end;
   end;
 
   Result := success;
@@ -178,25 +192,56 @@ end;
 
 function LoadMedia(): boolean;
 const
-  imgFoo = '../Source/10_color_keying/foo.png';
-  imgBackground = '../Source/10_color_keying/background.png';
+  imgDots = '../Source/11_clip_rendering_and_sprite_sheets/dots.png';
 var
-  success: boolean;
+  success: Boolean;
 begin
-  success := boolean(true);
+  // Loading success flag
+  success := Boolean(true);
 
-  // Load Foo texture
-  if not gFooTexture.LoadFromFile(imgFoo) then
+  // Load sprite sheet texture
+  if not gSpriteSheetTexture.LoadFromFile(imgDots) then
   begin
-    WriteLn('Failed to load Foo texture image!');
-    success := false;
-  end;
-
-  // Load background texture
-  if not gBackgroundTexture.LoadFromFile(imgBackground) then
-  begin
-    WriteLn('Failed to load background texture image!');
+    WriteLn('Failed to load sprite sheet texture!');
 		success := false;
+  end
+  else
+  begin
+    // Set top left sprite
+    with gSpriteClips[0] do
+    begin
+      x := 0;
+		  y := 0;
+		  w := 100;
+		  h := 100;
+    end;
+
+		// Set top right sprite
+    with gSpriteClips[1] do
+    begin
+      x := 100;
+      y := 0;
+      w := 100;
+      h := 100;
+    end;
+
+    // Set bottom left sprite
+    with gSpriteClips[2] do
+    begin
+      x := 0;
+      y := 100;
+      w := 100;
+      h := 100;
+    end;
+
+    // Set bottom right sprite
+    with gSpriteClips[3] do
+    begin
+      x := 100;
+		  y := 100;
+		  w := 100;
+		  h := 100;
+    end;
   end;
 
   Result := success;
@@ -204,10 +249,6 @@ end;
 
 procedure Close();
 begin
-  // Free loaded image
-  SDL_DestroyTexture(gTexture);
-  gTexture := nil;
-
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
   SDL_DestroyWindow(gWindow);
@@ -265,7 +306,8 @@ begin
   else
   begin
     // Color key image
-    SDL_SetColorKey(loadedSurface, Ord(SDL_TRUE), SDL_MapRGB(loadedSurface^.format, 0, $FF, $FF));
+    SDL_SetColorKey(loadedSurface, Ord(SDL_TRUE), SDL_MapRGB(loadedSurface^.format,
+      0, $FF, $FF));
 
     // Create texture from surface pixels
     newTexture := SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
@@ -286,7 +328,7 @@ begin
   Result := _texture <> nil;
 end;
 
-procedure TTexture.render(x, y: integer);
+procedure TTexture.Render(x, y: integer; clip: PSDL_Rect);
 var
   renderQuad: TSDL_Rect;
 begin
@@ -297,8 +339,14 @@ begin
   renderQuad.w := _width;
   renderQuad.h := _height;
 
-  SDL_RenderCopy(gRenderer, _texture, nil, @renderQuad);
+  // Set clip rendering dimensions
+  if clip <> nil then
+  begin
+    renderQuad.w := clip^.w;
+    renderQuad.h := clip^.h;
+  end;
+
+  SDL_RenderCopy(gRenderer, _texture, clip, @renderQuad);
 end;
 
 end.
-

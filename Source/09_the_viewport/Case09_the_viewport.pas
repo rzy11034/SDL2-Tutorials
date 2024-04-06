@@ -30,6 +30,7 @@ var
   // Current displayed texture
   gTexture:PSDL_Texture = nil;
 
+// Starts up SDL and creates window
 function Init(): boolean; forward;
 // Loads media
 function LoadMedia(): boolean; forward;

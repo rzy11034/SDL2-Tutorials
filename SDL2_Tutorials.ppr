@@ -19,7 +19,13 @@ uses
   Case05_optimized_surface_loading_and_soft_stretching,
   Case06_extension_libraries_and_loading_other_image_formats,
   Case07_texture_loading_and_rendering,
-  Case08_geometry_rendering, Case09_the_viewport, Case10_color_keying, Case10_color_keying.LTexture;
+  Case08_geometry_rendering,
+  Case09_the_viewport,
+  Case10_color_keying,
+  Case11_clip_rendering_and_sprite_sheets,
+  Case12_color_modulation,
+  Case13_alpha_blending, Case15_rotation_and_flipping;
+  //Case14_animated_sprites_and_vsync;
 
 var
   gLoaderSDL2: TLoaderSDL2;
@@ -39,4 +45,3 @@ begin
     gLoaderSDL2.Free;
   end;
 end.
-

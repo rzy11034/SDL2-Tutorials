@@ -1,4 +1,4 @@
-﻿unit Case10_color_keying;
+﻿unit Case13_alpha_blending;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -23,8 +23,8 @@ type
   TTexture = class(TObject)
   private
     _height: integer;
-    _texture: PSDL_Texture;
     _width: integer;
+    _texture: PSDL_Texture;
 
   public
     constructor Create;
@@ -37,7 +37,16 @@ type
     procedure Clean;
 
     // Renders texture at given point
-    procedure render(x, y: integer);
+    procedure Render(x, y: integer; clip: PSDL_Rect = nil);
+
+    //Set color modulation
+    procedure SetColor(red, green, blue: byte);
+
+     //Set blending
+    procedure SetBlendMode(blending: TSDL_BlendMode);
+
+        //Set alpha modulation
+    procedure SetAlpha(alpha: byte);
 
     property Width: integer read _width;
     property Height: integer read _height;
@@ -50,12 +59,13 @@ const
 var
   // The window we'll be rendering to
   gWindow: PSDL_Window = nil;
+
   // The window renderer
   gRenderer: PSDL_Renderer = nil;
-  // Current displayed texture
-  gTexture:PSDL_Texture = nil;
-  // Scene textures
-  gFooTexture, gBackgroundTexture: TTexture;
+
+  // Scene texture
+  gModulatedTexture: TTexture;
+  gBackgroundTexture: TTexture;
 
 // Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -68,6 +78,7 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
+  a: byte;
 begin
   // Start up SDL and create window
   if not Init then
@@ -76,7 +87,7 @@ begin
   end
   else
   begin
-    gFooTexture := TTexture.Create;
+    gModulatedTexture := TTexture.Create;
     gBackgroundTexture := TTexture.Create;
     try
       // Load media
@@ -92,6 +103,9 @@ begin
         // Event handler
         e := Default(TSDL_Event);
 
+        // Modulation component
+        a := byte(255);
+
         // While application is running
         while not quit do
         begin
@@ -100,6 +114,33 @@ begin
             if e.type_ = SDL_QUIT_EVENT then
             begin
               quit := true;
+            end
+            else if e.type_ = SDL_KEYDOWN then
+            begin
+              case e.key.keysym.sym of
+                // Increase alpha on w
+                SDLK_w:
+                begin
+                  // Cap if over 255
+                  if a + 32 > 255 then
+                    a := 255
+                  else // Increment otherwise
+                    a += 32;
+                end;
+
+                //Decrease alpha on s
+                SDLK_s:
+                begin
+                  // Cap if below 0
+                  if a - 32 < 0 then
+                    a := 0
+                  else // Decrement otherwise
+                    a -= 32;
+                end;
+
+
+                SDLK_ESCAPE: quit := true;
+              end;
             end;
           end;
 
@@ -107,24 +148,25 @@ begin
           SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
           SDL_RenderClear(gRenderer);
 
-          //Render background texture to screen
+          // Render background
           gBackgroundTexture.render(0, 0);
 
-          //Render Foo' to the screen
-          gFooTexture.render(240, 190);
+          // Modulate and render texture
+          gModulatedTexture.SetAlpha(a);
+          gModulatedTexture.Render(0, 0);
 
           //Update screen
           SDL_RenderPresent(gRenderer);
         end;
       end;
     finally
-      gFooTexture.Free;
       gBackgroundTexture.Free;
+      gModulatedTexture.Free;
     end;
   end;
 
   // Free resources and close SDL
-	Close();
+  Close();
 end;
 
 function Init(): boolean;
@@ -137,40 +179,48 @@ begin
   if SDL_Init(SDL_INIT_VIDEO) < 0 then
   begin
     WriteLnF('SDL could not initialize! SDL_Error: %s', [SDL_GetError()]);
-    Exit(false);
-  end;
-
-  // Set texture filtering to linear
-  if not SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, '1') then
-    WriteLn('Warning: Linear texture filtering not enabled!');
-
-  // Create window
-  gWindow := SDL_CreateWindow('SDL Tutorial', SDL_WINDOWPOS_UNDEFINED,
-    SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-  if gWindow = nil then
+    success := false;
+  end
+  else
   begin
-    WriteLn('Window could not be created! SDL_Error: ', SDL_GetError);
-    Exit(false);
-  end;
+    // Set texture filtering to linear
+    if not SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, '1') then
+    begin
+      WriteLn('Warning: Linear texture filtering not enabled!');
+    end;
 
-  // Create renderer for window
-  gRenderer := SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
-  if gRenderer = nil then
-  begin
-    WriteLn('Renderer could not be created! SDL Error:', SDL_GetError);
-    Exit(false);
-  end;
+    // Create window
+    gWindow := SDL_CreateWindow('SDL Tutorial', SDL_WINDOWPOS_UNDEFINED,
+      SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    if gWindow = nil then
+    begin
+      WriteLn('Window could not be created! SDL_Error: ', SDL_GetError);
+      success := false;
+    end
+    else
+    begin
+      // Create renderer for window
+      gRenderer := SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+      if gRenderer = nil then
+      begin
+        WriteLn('Renderer could not be created! SDL Error:', SDL_GetError);
+        success := false;
+      end
+      else
+      begin
+        // Initialize renderer color
+        SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
 
-  // Initialize renderer color
-  SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
-
-  //Initialize PNG loading
-  imgFlags := integer(0);
-  imgFlags := IMG_INIT_PNG;
-  if not (IMG_Init(imgFlags) and imgFlags).ToBoolean then
-  begin
-    WriteLn('SDL_image could not initialize! SDL_image Error.');
-    Exit(false);
+        //Initialize PNG loading
+        imgFlags := integer(0);
+        imgFlags := IMG_INIT_PNG;
+        if not (IMG_Init(imgFlags) and imgFlags).ToBoolean then
+        begin
+          WriteLn('SDL_image could not initialize! SDL_image Error.');
+          success := false;
+        end;
+      end;
+    end;
   end;
 
   Result := success;
@@ -178,25 +228,31 @@ end;
 
 function LoadMedia(): boolean;
 const
-  imgFoo = '../Source/10_color_keying/foo.png';
-  imgBackground = '../Source/10_color_keying/background.png';
+  imgFadeout = '../Source/13_alpha_blending/fadeout.png';
+  imgFadein = '../Source/13_alpha_blending/fadein.png';
 var
   success: boolean;
 begin
+  // Loading success flag
   success := boolean(true);
 
-  // Load Foo texture
-  if not gFooTexture.LoadFromFile(imgFoo) then
+  // Load front alpha texture
+  if not gModulatedTexture.LoadFromFile(imgFadeout) then
   begin
-    WriteLn('Failed to load Foo texture image!');
+    WriteLn('Failed to load front texture!');
     success := false;
+  end
+  else
+  begin
+    // Set standard alpha blending
+    gModulatedTexture.SetBlendMode(SDL_BLENDMODE_BLEND);
   end;
 
   // Load background texture
-  if not gBackgroundTexture.LoadFromFile(imgBackground) then
+  if not gBackgroundTexture.LoadFromFile(imgFadein) then
   begin
-    WriteLn('Failed to load background texture image!');
-		success := false;
+    WriteLn('Failed to load background texture!');
+    success := false;
   end;
 
   Result := success;
@@ -204,10 +260,6 @@ end;
 
 procedure Close();
 begin
-  // Free loaded image
-  SDL_DestroyTexture(gTexture);
-  gTexture := nil;
-
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
   SDL_DestroyWindow(gWindow);
@@ -229,7 +281,7 @@ end;
 procedure TTexture.Clean;
 begin
   // Free texture if it exists
-	if _texture <> nil then
+  if _texture <> nil then
   begin
     SDL_DestroyTexture(_texture);
     _texture := nil;
@@ -240,7 +292,6 @@ end;
 
 destructor TTexture.Destroy;
 begin
-  Clean;
   inherited Destroy;
 end;
 
@@ -253,7 +304,7 @@ begin
   Clean;
 
   // The final texture
-	newTexture := PSDL_Texture(nil);
+  newTexture := PSDL_Texture(nil);
 
   // Load image at specified path
   loadedSurface := PSDL_Surface(nil);
@@ -265,7 +316,8 @@ begin
   else
   begin
     // Color key image
-    SDL_SetColorKey(loadedSurface, Ord(SDL_TRUE), SDL_MapRGB(loadedSurface^.format, 0, $FF, $FF));
+    SDL_SetColorKey(loadedSurface, Ord(SDL_TRUE), SDL_MapRGB(loadedSurface^.format,
+      0, $FF, $FF));
 
     // Create texture from surface pixels
     newTexture := SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
@@ -286,7 +338,7 @@ begin
   Result := _texture <> nil;
 end;
 
-procedure TTexture.render(x, y: integer);
+procedure TTexture.Render(x, y: integer; clip: PSDL_Rect);
 var
   renderQuad: TSDL_Rect;
 begin
@@ -297,8 +349,32 @@ begin
   renderQuad.w := _width;
   renderQuad.h := _height;
 
-  SDL_RenderCopy(gRenderer, _texture, nil, @renderQuad);
+  // Set clip rendering dimensions
+  if clip <> nil then
+  begin
+    renderQuad.w := clip^.w;
+    renderQuad.h := clip^.h;
+  end;
+
+  SDL_RenderCopy(gRenderer, _texture, clip, @renderQuad);
+end;
+
+procedure TTexture.SetAlpha(alpha: byte);
+begin
+  // Modulate texture alpha
+  SDL_SetTextureAlphaMod(_texture, alpha);
+end;
+
+procedure TTexture.SetBlendMode(blending: TSDL_BlendMode);
+begin
+  // Set blending function
+  SDL_SetTextureBlendMode(_texture, blending);
+end;
+
+procedure TTexture.SetColor(red, green, blue: byte);
+begin
+  // Modulate texture
+  SDL_SetTextureColorMod(_texture, red, green, blue);
 end;
 
 end.
-

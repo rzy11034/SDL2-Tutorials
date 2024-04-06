@@ -8,14 +8,16 @@ interface
 uses
   Classes,
   SysUtils,
-  {%H-}DeepStar.UString;
+  {%H-}DeepStar.Utils,
+  {%H-}DeepStar.UString,
+  {%H-}libSDL2;
 
 procedure Run;
 
 implementation
 
 uses
-  Case09_the_viewport;
+  Case14_animated_sprites_and_vsync;
 
 procedure Text;
 begin
