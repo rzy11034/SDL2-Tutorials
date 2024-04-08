@@ -1,4 +1,4 @@
-﻿unit Case15_rotation_and_flipping;
+﻿unit Case16_true_type_fonts;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -16,6 +16,7 @@ implementation
 uses
   libSDL2,
   libSDL2_image,
+  libSDL2_ttf,
   DeepStar.Utils,
   DeepStar.UString;
 
@@ -33,6 +34,9 @@ type
     // Loads image at specified path
     function LoadFromFile(path: string): boolean;
 
+    // Creates image from font string
+    function LoadFromRenderedText(textureText: string; textColor: TSDL_Color): boolean;
+
     // Deallocates texture
     procedure Clean;
 
@@ -43,10 +47,10 @@ type
     //Set color modulation
     procedure SetColor(red, green, blue: byte);
 
-     //Set blending
+    //Set blending
     procedure SetBlendMode(blending: TSDL_BlendMode);
 
-        //Set alpha modulation
+    //Set alpha modulation
     procedure SetAlpha(alpha: byte);
 
     property Width: integer read _width;
@@ -64,7 +68,11 @@ var
   // The window renderer
   gRenderer: PSDL_Renderer = nil;
 
-  gArrowTexture: TTexture;
+  // Globally used font
+  gFont: PTTF_Font = nil;
+
+  // Rendered texture
+  gArrowTexture: TTexture = nil;
 
 // Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -306,6 +314,36 @@ begin
 
   _texture := newTexture;
   Result := _texture <> nil;
+end;
+
+function TTexture.LoadFromRenderedText(textureText: string; textColor: TSDL_Color): boolean;
+var
+  textSurface: PSDL_Surface;
+begin
+  // Get rid of preexisting texture
+  Clean;
+
+  // Render text surface
+  textSurface := PSDL_Surface(nil);
+  textSurface := TTF_RenderText_Solid(gFont, textureText.ToPAnsiChar, textColor);
+  if textSurface = nil then
+  begin
+    WriteLnF('Unable to render text surface! SDL_ttf Error: %s', [SDL_GetError()])
+  end
+  else
+  begin
+    // Create texture from surface pixels
+    _texture := SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    if _texture <> nil then
+    begin
+
+    end
+    else
+    begin
+
+    end;
+  end;
+
 end;
 
 procedure TTexture.Render(x, y: integer; clip: PSDL_Rect; angle: double;

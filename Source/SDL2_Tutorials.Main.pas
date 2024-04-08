@@ -17,7 +17,7 @@ procedure Run;
 implementation
 
 uses
-  Case14_animated_sprites_and_vsync;
+  Case15_rotation_and_flipping;
 
 procedure Text;
 begin

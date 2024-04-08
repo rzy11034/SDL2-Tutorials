@@ -24,8 +24,10 @@ uses
   Case10_color_keying,
   Case11_clip_rendering_and_sprite_sheets,
   Case12_color_modulation,
-  Case13_alpha_blending, Case15_rotation_and_flipping;
-  //Case14_animated_sprites_and_vsync;
+  Case13_alpha_blending,
+  Case15_rotation_and_flipping,
+  Case14_animated_sprites_and_vsync,
+  Case16_true_type_fonts;
 
 var
   gLoaderSDL2: TLoaderSDL2;

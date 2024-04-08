@@ -11,8 +11,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="19"/>
-        <CursorPos X="55" Y="27"/>
+        <TopLine Value="13"/>
+        <CursorPos X="48" Y="32"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,8 +21,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="18"/>
-        <CursorPos X="7" Y="23"/>
+        <TopLine Value="6"/>
+        <CursorPos X="33" Y="24"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -80,7 +80,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="108"/>
         <CursorPos X="59" Y="68"/>
-        <UsageCount Value="173"/>
+        <UsageCount Value="222"/>
       </Unit>
       <Unit>
         <Filename Value="Source\06_extension_libraries_and_loading_other_image_formats\Case06_extension_libraries_and_loading_other_image_formats.pas"/>
@@ -89,7 +89,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="70"/>
         <CursorPos X="60" Y="110"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="215"/>
       </Unit>
       <Unit>
         <Filename Value="Source\07_texture_loading_and_rendering\Case07_texture_loading_and_rendering.pas"/>
@@ -98,7 +98,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="53"/>
         <CursorPos X="37" Y="69"/>
-        <UsageCount Value="163"/>
+        <UsageCount Value="212"/>
       </Unit>
       <Unit>
         <Filename Value="Source\08_geometry_rendering\Case08_geometry_rendering.pas"/>
@@ -107,7 +107,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="82"/>
         <CursorPos X="26" Y="113"/>
-        <UsageCount Value="159"/>
+        <UsageCount Value="208"/>
       </Unit>
       <Unit>
         <Filename Value="Source\09_the_viewport\Case09_the_viewport.pas"/>
@@ -116,7 +116,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="69"/>
         <CursorPos Y="20"/>
-        <UsageCount Value="156"/>
+        <UsageCount Value="205"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.pas"/>
@@ -125,7 +125,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="30"/>
         <CursorPos X="53" Y="181"/>
-        <UsageCount Value="147"/>
+        <UsageCount Value="206"/>
       </Unit>
       <Unit>
         <Filename Value="Source\11_clip_rendering_and_sprite_sheets\Case11_clip_rendering_and_sprite_sheets.pas"/>
@@ -134,7 +134,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="117"/>
         <CursorPos X="5" Y="134"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="138"/>
       </Unit>
       <Unit>
         <Filename Value="Source\12_color_modulation\Case12_color_modulation.pas"/>
@@ -143,7 +143,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="164"/>
         <CursorPos X="34" Y="162"/>
-        <UsageCount Value="51"/>
+        <UsageCount Value="112"/>
       </Unit>
       <Unit>
         <Filename Value="Source\13_alpha_blending\Case13_alpha_blending.pas"/>
@@ -152,7 +152,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="109"/>
         <CursorPos X="19" Y="87"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="110"/>
       </Unit>
       <Unit>
         <Filename Value="Source\14_animated_sprites_and_vsync\Case14_animated_sprites_and_vsync.pas"/>
@@ -161,7 +161,28 @@
         <WindowIndex Value="0"/>
         <TopLine Value="342"/>
         <CursorPos X="42" Y="344"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="107"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="311"/>
+        <CursorPos X="5" Y="351"/>
+        <UsageCount Value="91"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="308"/>
+        <CursorPos X="7" Y="339"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
@@ -169,7 +190,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="23" Y="70"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="78"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2.pas"/>
@@ -178,7 +199,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4182"/>
         <CursorPos X="6" Y="4190"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_gfx.pas"/>
@@ -186,7 +207,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_image.pas"/>
@@ -194,7 +215,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_mixer.pas"/>
@@ -202,7 +223,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_net.pas"/>
@@ -210,7 +231,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_ttf.pas"/>
@@ -218,7 +239,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\sdl2_loader.pas"/>
@@ -226,14 +247,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="28" Y="58"/>
-        <UsageCount Value="12"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\SDL2_Tutorials.Run.pas"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <CursorPos X="22" Y="4"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
@@ -243,7 +257,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1562"/>
         <CursorPos X="4" Y="1580"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\sdl2_loader.pas"/>
@@ -252,7 +266,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="29"/>
         <CursorPos X="20" Y="45"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
@@ -261,105 +275,20 @@
         <WindowIndex Value="0"/>
         <TopLine Value="455"/>
         <CursorPos X="26" Y="459"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
-        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_image.pas"/>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_ttf.pas"/>
         <FRMtype Value="0"/>
-        <UnitName Value="libSDL2_image"/>
-        <EditorIndex Value="-1"/>
+        <UnitName Value="libSDL2_ttf"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="22"/>
-        <CursorPos X="38" Y="47"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_gfx.pas"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="libSDL2_gfx"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="22"/>
-        <CursorPos X="20" Y="56"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="199"/>
-        <CursorPos X="57" Y="228"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="298"/>
+        <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="22">
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="52" Column="16" TopLine="34"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="11" Column="25"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="59" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="60" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="61" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="44" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="45" TopLine="31"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="44" TopLine="34"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="45" TopLine="34"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="47" TopLine="38"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="47" TopLine="38"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="62" TopLine="48"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="63" TopLine="49"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="44" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="61" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="44" TopLine="37"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <Caret Line="45" TopLine="37"/>
@@ -387,6 +316,98 @@
       <Position>
         <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
         <Caret Line="356" Column="17" TopLine="337"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="323" Column="29" TopLine="317"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="144" Column="16" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="12" Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="147" Column="40" TopLine="137"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="149" Column="26" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="225" Column="23" TopLine="221"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="125" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="114" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="125" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="114" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="125" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="114" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="125" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="114" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="125" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="114" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
+        <Caret Line="132" Column="37" TopLine="121"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <Caret Line="19" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <Caret Line="72" Column="13" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <Caret Line="38" Column="20" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <Caret Line="327" Column="3" TopLine="307"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <Caret Line="335" Column="17" TopLine="304"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
+        <Caret Line="328" Column="16" TopLine="308"/>
       </Position>
     </JumpHistory>
     <RunParams>
