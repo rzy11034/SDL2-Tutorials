@@ -12,7 +12,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
-        <CursorPos X="48" Y="32"/>
+        <CursorPos X="23" Y="31"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -22,7 +22,7 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="3"/>
-        <CursorPos X="27" Y="25"/>
+        <CursorPos X="16" Y="13"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -134,7 +134,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="117"/>
         <CursorPos X="5" Y="134"/>
-        <UsageCount Value="149"/>
+        <UsageCount Value="154"/>
       </Unit>
       <Unit>
         <Filename Value="Source\12_color_modulation\Case12_color_modulation.pas"/>
@@ -143,7 +143,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="164"/>
         <CursorPos X="34" Y="162"/>
-        <UsageCount Value="123"/>
+        <UsageCount Value="128"/>
       </Unit>
       <Unit>
         <Filename Value="Source\13_alpha_blending\Case13_alpha_blending.pas"/>
@@ -152,7 +152,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="109"/>
         <CursorPos X="19" Y="87"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="126"/>
       </Unit>
       <Unit>
         <Filename Value="Source\14_animated_sprites_and_vsync\Case14_animated_sprites_and_vsync.pas"/>
@@ -161,7 +161,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="342"/>
         <CursorPos X="42" Y="344"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="123"/>
       </Unit>
       <Unit>
         <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
@@ -170,17 +170,25 @@
         <WindowIndex Value="0"/>
         <TopLine Value="311"/>
         <CursorPos X="5" Y="351"/>
-        <UsageCount Value="102"/>
+        <UsageCount Value="107"/>
       </Unit>
       <Unit>
         <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="361"/>
-        <CursorPos X="5" Y="401"/>
-        <UsageCount Value="43"/>
-        <Loaded Value="True"/>
+        <TopLine Value="93"/>
+        <CursorPos X="63" Y="110"/>
+        <UsageCount Value="48"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="500"/>
+        <CursorPos X="80" Y="503"/>
+        <UsageCount Value="29"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
@@ -253,9 +261,9 @@
         <UnitName Value="libSDL2"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1562"/>
-        <CursorPos X="4" Y="1580"/>
-        <UsageCount Value="2"/>
+        <TopLine Value="60"/>
+        <CursorPos X="4" Y="77"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\sdl2_loader.pas"/>
@@ -281,77 +289,161 @@
         <UnitName Value="libSDL2_ttf"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="298"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="60"/>
+        <CursorPos X="4" Y="77"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="84"/>
-        <CursorPos X="72" Y="97"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="134"/>
+        <CursorPos X="40" Y="157"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="518"/>
+        <CursorPos X="3" Y="536"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="System"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="515"/>
+        <CursorPos X="3" Y="515"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="13">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="45" TopLine="37"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="155" Column="77" TopLine="133"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="20" Column="13" TopLine="9"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="256" Column="11" TopLine="250"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="19" Column="15"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="263" TopLine="251"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="72" Column="13" TopLine="43"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="270" TopLine="263"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="38" Column="20" TopLine="38"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="277" TopLine="270"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="327" Column="3" TopLine="307"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="284" TopLine="277"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="335" Column="17" TopLine="304"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="290" TopLine="278"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="328" Column="16" TopLine="308"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="137" TopLine="127"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="136" Column="56" TopLine="118"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="138" TopLine="127"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="202" Column="22" TopLine="182"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="139" TopLine="127"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="360" Column="21" TopLine="341"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="137" TopLine="126"/>
       </Position>
       <Position>
-        <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
-        <Caret Line="381" Column="41"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="138" TopLine="126"/>
       </Position>
       <Position>
-        <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
-        <Caret Line="81" Column="22" TopLine="56"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="139" TopLine="127"/>
       </Position>
       <Position>
-        <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
-        <Caret Line="299" Column="3" TopLine="267"/>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="143" TopLine="136"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="147" TopLine="136"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="151" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="157" TopLine="145"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="123" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="125" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="129" TopLine="117"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="137" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="138" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="139" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="143" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="147" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="151" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="157" TopLine="150"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="123" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="125" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <Caret Line="129" TopLine="117"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -375,11 +467,4 @@
       </List>
     </HistoryLists>
   </ProjectSession>
-  <Debugging>
-    <Watches>
-      <Item ClassAutoCast="True">
-        <Expression Value="sss"/>
-      </Item>
-    </Watches>
-  </Debugging>
 </CONFIG>

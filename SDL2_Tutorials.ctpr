@@ -25,7 +25,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events"/>
+            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events;Source\18_key_states"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -142,6 +142,10 @@
         <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -152,7 +156,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events"/>
+      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events;Source\18_key_states"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -174,9 +178,10 @@
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <DebugInfoType Value="dsDwarf2Set"/>
+        <DebugInfoType Value="dsDwarf3"/>
         <UseHeaptrc Value="True"/>
         <TrashVariables Value="True"/>
+        <UseExternalDbgSyms Value="True"/>
       </Debugging>
     </Linking>
   </CompilerOptions>

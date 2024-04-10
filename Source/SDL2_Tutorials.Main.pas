@@ -17,7 +17,7 @@ procedure Run;
 implementation
 
 uses
-  Case16_true_type_fonts;
+  Case18_key_states;
 
 procedure Text;
 begin

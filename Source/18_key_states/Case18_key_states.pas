@@ -1,4 +1,4 @@
-﻿unit Case17_mouse_events;
+﻿unit Case18_key_states;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -21,15 +21,6 @@ uses
   DeepStar.UString;
 
 type
-  TButtonSprite =
-    (
-    BUTTON_SPRITE_MOUSE_OUT = 0,
-    BUTTON_SPRITE_MOUSE_OVER_MOTION = 1,
-    BUTTON_SPRITE_MOUSE_DOWN = 2,
-    BUTTON_SPRITE_MOUSE_UP = 3,
-    BUTTON_SPRITE_TOTAL = 4
-    );
-
   TTexture = class(TObject)
   private
     _height: integer;
@@ -66,35 +57,9 @@ type
     property Height: integer read _height;
   end;
 
-  TButton = class(TObject)
-  private
-    //Top left position
-		_Position: TSDL_Point;
-		//Currently used global sprite
-		_CurrentSprite: TButtonSprite;
-
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    // Sets top left position
-    procedure SetPosition(x, y: integer);
-
-    // Handles mouse event
-    procedure HandleEvent(e: PSDL_Event);
-
-    // Shows button sprite
-    procedure Render();
-  end;
-
 const
   SCREEN_WIDTH = 640;
   SCREEN_HEIGHT = 480;
-
-  // Button constants
-  BUTTON_WIDTH = 300;
-  BUTTON_HEIGHT = 200;
-  TOTAL_BUTTONS = 4;
 
 var
   // The window we'll be rendering to
@@ -103,12 +68,8 @@ var
   // The window renderer
   gRenderer: PSDL_Renderer = nil;
 
-  // Mouse button sprites
-  gSpriteClips: array[0..pred(Ord(BUTTON_SPRITE_TOTAL))] of TSDL_Rect;
-  gButtonSpriteSheetTexture: TTexture;
-
-  // Buttons objects
-  gButtons: array[0.. pred(TOTAL_BUTTONS)] of TButton;
+  // Scene textures
+  gPressTexture, gUpTexture, gDownTexture, gLeftTexture, gRightTexture: TTexture;
 
   // Globally used font
   gFont: PTTF_Font = nil;
@@ -124,7 +85,8 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  i: Integer;
+  currentTexture: TTexture;
+  currentKeyStates: PByte;
 begin
   // Start up SDL and create window
   if not Init then
@@ -133,11 +95,11 @@ begin
   end
   else
   begin
-    gButtonSpriteSheetTexture := TTexture.Create;
-
-    for i := 0 to High(gButtons) do
-      gButtons[i] := TButton.Create;
-
+    gPressTexture := TTexture.Create;
+    gUpTexture := TTexture.Create;
+    gDownTexture := TTexture.Create;
+    gLeftTexture := TTexture.Create;
+    gRightTexture := TTexture.Create;
     try
       // Load media
       if not loadMedia then
@@ -151,6 +113,9 @@ begin
 
         // Event handler
         e := Default(TSDL_Event);
+
+        //Current rendered texture
+        currentTexture := TTexture(nil);
 
         // While application is running
         while not quit do
@@ -168,10 +133,28 @@ begin
               end;
             end;
 
-            // Handle button events
-            for i := 0 to TOTAL_BUTTONS - 1 do
+            // Set texture based on current keystate
+            currentKeyStates := PByte(nil);
+            currentKeyStates := SDL_GetKeyboardState(nil);
+            if currentKeyStates[SDL_SCANCODE_UP].ToBoolean then
             begin
-              gButtons[i].HandleEvent(@e);
+              CURRENTTEXTURE := gUpTexture;
+            end
+            else if currentKeyStates[SDL_SCANCODE_DOWN].ToBoolean then
+            begin
+              currentTexture := gDownTexture;
+            end
+            else if currentKeyStates[SDL_SCANCODE_LEFT].ToBoolean then
+            begin
+              currentTexture := gLeftTexture;
+            end
+            else if currentKeyStates[SDL_SCANCODE_RIGHT].ToBoolean then
+            begin
+              currentTexture := gRightTexture;
+            end
+            else
+            begin
+              currentTexture := gPressTexture;
             end;
           end;
 
@@ -179,21 +162,19 @@ begin
           SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
           SDL_RenderClear(gRenderer);
 
-          // Render buttons
-          for i := 0 to TOTAL_BUTTONS - 1 do
-          begin
-            gButtons[i].Render;
-          end;
+          // Render current texture
+          currentTexture.Render(0, 0);
 
           //Update screen
           SDL_RenderPresent(gRenderer);
         end;
       end;
     finally
-      for i := 0 to High(gButtons) do
-        FreeAndNil(gButtons[i]);
-
-      gButtonSpriteSheetTexture.Free;
+      gPressTexture.Free;
+      gUpTexture.Free;
+      gDownTexture.Free;
+      gLeftTexture.Free;
+      gRightTexture.Free;
     end;
   end;
 
@@ -260,37 +241,51 @@ end;
 
 function LoadMedia(): boolean;
 const
-  imgButton = '../Source/17_mouse_events/button.png';
+  imgPress = '../Source/18_key_states/press.png';
+  imgUp = '../Source/18_key_states/up.png';
+  imgDown = '../Source/18_key_states/down.png';
+  imgLeft = '../Source/18_key_states/left.png';
+  imgRight = '../Source/18_key_states/right.png';
 var
   success: boolean;
-  i: Integer;
 begin
   // Loading success flag
   success := boolean(true);
 
-  // Load sprites
-  if not gButtonSpriteSheetTexture.LoadFromFile(imgButton) then
-  begin
-    WriteLn('Failed to load button sprite texture!');
-    success := false;
-  end
-  else
-  begin
-    // Set sprites
-    for i := 0 to Ord(BUTTON_SPRITE_TOTAL) - 1 do
-    begin
-      gSpriteClips[i].x := 0;
-      gSpriteClips[i].y := i * 200;
-      gSpriteClips[i].w := BUTTON_WIDTH;
-      gSpriteClips[i].h := BUTTON_HEIGHT;
-    end;
+  // Load press texture
+	if not gPressTexture.loadFromFile(imgPress) then
+	begin
+  		WriteLn('Failed to load press texture!');
+  		success := false;
   end;
 
-  // Set buttons in corners
-  gButtons[0].setPosition(0, 0);
-  gButtons[1].setPosition(SCREEN_WIDTH - BUTTON_WIDTH, 0);
-  gButtons[2].setPosition(0, SCREEN_HEIGHT - BUTTON_HEIGHT);
-  gButtons[3].setPosition(SCREEN_WIDTH - BUTTON_WIDTH, SCREEN_HEIGHT - BUTTON_HEIGHT);
+	// Load up texture
+	if not gUpTexture.loadFromFile(imgUp) then
+	begin
+  		WriteLn('Failed to load up texture!');
+  		success := false;
+  end;
+
+  // Load down texture
+	if not gDownTexture.loadFromFile(imgDown) then
+	begin
+  		WriteLn('Failed to load down texture!');
+  		success := false;
+  end;
+
+  // Load left texture
+	if not gLeftTexture.loadFromFile(imgLeft) then
+	begin
+  		WriteLn('Failed to load left texture!');
+  		success := false;
+  end;
+
+  // Load right texture
+	if not gRightTexture.loadFromFile(imgRight) then
+	begin
+  		WriteLn('Failed to load right texture!');
+  		success := false;
+  end;
 
   Result := success;
 end;
@@ -306,87 +301,6 @@ begin
   // Quit SDL subsystems
   IMG_Quit();
   SDL_Quit();
-end;
-
-{ TButton }
-
-constructor TButton.Create;
-begin
-  _Position := Default(TSDL_Point);
-  _CurrentSprite := TButtonSprite.BUTTON_SPRITE_MOUSE_OUT;
-end;
-
-destructor TButton.Destroy;
-begin
-  inherited Destroy;
-end;
-
-procedure TButton.HandleEvent(e: PSDL_Event);
-var
-  x, y: Integer;
-  inside: Boolean;
-begin
-  // If mouse event happened
-  if (e^.type_ = SDL_MOUSEMOTION)
-    or (e^.type_ = SDL_MOUSEBUTTONDOWN)
-    or (e^.type_ = SDL_MOUSEBUTTONUP) then
-  begin
-    // Get mouse position
-    x := integer(0);
-    y := integer(0);
-    SDL_GetMouseState(@x, @y);
-
-    // Check if mouse is in button
-    inside := boolean(true);
-
-    // Mouse is left of the button
-    if x < _Position.x then
-    begin
-      inside := false;
-    end
-    // Mouse is right of the button
-    else if x > _Position.x + BUTTON_WIDTH then
-    begin
-      inside := false;
-    end
-    // Mouse above the button
-    else if y < _Position.y then
-    begin
-      inside := false;
-    end
-    // Mouse below the button
-    else if y > _Position.y + BUTTON_HEIGHT then
-    begin
-      inside := false;
-    end;
-
-    // Mouse is outside button
-    if not inside then
-    begin
-      _CurrentSprite := BUTTON_SPRITE_MOUSE_OUT;
-    end
-    else // Mouse is inside button
-    begin
-      // Set mouse over sprite
-      case e^.type_ of
-        SDL_MOUSEMOTION: _CurrentSprite := BUTTON_SPRITE_MOUSE_OVER_MOTION;
-        SDL_MOUSEBUTTONDOWN: _CurrentSprite := BUTTON_SPRITE_MOUSE_DOWN;
-        SDL_MOUSEBUTTONUP: _CurrentSprite := BUTTON_SPRITE_MOUSE_UP;
-      end;
-    end;
-  end;
-end;
-
-procedure TButton.Render();
-begin
-  //Show current button sprite
-  gButtonSpriteSheetTexture.Render(_Position.x, _Position.y, @gSpriteClips[Ord(_CurrentSprite)]);
-end;
-
-procedure TButton.SetPosition(x, y: integer);
-begin
-  _Position.x := x;
-  _Position.y := y;
 end;
 
 { TTexture }

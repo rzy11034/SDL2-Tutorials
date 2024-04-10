@@ -27,7 +27,9 @@ uses
   Case13_alpha_blending,
   Case15_rotation_and_flipping,
   Case14_animated_sprites_and_vsync,
-  Case16_true_type_fonts, Case17_mouse_events;
+  Case16_true_type_fonts,
+  Case17_mouse_events,
+  Case18_key_states;
 
 var
   gLoaderSDL2: TLoaderSDL2;
