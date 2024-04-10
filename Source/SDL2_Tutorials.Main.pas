@@ -17,7 +17,7 @@ procedure Run;
 implementation
 
 uses
-  Case15_rotation_and_flipping;
+  Case16_true_type_fonts;
 
 procedure Text;
 begin

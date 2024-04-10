@@ -1,4 +1,4 @@
-﻿unit Case16_true_type_fonts;
+﻿unit Case17_mouse_events;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -21,6 +21,15 @@ uses
   DeepStar.UString;
 
 type
+  TButtonSprite =
+    (
+    BUTTON_SPRITE_MOUSE_OUT = 0,
+    BUTTON_SPRITE_MOUSE_OVER_MOTION = 1,
+    BUTTON_SPRITE_MOUSE_DOWN = 2,
+    BUTTON_SPRITE_MOUSE_UP = 3,
+    BUTTON_SPRITE_TOTAL = 4
+    );
+
   TTexture = class(TObject)
   private
     _height: integer;
@@ -41,8 +50,8 @@ type
     procedure Clean;
 
     // Renders texture at given point
-    procedure Render(x, y: integer; clip: PSDL_Rect = nil; angle:double=0;
-      center: PSDL_Point=nil; flip: TSDL_RendererFlags = SDL_FLIP_NONE);
+    procedure Render(x, y: integer; clip: PSDL_Rect = nil; angle: double = 0;
+      center: PSDL_Point = nil; flip: TSDL_RendererFlags = SDL_FLIP_NONE);
 
     //Set color modulation
     procedure SetColor(red, green, blue: byte);
@@ -57,9 +66,35 @@ type
     property Height: integer read _height;
   end;
 
+  TButton = class(TObject)
+  private
+    //Top left position
+		_Position: TSDL_Point;
+		//Currently used global sprite
+		_CurrentSprite: TButtonSprite;
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    // Sets top left position
+    procedure SetPosition(x, y: integer);
+
+    // Handles mouse event
+    procedure HandleEvent(e: PSDL_Event);
+
+    // Shows button sprite
+    procedure Render();
+  end;
+
 const
   SCREEN_WIDTH = 640;
   SCREEN_HEIGHT = 480;
+
+  // Button constants
+  BUTTON_WIDTH = 300;
+  BUTTON_HEIGHT = 200;
+  TOTAL_BUTTONS = 4;
 
 var
   // The window we'll be rendering to
@@ -148,7 +183,7 @@ end;
 
 function Init(): boolean;
 var
-  success:  boolean;
+  success: boolean;
   imgFlags: integer;
 begin
   success := boolean(true);
@@ -257,6 +292,33 @@ begin
   SDL_Quit();
 end;
 
+{ TButton }
+
+constructor TButton.Create;
+begin
+
+end;
+
+destructor TButton.Destroy;
+begin
+  inherited Destroy;
+end;
+
+procedure TButton.HandleEvent(e: PSDL_Event);
+begin
+
+end;
+
+procedure TButton.Render();
+begin
+
+end;
+
+procedure TButton.SetPosition(x, y: integer);
+begin
+
+end;
+
 { TTexture }
 
 constructor TTexture.Create;
@@ -336,7 +398,7 @@ begin
   textSurface := TTF_RenderText_Solid(gFont, textureText.ToPAnsiChar, textColor);
   if textSurface = nil then
   begin
-    WriteLnF('Unable to render text surface! SDL_ttf Error: %s', [SDL_GetError()])
+    WriteLnF('Unable to render text surface! SDL_ttf Error: %s', [SDL_GetError()]);
   end
   else
   begin
