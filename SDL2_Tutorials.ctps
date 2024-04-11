@@ -11,18 +11,17 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="13"/>
-        <CursorPos X="23" Y="31"/>
+        <CursorPos X="26" Y="19"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3"/>
-        <CursorPos X="16" Y="13"/>
+        <CursorPos X="10" Y="31"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -134,7 +133,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="117"/>
         <CursorPos X="5" Y="134"/>
-        <UsageCount Value="154"/>
+        <UsageCount Value="175"/>
       </Unit>
       <Unit>
         <Filename Value="Source\12_color_modulation\Case12_color_modulation.pas"/>
@@ -143,7 +142,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="164"/>
         <CursorPos X="34" Y="162"/>
-        <UsageCount Value="128"/>
+        <UsageCount Value="149"/>
       </Unit>
       <Unit>
         <Filename Value="Source\13_alpha_blending\Case13_alpha_blending.pas"/>
@@ -152,7 +151,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="109"/>
         <CursorPos X="19" Y="87"/>
-        <UsageCount Value="126"/>
+        <UsageCount Value="147"/>
       </Unit>
       <Unit>
         <Filename Value="Source\14_animated_sprites_and_vsync\Case14_animated_sprites_and_vsync.pas"/>
@@ -161,7 +160,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="342"/>
         <CursorPos X="42" Y="344"/>
-        <UsageCount Value="123"/>
+        <UsageCount Value="144"/>
       </Unit>
       <Unit>
         <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
@@ -170,7 +169,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="311"/>
         <CursorPos X="5" Y="351"/>
-        <UsageCount Value="107"/>
+        <UsageCount Value="128"/>
       </Unit>
       <Unit>
         <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
@@ -179,7 +178,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="93"/>
         <CursorPos X="63" Y="110"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="69"/>
       </Unit>
       <Unit>
         <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
@@ -188,7 +187,34 @@
         <WindowIndex Value="0"/>
         <TopLine Value="500"/>
         <CursorPos X="80" Y="503"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="50"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="407"/>
+        <CursorPos X="49" Y="413"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\19_gamepads_and_joysticks\Case19_gamepads_and_joysticks.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="423"/>
+        <CursorPos X="21" Y="424"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="453"/>
+        <CursorPos X="5" Y="491"/>
+        <UsageCount Value="38"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
@@ -196,7 +222,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="23" Y="70"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2.pas"/>
@@ -205,7 +231,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4182"/>
         <CursorPos X="6" Y="4190"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_gfx.pas"/>
@@ -213,7 +239,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_image.pas"/>
@@ -221,7 +247,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_mixer.pas"/>
@@ -229,7 +255,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_net.pas"/>
@@ -237,7 +263,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\libsdl2_ttf.pas"/>
@@ -245,7 +271,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Lib\sdl2_loader.pas"/>
@@ -253,7 +279,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="28" Y="58"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
@@ -261,9 +287,9 @@
         <UnitName Value="libSDL2"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="60"/>
-        <CursorPos X="4" Y="77"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="2341"/>
+        <CursorPos X="26" Y="2361"/>
+        <UsageCount Value="15"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\sdl2_loader.pas"/>
@@ -272,16 +298,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="29"/>
         <CursorPos X="20" Y="45"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="455"/>
-        <CursorPos X="26" Y="459"/>
-        <UsageCount Value="2"/>
+        <TopLine Value="274"/>
+        <CursorPos X="28" Y="277"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_ttf.pas"/>
@@ -291,18 +317,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="60"/>
         <CursorPos X="4" Y="77"/>
-        <UsageCount Value="10"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="134"/>
-        <CursorPos X="40" Y="157"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
@@ -311,7 +326,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="518"/>
         <CursorPos X="3" Y="536"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
@@ -321,129 +336,160 @@
         <WindowIndex Value="0"/>
         <TopLine Value="515"/>
         <CursorPos X="3" Y="515"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="79"/>
+        <CursorPos X="22" Y="26"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_mixer.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="libSDL2_mixer"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="118"/>
+        <CursorPos X="4" Y="138"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\ctypes.pp"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="43"/>
+        <CursorPos X="3" Y="63"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="81" Y="9"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelpo.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="29"/>
+        <CursorPos X="3" Y="38"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="SysUtils"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="3" Y="38"/>
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="23">
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="155" Column="77" TopLine="133"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" Column="42" TopLine="7"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="256" Column="11" TopLine="250"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" TopLine="10"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="263" TopLine="251"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="27" TopLine="11"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="270" TopLine="263"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" TopLine="12"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="277" TopLine="270"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="27" TopLine="12"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="284" TopLine="277"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="497" Column="5" TopLine="459"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="290" TopLine="278"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="20" Column="17"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="137" TopLine="127"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="89" Column="51"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="138" TopLine="127"/>
+        <Filename Value="SDL2_Tutorials.ppr"/>
+        <Caret Line="19" Column="26"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="139" TopLine="127"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Column="30" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="137" TopLine="126"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="104" TopLine="88"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="138" TopLine="126"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="238" Column="31" TopLine="211"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="139" TopLine="127"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="26" TopLine="11"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="143" TopLine="136"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="241" Column="15" TopLine="211"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="147" TopLine="136"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="316" Column="41" TopLine="224"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="151" TopLine="144"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="301" Column="40" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="157" TopLine="145"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="335" Column="14" TopLine="102"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="123" TopLine="116"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="98" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="125" TopLine="116"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="28" Column="22" TopLine="11"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="129" TopLine="117"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="43" TopLine="17"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="137" TopLine="130"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="274" Column="47" TopLine="315"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="138" TopLine="130"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="175" Column="38" TopLine="149"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="139" TopLine="130"/>
+        <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
+        <Caret Line="161" Column="41" TopLine="134"/>
       </Position>
       <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="143" TopLine="131"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="147" TopLine="140"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="151" TopLine="140"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="157" TopLine="150"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="123" TopLine="116"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="125" TopLine="116"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
-        <Caret Line="129" TopLine="117"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="20" Column="9" TopLine="4"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -47,121 +47,121 @@ SDL2教程
 	- Rotate and flip your textures in SDL2.
 
 16. True Type Fonts
-	Render text with TTF fonts in SDL2.
+	- Render text with TTF fonts in SDL2.
 	
 17. Mouse Events
-	Handle mouse input with SDL2.
+	- Handle mouse input with SDL2.
 
 18. Key States
-	Query current key state with SDL2.
+	- Query current key state with SDL2.
 
 19. Gamepads and Joysticks
-	Use gamepads and joysticks with SDL2.
+	- Use gamepads and joysticks with SDL2.
 	
 20. Force Feedback
-	Make your controllers rumble with SDL2.
+	- Make your controllers rumble with SDL2.
 	
 21. Sound Effects and Music
-	Play sound with SDL2 and SDL_mixer.
+	- Play sound with SDL2 and SDL_mixer.
 	
 22. Timing
-	Use time with SDL2.
+	- Use time with SDL2.
 	
 23. Advanced Timers
-	Start, stop, pause, and unpause timers with SDL2.
+	- Start, stop, pause, and unpause timers with SDL2.
 	
 24. Calculating Frame Rate
-	Calculate the frame rate for your SDL 2 applications.
+	- Calculate the frame rate for your SDL 2 applications.
 	
 25. Capping Frame Rate
-	Manually keep a constant frame rate with SDL2.
+	- Manually keep a constant frame rate with SDL2.
 	
 26. Motion
-	Move around game objects in SDL2.
+	- Move around game objects in SDL2.
 	
 27. Collision Detection
-	Check for collision SDL2.
+	- Check for collision SDL2.
 	
-Per-Pixel Collision Detection
-	Check collision with any image in SDL2.
+28. Per-Pixel Collision Detection
+	- Check collision with any image in SDL2.
 	
-Circular Collision Detection
-	Check for collision with circles in SDL2.
+30. Circular Collision Detection
+	- Check for collision with circles in SDL2.
 	
-Scrolling
-	Scroll through levels with a camera in SDL2.
+31. Scrolling
+	- Scroll through levels with a camera in SDL2.
 	
-Scrolling Backgrounds
-	Make infinite scrolling backgrounds in SDL2.
+32. Scrolling Backgrounds
+	- Make infinite scrolling backgrounds in SDL2.
 	
-Text Input And Clipboard Handling
-	Use text input and the clipboard in SDL2.
+33. Text Input And Clipboard Handling
+	- Use text input and the clipboard in SDL2.
 	
-File Reading and Writing
-	Load and save binary files in SDL2.
+34. File Reading and Writing
+	- Load and save binary files in SDL2.
 	
-Audio Recording
-	Record and playback audio in SDL2.
+35. Audio Recording
+	- Record and playback audio in SDL2.
 	
-Window Events
-	Handle resizable windows in SDL2.
+36. Window Events
+	- Handle resizable windows in SDL2.
 	
-Multiple Windows
-	Handle multiple windows in SDL2.
+37. Multiple Windows
+	- Handle multiple windows in SDL2.
 	
-Multiple Displays
-	Handle multiple monitors in SDL2.
+38. Multiple Displays
+	- Handle multiple monitors in SDL2.
 	
-Particle Engines
-	Make particle effects in SDL2.
+39. Particle Engines
+	- Make particle effects in SDL2.
 	
-Tiling
-	Make levels with tiling engines in SDL2.
+40. Tiling
+	- Make levels with tiling engines in SDL2.
 	
-Texture Manipulation
-	Get and modify texture pixel data in SDL2.
+41. Texture Manipulation
+	- Get and modify texture pixel data in SDL2.
 	
-Bitmap Fonts
-	Render bitmap fonts in SDL2.
+42. Bitmap Fonts
+	- Render bitmap fonts in SDL2.
 	
-Texture Streaming
-	Stream to textures in SDL2.
+43. Texture Streaming
+	- Stream to textures in SDL2.
 	
-Render to Texture
-	Render to a texture in SDL2.
+44. Render to Texture
+	- Render to a texture in SDL2.
 	
-Frame Independent Movement
-	Move around at any frame rate in SDL2.
+45. Frame Independent Movement
+	- Move around at any frame rate in SDL2.
 	
-Timer Callbacks
-	Run timer callbacks in SDL2.
+46. Timer Callbacks
+	- Run timer callbacks in SDL2.
 	
-Multithreading
-	Run multithreaded applications in SDL2.
+47. Multithreading
+	- Run multithreaded applications in SDL2.
 	
-Semaphores
-	Lock data between threads in SDL2.
+48. Semaphores
+	- Lock data between threads in SDL2.
 	
-Atomic Operations
-	Synchronize your threads at a CPU level in SDL2.
+49. Atomic Operations
+	- Synchronize your threads at a CPU level in SDL2.
 	
-Mutexes and Conditions
-	Synchronize threads with signaling in SDL2.
+50. Mutexes and Conditions
+	- Synchronize threads with signaling in SDL2.
 	
-SDL and OpenGL 2
-	Support Legacy OpenGL in SDL2.
+51. SDL and OpenGL 2
+	- Support Legacy OpenGL in SDL2.
 	
-SDL and Modern OpenGL
-	Make modern shader based OpenGL programs in SDL2.
+52. SDL and Modern OpenGL
+	- Make modern shader based OpenGL programs in SDL2.
 	
-Hello Mobile
-	Port your Windows/Linux/MacOS games to Android/iOS.
+53. Hello Mobile
+	- Port your Windows/Linux/MacOS games to Android/iOS.
 	
-Extensions and Changing Orientation
-	Use SDL_image/SDL_ttf/SDL_mixer and handle orientation on Android/iOS.
+54. Extensions and Changing Orientation
+	- Use SDL_image/SDL_ttf/SDL_mixer and handle orientation on Android/iOS.
 	
-Touches
-	Learn how to handle touch input from an Android/iOS device in SDL2.
+55. Touches
+	- Learn how to handle touch input from an Android/iOS device in SDL2.
 	
-Multi Touch
-	Learn how to handle multi touch gestures on Android/iOS with SDL2. 
+56. Multi Touch
+	- Learn how to handle multi touch gestures on Android/iOS with SDL2. 
