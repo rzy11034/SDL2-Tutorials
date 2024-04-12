@@ -29,7 +29,7 @@ uses
   Case14_animated_sprites_and_vsync,
   Case16_true_type_fonts,
   Case17_mouse_events,
-  Case18_key_states, Case19_gamepads_and_joysticks, Case20_force_feedback, Case21_sound_effects_and_music;
+  Case18_key_states, Case19_gamepads_and_joysticks, Case20_force_feedback, Case21_sound_effects_and_music, Case22_timing;
 
 var
   gLoaderSDL2: TLoaderSDL2;
