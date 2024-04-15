@@ -1,4 +1,4 @@
-﻿unit Case22_timing;
+﻿unit Case23_advanced_timers;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -58,6 +58,36 @@ type
     property Height: integer read _height;
   end;
 
+  TTimer = class(TObject)
+  private
+    // The clock time when the timer started
+    _StartTicks: integer;
+
+    // The ticks stored when the timer was paused
+    _PausedTicks: integer;
+
+    // The timer status
+    _Paused: boolean;
+    _Started: boolean;
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    // The various clock actions
+    procedure Start();
+		procedure Stop();
+		procedure Pause();
+		procedure Unpause();
+
+    // Gets the timer's time
+    function GetTicks(): integer;
+
+    //Checks the status of the timer
+    function IsStarted(): boolean;
+    function IsPaused(): boolean;
+  end;
+
 const
   SCREEN_WIDTH = 640;
   SCREEN_HEIGHT = 480;
@@ -70,7 +100,7 @@ var
   gRenderer: PSDL_Renderer = nil;
 
   // Scene texture
-  gTimeTextTexture, gPromptTextTexture: TTexture;
+  gTimeTextTexture, gPausePromptTexture, gStartPromptTexture: TTexture;
 
   // Globally used font
   gFont: PTTF_Font = nil;
@@ -86,9 +116,9 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  startTime: Integer;
   timeText: TStringBuilder;
   textColor: TSDL_Color;
+  timer: TTimer;
 begin
   // Start up SDL and create window
   if not Init then
@@ -97,9 +127,13 @@ begin
   end
   else
   begin
-    gPromptTextTexture := TTexture.Create;
     gTimeTextTexture := TTexture.Create;
+    gPausePromptTexture := TTexture.Create;
+    gStartPromptTexture := TTexture.Create;
     timeText := TStringBuilder.Create;
+
+    // The application timer
+	  timer := TTimer.Create;
     try
       // Load media
       if not loadMedia then
@@ -114,8 +148,7 @@ begin
         // Event handler
         e := Default(TSDL_Event);
 
-        // Current time start time
-        startTime:= Integer(0);
+
 
         // Set text color as black
         textColor := Default(TSDL_Color);
@@ -141,15 +174,37 @@ begin
               case e.key.keysym.sym of
                 SDLK_ESCAPE: quit := true;
 
-                SDLK_RETURN: startTime := SDL_GetTicks();
+                SDLK_s:
+                begin
+                  if timer.IsStarted then
+                  begin
+                    timer.Stop;
+                  end
+                  else
+                  begin
+                    timer.Start;
+                  end;
+                end;
+
+                SDLK_p:
+                begin
+                  if timer.IsPaused then
+                  begin
+                    timer.Unpause;
+                  end
+                  else
+                  begin
+                    timer.Pause;
+                  end;
+                end;
               end;
             end;
           end;
 
           //Set text to be rendered
           timeText.Clear;
-          timeText.Append('Milliseconds since start time ');
-          timeText.Append(SDL_GetTicks() - startTime);
+          timeText.Append('Seconds since start time ');
+          timeText.Append(timer.GetTicks / 1000);
 
           if not gTimeTextTexture.LoadFromRenderedText(timeText.ToString, textColor) then
           begin
@@ -161,18 +216,22 @@ begin
           SDL_RenderClear(gRenderer);
 
           // Render textures
-          gPromptTextTexture.Render((SCREEN_HEIGHT - gPromptTextTexture.Width) div 2, 0);
-          gTimeTextTexture.Render((SCREEN_WIDTH - gPromptTextTexture.Width) div 2,
-            (SCREEN_HEIGHT - gPromptTextTexture.Width) div 2);
+          gStartPromptTexture.Render((SCREEN_HEIGHT - gStartPromptTexture.Width) div 2, 0);
+          gPausePromptTexture.Render((SCREEN_WIDTH - gPausePromptTexture.Width) div 2,
+            gPausePromptTexture.Height);
+          gTimeTextTexture.Render((SCREEN_WIDTH - gStartPromptTexture.Width) div 2,
+            (SCREEN_HEIGHT - gTimeTextTexture.Height) div 2);
 
           // Update screen
           SDL_RenderPresent(gRenderer);
         end;
       end;
     finally
+      timer.Free;
       timeText.Free;
       gTimeTextTexture.Free;
-      gPromptTextTexture.Free;
+      gPausePromptTexture.Free;
+      gStartPromptTexture.Free;
     end;
   end;
 
@@ -247,7 +306,7 @@ end;
 
 function LoadMedia(): boolean;
 const
-  ttfLazy = '../Source/22_timing/lazy.ttf';
+  ttfLazy = '../Source/23_advanced_timers/lazy.ttf';
 var
   success: boolean;
   textColor: TSDL_Colour;
@@ -274,11 +333,19 @@ begin
       a := 255;
     end;
 
-    // Load prompt texture
-    if not gPromptTextTexture.LoadFromRenderedText('Press Enter to Reset Start Time.',
+    // Load stop prompt texture
+    if not gStartPromptTexture.LoadFromRenderedText('Press S to Start or Stop the Timer.',
       textColor) then
     begin
-      WriteLn('Failed to load prompt texture!');
+      WriteLn('Unable to render start/stop prompt texture!');
+      success := false;
+    end;
+
+    // Load pause prompt texture
+    if not gPausePromptTexture.LoadFromRenderedText('Press P to Pause or Unpause the Timer.',
+      textColor) then
+    begin
+      WriteLn('Unable to render pause/unpause prompt texture!');
       success := false;
     end;
   end;
@@ -288,6 +355,10 @@ end;
 
 procedure Close();
 begin
+  // Free global font
+  TTF_CloseFont(gFont);
+  gFont := nil;
+
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
   SDL_DestroyWindow(gWindow);
@@ -295,9 +366,120 @@ begin
   gRenderer := nil;
 
   // Quit SDL subsystems
-  Mix_Quit();
+  TTF_Quit();
   IMG_Quit();
   SDL_Quit();
+end;
+
+{ TTimer }
+
+constructor TTimer.Create;
+begin
+  inherited;
+
+  //Initialize the variables
+  _StartTicks := 0;
+  _PausedTicks := 0;
+
+  _Paused := false;
+  _Started := false;
+end;
+
+destructor TTimer.Destroy;
+begin
+  inherited Destroy;
+end;
+
+function TTimer.GetTicks: integer;
+var
+  time_: Integer;
+begin
+  // The actual timer time
+  time_ := integer(0);
+
+  // If the timer is running
+  if _Started then
+  begin
+    // If the timer is paused
+    if _Paused then
+    begin
+      // Return the number of ticks when the timer was paused
+      time_ := _PausedTicks;
+    end
+    else
+    begin
+      // Return the current time minus the start time
+      time_ := SDL_GetTicks() - _StartTicks;
+    end;
+  end;
+
+  Result := time_;
+end;
+
+function TTimer.IsPaused(): boolean;
+begin
+  Result := _Paused;
+end;
+
+function TTimer.IsStarted(): boolean;
+begin
+  Result := _Started;
+end;
+
+procedure TTimer.Pause;
+begin
+  // If the timer is running and isn't already paused
+  if _Started and (not _Paused) then
+  begin
+    //Pause the timer
+    _Paused := true;
+
+    //Calculate the paused ticks
+    _PausedTicks := SDL_GetTicks() - _StartTicks;
+    _StartTicks := 0;
+  end;
+end;
+
+procedure TTimer.Start;
+begin
+  //Start the timer
+  _Started := true;
+
+  //Unpause the timer
+  _Paused := false;
+
+  //Get the current clock time
+  _StartTicks := SDL_GetTicks();
+  _PausedTicks := 0;
+end;
+
+procedure TTimer.Stop;
+begin
+  //Stop the timer
+  _Started := false;
+
+  //Unpause the timer
+  _Paused := false;
+
+  //Clear tick variables
+  _StartTicks := 0;
+  _PausedTicks := 0;
+end;
+
+procedure TTimer.Unpause;
+begin
+  // If the timer is running and paused
+  if _Started and _Paused then
+  begin
+    //Unpause the timer
+    _Paused := false;
+
+    //Reset the starting ticks
+    _StartTicks := SDL_GetTicks() - _PausedTicks;
+
+    //Reset the paused ticks
+    _PausedTicks := 0;
+  end;
 end;
 
 { TTexture }

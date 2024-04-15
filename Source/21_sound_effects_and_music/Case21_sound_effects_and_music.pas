@@ -244,7 +244,7 @@ begin
 
         if Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0 then
         begin
-          WriteLnF('SDL_mixer could not initialize! SDL_mixer Error: %',
+          WriteLnF('SDL_mixer could not initialize! SDL_mixer Error: %s',
             [SDL_GetError()]);
           success := false;
         end;

@@ -12,6 +12,10 @@ uses
   DeepStar.Utils,
   SDL2_Loader,
   SDL2_Tutorials.Main,
+  SDL2_Tutorials.Utils,
+  SDL2_Tutorials.Texture,
+  SDL2_Tutorials.Dot,
+  SDL2_Tutorials.Timer,
   Case01_hello_SDL,
   Case02_getting_an_image_on_the_screen,
   Case03_event_driven_programming,
@@ -29,7 +33,16 @@ uses
   Case14_animated_sprites_and_vsync,
   Case16_true_type_fonts,
   Case17_mouse_events,
-  Case18_key_states, Case19_gamepads_and_joysticks, Case20_force_feedback, Case21_sound_effects_and_music, Case22_timing;
+  Case18_key_states,
+  Case19_gamepads_and_joysticks,
+  Case20_force_feedback,
+  Case21_sound_effects_and_music,
+  Case22_timing,
+  Case23_advanced_timers,
+  Case24_calculating_frame_rate,
+  Case25_capping_frame_rate,
+  Case26_motion,
+  Case27_collision_detection;
 
 var
   gLoaderSDL2: TLoaderSDL2;

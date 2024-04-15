@@ -11,7 +11,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="26" Y="19"/>
+        <TopLine Value="4"/>
+        <CursorPos X="29" Y="45"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -20,8 +21,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="17"/>
-        <CursorPos X="6" Y="23"/>
+        <TopLine Value="7"/>
+        <CursorPos X="7" Y="20"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -142,7 +143,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="164"/>
         <CursorPos X="34" Y="162"/>
-        <UsageCount Value="184"/>
+        <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="Source\13_alpha_blending\Case13_alpha_blending.pas"/>
@@ -151,7 +152,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="109"/>
         <CursorPos X="19" Y="87"/>
-        <UsageCount Value="182"/>
+        <UsageCount Value="199"/>
       </Unit>
       <Unit>
         <Filename Value="Source\14_animated_sprites_and_vsync\Case14_animated_sprites_and_vsync.pas"/>
@@ -160,7 +161,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="342"/>
         <CursorPos X="42" Y="344"/>
-        <UsageCount Value="179"/>
+        <UsageCount Value="196"/>
       </Unit>
       <Unit>
         <Filename Value="Source\15_rotation_and_flipping\Case15_rotation_and_flipping.pas"/>
@@ -169,7 +170,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="311"/>
         <CursorPos X="5" Y="351"/>
-        <UsageCount Value="163"/>
+        <UsageCount Value="180"/>
       </Unit>
       <Unit>
         <Filename Value="Source\16_true_type_fonts\Case16_true_type_fonts.pas"/>
@@ -178,7 +179,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="93"/>
         <CursorPos X="63" Y="110"/>
-        <UsageCount Value="104"/>
+        <UsageCount Value="121"/>
       </Unit>
       <Unit>
         <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
@@ -187,7 +188,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="500"/>
         <CursorPos X="80" Y="503"/>
-        <UsageCount Value="85"/>
+        <UsageCount Value="102"/>
       </Unit>
       <Unit>
         <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
@@ -196,7 +197,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="407"/>
         <CursorPos X="49" Y="413"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="95"/>
       </Unit>
       <Unit>
         <Filename Value="Source\19_gamepads_and_joysticks\Case19_gamepads_and_joysticks.pas"/>
@@ -205,7 +206,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="423"/>
         <CursorPos X="21" Y="424"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="93"/>
       </Unit>
       <Unit>
         <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
@@ -214,16 +215,108 @@
         <WindowIndex Value="0"/>
         <TopLine Value="453"/>
         <CursorPos X="5" Y="491"/>
-        <UsageCount Value="73"/>
+        <UsageCount Value="90"/>
       </Unit>
       <Unit>
         <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="454"/>
-        <CursorPos X="5" Y="488"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="81"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\22_timing\Case22_timing.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="256"/>
+        <CursorPos X="11" Y="259"/>
+        <UsageCount Value="71"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\23_advanced_timers\Case23_advanced_timers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="300"/>
+        <CursorPos X="41" Y="334"/>
+        <UsageCount Value="37"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="265"/>
+        <CursorPos X="62" Y="265"/>
+        <UsageCount Value="37"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\25_capping_frame_rate\Case25_capping_frame_rate.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="287"/>
+        <CursorPos X="39" Y="295"/>
+        <UsageCount Value="37"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="87"/>
+        <CursorPos X="15" Y="69"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Units\SDL2_Tutorials.Texture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="60"/>
+        <CursorPos Y="70"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="107"/>
+        <CursorPos X="25" Y="122"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Units\SDL2_Tutorials.Timer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="111"/>
+        <CursorPos Y="118"/>
+        <UsageCount Value="36"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\27_collision_detection\Case27_collision_detection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="76"/>
+        <CursorPos X="13" Y="94"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Units\SDL2_Tutorials.Utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="37" Y="14"/>
+        <UsageCount Value="23"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
@@ -231,16 +324,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="23" Y="70"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="70"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="libSDL2"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="564"/>
-        <CursorPos X="19" Y="578"/>
+        <TopLine Value="1518"/>
+        <CursorPos X="13" Y="1526"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit>
@@ -251,7 +344,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="29"/>
         <CursorPos X="20" Y="45"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
@@ -260,7 +353,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="274"/>
         <CursorPos X="28" Y="277"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_ttf.pas"/>
@@ -270,7 +363,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="60"/>
         <CursorPos X="4" Y="77"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
@@ -279,7 +372,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="518"/>
         <CursorPos X="3" Y="536"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
@@ -289,7 +382,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="515"/>
         <CursorPos X="3" Y="515"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_mixer.pas"/>
@@ -299,7 +392,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="118"/>
         <CursorPos X="4" Y="138"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\ctypes.pp"/>
@@ -308,7 +401,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="43"/>
         <CursorPos X="3" Y="63"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
@@ -316,7 +409,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="81" Y="9"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelpo.inc"/>
@@ -325,7 +418,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="29"/>
         <CursorPos X="3" Y="38"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
@@ -334,18 +427,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="38"/>
-        <UsageCount Value="6"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\22_timing\Case22_timing.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="261"/>
-        <CursorPos X="18" Y="278"/>
-        <UsageCount Value="54"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\strings.pp"/>
@@ -355,89 +437,137 @@
         <WindowIndex Value="0"/>
         <TopLine Value="121"/>
         <CursorPos X="66" Y="113"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="10" Y="13"/>
+        <UsageCount Value="19"/>
+        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="19">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="26" Column="42" TopLine="7"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="163" TopLine="151"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="26" TopLine="10"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="170" TopLine="163"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="27" TopLine="11"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="180" TopLine="174"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="26" TopLine="12"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="59" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="27" TopLine="12"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="60" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="SDL2_Tutorials.ppr"/>
-        <Caret Line="19" Column="26"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="63" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="26" TopLine="11"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="149" TopLine="142"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="28" Column="22" TopLine="11"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="150" TopLine="142"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="43" TopLine="17"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="158" TopLine="151"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="20" Column="9" TopLine="4"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="149" TopLine="142"/>
       </Position>
       <Position>
-        <Filename Value="Source\22_timing\Case22_timing.pas"/>
-        <Caret Line="19" Column="4"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="161" TopLine="154"/>
       </Position>
       <Position>
-        <Filename Value="Source\22_timing\Case22_timing.pas"/>
-        <Caret Line="17" Column="11"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="63" TopLine="56"/>
       </Position>
       <Position>
-        <Filename Value="Source\22_timing\Case22_timing.pas"/>
-        <Caret Line="50" Column="29" TopLine="79"/>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="57" Column="29" TopLine="48"/>
       </Position>
       <Position>
-        <Filename Value="Source\22_timing\Case22_timing.pas"/>
-        <Caret Line="277" Column="34" TopLine="262"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="37" Column="34" TopLine="13"/>
       </Position>
       <Position>
-        <Filename Value="Source\22_timing\Case22_timing.pas"/>
-        <Caret Line="287" Column="18" TopLine="255"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="103" Column="22" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="24" Column="53" TopLine="20"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="44" Column="41" TopLine="27"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="35" TopLine="24"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="105" Column="3" TopLine="98"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="36" TopLine="24"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="44" Column="26" TopLine="27"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="37" TopLine="25"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="105" Column="3" TopLine="102"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="35" Column="35" TopLine="17"/>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="44" Column="39" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
+        <Caret Line="49" Column="49" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="69" Column="52" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="70" Column="35" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="75" Column="49" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="97" Column="13" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\27_collision_detection\Case27_collision_detection.pas"/>
+        <Caret Line="60" Column="33" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="97" Column="13" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="69" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="103" Column="23" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\26_motion\Case26_motion.pas"/>
+        <Caret Line="70" TopLine="63"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -462,15 +592,6 @@
     </HistoryLists>
   </ProjectSession>
   <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Line Value="23"/>
-      </Item>
-    </BreakPoints>
     <Watches>
       <Item ClassAutoCast="True">
         <Expression Value="p"/>
