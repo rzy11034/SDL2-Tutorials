@@ -13,9 +13,6 @@ uses
   SDL2_Loader,
   SDL2_Tutorials.Main,
   SDL2_Tutorials.Utils,
-  SDL2_Tutorials.Texture,
-  SDL2_Tutorials.Dot,
-  SDL2_Tutorials.Timer,
   Case01_hello_SDL,
   Case02_getting_an_image_on_the_screen,
   Case03_event_driven_programming,
@@ -42,7 +39,8 @@ uses
   Case24_calculating_frame_rate,
   Case25_capping_frame_rate,
   Case26_motion,
-  Case27_collision_detection;
+  Case27_collision_detection,
+  Case28_per_pixel_collision_detection;
 
 var
   gLoaderSDL2: TLoaderSDL2;

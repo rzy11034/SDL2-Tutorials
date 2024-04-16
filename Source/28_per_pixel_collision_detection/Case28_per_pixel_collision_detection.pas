@@ -1,4 +1,4 @@
-﻿unit Case26_motion;
+﻿unit Case28_per_pixel_collision_detection;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -19,7 +19,10 @@ uses
   libSDL2_ttf,
   libSDL2_mixer,
   DeepStar.Utils,
-  DeepStar.UString;
+  DeepStar.UString,
+  DeepStar.DSA.Interfaces,
+  DeepStar.DSA.Linear.ArrayList,
+  SDL2_Tutorials.Utils;
 
 type
   TTexture = class(TObject)
@@ -62,6 +65,10 @@ type
   end;
 
   TDot = class(TObject)
+  strict private type
+    IList_SDL_Rect = specialize IList<TSDL_Rect>;
+    TList_SDL_Rect = specialize TArrayList<TSDL_Rect>;
+
   public const
     // The dimensions of the dot
     DOT_WIDTH = 20;
@@ -81,7 +88,10 @@ type
     _VelX, _VelY: integer;
 
     // Dot's collision box
-    _Collider: TSDL_Rect;
+    _Colliders: IList_SDL_Rect;
+
+    // Moves the collision boxes relative to the dot's offset
+    procedure __ShiftColliders();
 
   public
     constructor Create(aWindows: PSDL_Window; aTexture: TTexture);
@@ -91,12 +101,13 @@ type
     procedure HandleEvent(var e: TSDL_Event);
 
     // Moves the dot
-    procedure Move(var wall: TSDL_Rect);
+    procedure Move(otherColliders: IList_SDL_Rect);
 
     // Shows the dot on the screen
     procedure Render();
 
-    function CheckCollision(a, b: TSDL_Rect): boolean;
+    // Gets the collision boxes
+    function GetColliders: IList_SDL_Rect;
   end;
 
   TTimer = class(TObject)
@@ -165,6 +176,7 @@ begin
   else
   begin
     gDotTexture := TTexture.Create(gRenderer);
+    dot := TDot.Create(gWindow, gDotTexture);
     try
       // Load media
       if not loadMedia then
@@ -173,53 +185,53 @@ begin
       end
       else
       begin
-        dot := TDot.Create(gWindow, gDotTexture);
-        try
-          // Main loop flag
-          quit := boolean(false);
+        // Main loop flag
+        quit := boolean(false);
 
-          // Event handler
-          e := Default(TSDL_Event);
+        // Event handler
+        e := Default(TSDL_Event);
 
-          wall := Default(TSDL_Rect);
+        wall := Default(TSDL_Rect);
+        wall := SDL_Rect(300, 40, 40, 400);
 
-          // While application is running
-          while not quit do
+        // While application is running
+        while not quit do
+        begin
+          while SDL_PollEvent(@e) <> 0 do
           begin
-            while SDL_PollEvent(@e) <> 0 do
+            if e.type_ = SDL_QUIT_EVENT then
             begin
-              if e.type_ = SDL_QUIT_EVENT then
-              begin
-                quit := true;
-              end
-              else if e.type_ = SDL_KEYDOWN then
-              begin
-                case e.key.keysym.sym of
-                  SDLK_ESCAPE: quit := true;
-                end;
+              quit := true;
+            end
+            else if e.type_ = SDL_KEYDOWN then
+            begin
+              case e.key.keysym.sym of
+                SDLK_ESCAPE: quit := true;
               end;
-
-              dot.HandleEvent(e);
             end;
 
-            //wall := Default(TSDL_Rect);
-            dot.Move(wall);
-
-            // Clear screen
-            SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
-            SDL_RenderClear(gRenderer);
-
-            //Render objects
-            dot.render();
-
-            // Update screen
-            SDL_RenderPresent(gRenderer);
+            dot.HandleEvent(e);
           end;
-        finally
-          dot.Free;
+
+          //dot.Move(wall);
+
+          // Clear screen
+          SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
+          SDL_RenderClear(gRenderer);
+
+          // Render wall
+          SDL_SetRenderDrawColor(gRenderer, $00, $00, $00, $FF);
+          SDL_RenderDrawRect(gRenderer, @wall);
+
+          //Render objects
+          dot.render();
+
+          // Update screen
+          SDL_RenderPresent(gRenderer);
         end;
       end;
     finally
+      dot.Free;
       gDotTexture.Free;
     end;
   end;
@@ -295,7 +307,7 @@ end;
 
 function LoadMedia(): boolean;
 const
-  imgDot = '../Source/26_motion/dot.bmp';
+  imgDot = '../Source/27_collision_detection/dot.bmp';
 var
   success: boolean;
 begin
@@ -449,54 +461,90 @@ begin
   _PosX := 0;
   _PosY := 0;
 
-  // Set collision box dimension
-  _Collider.w := DOT_WIDTH;
-  _Collider.h := DOT_HEIGHT;
-
   // Initialize the velocity
   _VelX := 0;
   _VelY := 0;
-end;
 
-function TDot.CheckCollision(a, b: TSDL_Rect): boolean;
-var
-  leftA, leftB, rightA, rightB, topA, topB, bottomA, bottomB: Integer;
-begin
-  // The sides of the rectangles
-  leftA := integer(0);
-  leftB := integer(0);
-  rightA := integer(0);
-  rightB := integer(0);
-  topA := integer(0);
-  topB := integer(0);
-  bottomA := integer(0);
-  bottomB := integer(0);
+  // Create the necessary SDL_Rects
+  _Colliders := TList_SDL_Rect.Create(11);
 
-  // Calculate the sides of rect A
-  leftA := a.x;
-  rightA := a.x + a.w;
-  topA := a.y;
-  bottomA := a.y + a.h;
+  // Initialize the collision boxes' width and height
+  //_Colliders[0].w := 6;
+  //_Colliders[0].h := 1;
+  //
+  //_Colliders[1].w := 10;
+  //_Colliders[1].h := 1;
+  //
+  //_Colliders[2].w := 14;
+  //_Colliders[2].h := 1;
+  //
+  //_Colliders[3].w := 16;
+  //_Colliders[3].h := 2;
+  //
+  //_Colliders[4].w := 18;
+  //_Colliders[4].h := 2;
+  //
+  //_Colliders[5].w := 20;
+  //_Colliders[5].h := 6;
+  //
+  //_Colliders[6].w := 18;
+  //_Colliders[6].h := 2;
+  //
+  //_Colliders[7].w := 16;
+  //_Colliders[7].h := 2;
+  //
+  //_Colliders[8].w := 14;
+  //_Colliders[8].h := 1;
+  //
+  //_Colliders[9].w := 10;
+  //_Colliders[9].h := 1; //_Colliders[0].w := 6;
+  //_Colliders[0].h := 1;
+  //
+  //_Colliders[1].w := 10;
+  //_Colliders[1].h := 1;
+  //
+  //_Colliders[2].w := 14;
+  //_Colliders[2].h := 1;
+  //
+  //_Colliders[3].w := 16;
+  //_Colliders[3].h := 2;
+  //
+  //_Colliders[4].w := 18;
+  //_Colliders[4].h := 2;
+  //
+  //_Colliders[5].w := 20;
+  //_Colliders[5].h := 6;
+  //
+  //_Colliders[6].w := 18;
+  //_Colliders[6].h := 2;
+  //
+  //_Colliders[7].w := 16;
+  //_Colliders[7].h := 2;
+  //
+  //_Colliders[8].w := 14;
+  //_Colliders[8].h := 1;
+  //
+  //_Colliders[9].w := 10;
+  //_Colliders[9].h := 1;
+  //
+  //_Colliders[10].w := 6;
+  //_Colliders[10].h := 1;
+  //
+  //_Colliders[10].w := 6;
+  //_Colliders[10].h := 1;
 
-  // Calculate the sides of rect B
-  leftB := b.x;
-  rightB := b.x + b.w;
-  topB := b.y;
-  bottomB := b.y + b.h;
-
-  // If any of the sides from A are outside of B
-  if bottomA <= topB then Exit(false);
-  if topA >= bottomB then Exit(false);
-  if rightA <= leftB then Exit(false);
-  if leftA >= rightB then Exit(false);
-
-  // If none of the sides from A are outside B
-  Result := true;
+  //Initialize colliders relative to position
+  __ShiftColliders();
 end;
 
 destructor TDot.Destroy;
 begin
   inherited Destroy;
+end;
+
+function TDot.GetColliders: IList_SDL_Rect;
+begin
+
 end;
 
 procedure TDot.HandleEvent(var e: TSDL_Event);
@@ -524,39 +572,44 @@ begin
   end;
 end;
 
-procedure TDot.Move(var wall: TSDL_Rect);
+procedure TDot.Move(otherColliders: IList_SDL_Rect);
 begin
   //Move the dot left or right
-  _PosX += _VelX;
-  _Collider.x := _PosX;
-
-  //If the dot went too far to the left or right
-  if (_PosX < 0) or (_PosX + DOT_WIDTH > _ScreenWidth)
-    or CheckCollision(_Collider, wall) then
-  begin
-    //Move back
-    _PosX -= _VelX;
-    _Collider.x := _PosX;
-  end;
-
-  // Move the dot up or down
-  _PosY += _VelY;
-  _Collider.y := _PosY;
-
-  // If the dot went too far up or down
-  if (_PosY < 0) or (_PosY + DOT_HEIGHT > _ScreenHeight)
-    or CheckCollision(_Collider, wall) then
-  begin
-    // Move back
-    _PosY -= _VelY;
-    _Collider.y := _PosY
-  end;
+  //_PosX += _VelX;
+  //_Collider.x := _PosX;
+  //
+  ////If the dot went too far to the left or right
+  //if (_PosX < 0) or (_PosX + DOT_WIDTH > _ScreenWidth)
+  //  or CheckCollision(_Collider, wall) then
+  //begin
+  //  //Move back
+  //  _PosX -= _VelX;
+  //  _Collider.x := _PosX;
+  //end;
+  //
+  //// Move the dot up or down
+  //_PosY += _VelY;
+  //_Collider.y := _PosY;
+  //
+  //// If the dot went too far up or down
+  //if (_PosY < 0) or (_PosY + DOT_HEIGHT > _ScreenHeight)
+  //  or CheckCollision(_Collider, wall) then
+  //begin
+  //  // Move back
+  //  _PosY -= _VelY;
+  //  _Collider.y := _PosY
+  //end;
 end;
 
 procedure TDot.Render();
 begin
   // Show the dot
   _Texture.render(_PosX, _PosY);
+end;
+
+procedure TDot.__ShiftColliders();
+begin
+
 end;
 
 { TTexture }
