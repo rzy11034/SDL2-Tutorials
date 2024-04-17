@@ -18,7 +18,7 @@ procedure Run;
 implementation
 
 uses
-  Case30_scrolling;
+  Case32_text_input_and_clipboard_handling;
 
 procedure Text;
 begin

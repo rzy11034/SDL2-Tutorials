@@ -12,7 +12,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="17"/>
-        <CursorPos X="45" Y="25"/>
+        <CursorPos X="23" Y="25"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -22,7 +22,7 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
-        <CursorPos X="19" Y="21"/>
+        <CursorPos X="23" Y="28"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -179,7 +179,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="93"/>
         <CursorPos X="63" Y="110"/>
-        <UsageCount Value="155"/>
+        <UsageCount Value="160"/>
       </Unit>
       <Unit>
         <Filename Value="Source\17_mouse_events\Case17_mouse_events.pas"/>
@@ -188,7 +188,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="500"/>
         <CursorPos X="80" Y="503"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="141"/>
       </Unit>
       <Unit>
         <Filename Value="Source\18_key_states\Case18_key_states.pas"/>
@@ -197,7 +197,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="407"/>
         <CursorPos X="49" Y="413"/>
-        <UsageCount Value="129"/>
+        <UsageCount Value="134"/>
       </Unit>
       <Unit>
         <Filename Value="Source\19_gamepads_and_joysticks\Case19_gamepads_and_joysticks.pas"/>
@@ -206,7 +206,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="423"/>
         <CursorPos X="21" Y="424"/>
-        <UsageCount Value="127"/>
+        <UsageCount Value="132"/>
       </Unit>
       <Unit>
         <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
@@ -215,14 +215,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="453"/>
         <CursorPos X="5" Y="491"/>
-        <UsageCount Value="124"/>
+        <UsageCount Value="129"/>
       </Unit>
       <Unit>
         <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="120"/>
       </Unit>
       <Unit>
         <Filename Value="Source\22_timing\Case22_timing.pas"/>
@@ -231,7 +231,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="11" Y="259"/>
-        <UsageCount Value="105"/>
+        <UsageCount Value="110"/>
       </Unit>
       <Unit>
         <Filename Value="Source\23_advanced_timers\Case23_advanced_timers.pas"/>
@@ -240,7 +240,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="41" Y="334"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
@@ -249,7 +249,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="207"/>
         <CursorPos X="62" Y="265"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="Source\25_capping_frame_rate\Case25_capping_frame_rate.pas"/>
@@ -258,7 +258,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="431"/>
         <CursorPos X="41" Y="436"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="Source\26_motion\Case26_motion.pas"/>
@@ -267,7 +267,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="421"/>
         <CursorPos X="5" Y="438"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="Source\27_collision_detection\Case27_collision_detection.pas"/>
@@ -276,16 +276,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="668"/>
         <CursorPos X="5" Y="708"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="64"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Utils.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="13"/>
-        <CursorPos Y="21"/>
-        <UsageCount Value="57"/>
+        <TopLine Value="10"/>
+        <CursorPos X="17" Y="44"/>
+        <UsageCount Value="62"/>
       </Unit>
       <Unit>
         <Filename Value="Source\28_per_pixel_collision_detection\Case28_per_pixel_collision_detection.pas"/>
@@ -294,7 +294,44 @@
         <WindowIndex Value="0"/>
         <TopLine Value="768"/>
         <CursorPos X="23" Y="784"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="38"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\29_circular_collision_detection\Case29_circular_collision_detection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="3" Y="23"/>
+        <UsageCount Value="29"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="785"/>
+        <CursorPos X="5" Y="820"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\31_scrolling_backgrounds\Case31_scrolling_backgrounds.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="654"/>
+        <CursorPos X="65" Y="668"/>
+        <UsageCount Value="25"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="401"/>
+        <CursorPos X="12" Y="238"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Texture.pas"/>
@@ -332,11 +369,12 @@
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="libSDL2"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="2587"/>
-        <CursorPos X="4" Y="2607"/>
+        <TopLine Value="2915"/>
+        <CursorPos X="33" Y="2919"/>
         <UsageCount Value="29"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\sdl2_loader.pas"/>
@@ -353,7 +391,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="267"/>
-        <CursorPos X="3" Y="284"/>
+        <CursorPos X="3" Y="279"/>
         <UsageCount Value="11"/>
       </Unit>
       <Unit>
@@ -409,8 +447,8 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="81" Y="9"/>
-        <UsageCount Value="2"/>
+        <TopLine Value="10"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelpo.inc"/>
@@ -560,114 +598,127 @@
         <CursorPos X="5" Y="42"/>
         <UsageCount Value="11"/>
       </Unit>
-      <Unit>
-        <Filename Value="Source\29_circular_collision_detection\Case29_circular_collision_detection.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <CursorPos X="3" Y="23"/>
-        <UsageCount Value="24"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="341"/>
-        <CursorPos Y="350"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="21">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="107" Column="21" TopLine="81"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="325" TopLine="319"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="640" Column="3" TopLine="637"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="327" TopLine="319"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="107" Column="29" TopLine="88"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="325" TopLine="319"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="640" Column="3" TopLine="637"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="326" TopLine="270"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="119" Column="28" TopLine="91"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="185" Column="13" TopLine="174"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="638" Column="17" TopLine="617"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="509" Column="6" TopLine="495"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="104" Column="20" TopLine="94"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="309" TopLine="303"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="642" Column="34" TopLine="128"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="312" TopLine="303"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="211" Column="17" TopLine="204"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="313" TopLine="303"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="247" Column="31" TopLine="227"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="321" TopLine="314"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="180" Column="33" TopLine="153"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="322" TopLine="314"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="258" Column="30" TopLine="186"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="323" TopLine="314"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="175" Column="10" TopLine="155"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="324" TopLine="314"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="366" Column="38" TopLine="346"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="309" TopLine="347"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="266" TopLine="189"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="197" TopLine="190"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="641" Column="16" TopLine="631"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="198" TopLine="190"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="104" Column="19" TopLine="104"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="616" TopLine="617"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="640" Column="21" TopLine="465"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="618" TopLine="616"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="348" Column="47" TopLine="447"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="621" TopLine="616"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="350" TopLine="334"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="635" Column="35" TopLine="555"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="353" TopLine="337"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="208" Column="26" TopLine="181"/>
       </Position>
       <Position>
-        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
-        <Caret Line="360" TopLine="351"/>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="223" Column="44" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="227" Column="42" TopLine="206"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="226" Column="54" TopLine="206"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="236" Column="53" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="235" Column="88" TopLine="213"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="253" Column="39" TopLine="235"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
+        <Caret Line="3146" Column="26" TopLine="3129"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="295" Column="28" TopLine="282"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
+        <Caret Line="253" Column="17" TopLine="237"/>
       </Position>
     </JumpHistory>
     <RunParams>

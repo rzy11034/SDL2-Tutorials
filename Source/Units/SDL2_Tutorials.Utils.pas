@@ -12,6 +12,7 @@ uses
 
 function SDL_Point(aX, aY: integer): TSDL_Point;
 function SDL_Rect(aX, aY, aW, aH: integer): TSDL_Rect;
+function SDL_Color(r, g, b, a: byte): TSDL_Color;
 
 implementation
 
@@ -25,6 +26,20 @@ begin
   begin
     x := aX; y := aY; w := aW; h := aH;
   end;
+
+  Result := res;
+end;
+
+function SDL_Color(r, g, b, a: byte): TSDL_Color;
+var
+  res: TSDL_Color;
+begin
+  res := Default(TSDL_Color);
+
+  res.a := a;
+  res.b := b;
+  res.g := g;
+  res.a := a;
 
   Result := res;
 end;
