@@ -40,7 +40,9 @@ uses
   Case25_capping_frame_rate,
   Case26_motion,
   Case27_collision_detection,
-  Case28_per_pixel_collision_detection;
+  Case28_per_pixel_collision_detection,
+  Case29_circular_collision_detection,
+  Case30_scrolling;
 
 var
   gLoaderSDL2: TLoaderSDL2;

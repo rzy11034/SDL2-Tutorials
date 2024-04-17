@@ -1,4 +1,4 @@
-﻿unit Case28_per_pixel_collision_detection;
+﻿unit Case29_circular_collision_detection;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -20,10 +20,15 @@ uses
   libSDL2_mixer,
   DeepStar.Utils,
   DeepStar.UString,
-  DeepStar.DSA.Interfaces,
-  DeepStar.DSA.Linear.ArrayList;
+  SDL2_Tutorials.Utils;
 
 type
+  // A circle stucture
+  PCircle = {%H-}^TCircle;
+  TCircle = record
+    x, y, r: integer;
+  end;
+
   TTexture = class(TObject)
   private
     _Renderer: PSDL_Renderer;
@@ -64,10 +69,6 @@ type
   end;
 
   TDot = class(TObject)
-  public type
-    IList_PSDL_Rect = specialize IList<PSDL_Rect>;
-    TList_PSDL_Rect = specialize TArrayList<PSDL_Rect>;
-
   public const
     // The dimensions of the dot
     DOT_WIDTH = 20;
@@ -87,7 +88,7 @@ type
     _VelX, _VelY: integer;
 
     // Dot's collision box
-    _Colliders: IList_PSDL_Rect;
+    _Collider: TCircle;
 
     // Moves the collision boxes relative to the dot's offset
     procedure __ShiftColliders();
@@ -100,15 +101,19 @@ type
     procedure HandleEvent(var e: TSDL_Event);
 
     // Moves the dot
-    procedure Move(otherColliders: IList_PSDL_Rect);
+    procedure Move(var square: TSDL_Rect; var circle: TCircle);
 
     // Shows the dot on the screen
     procedure Render();
 
     // Gets the collision boxes
-    function GetColliders: IList_PSDL_Rect;
+    function GetCollider: TCircle;
 
-    function CheckCollision(a, b: IList_PSDL_Rect): boolean;
+    // Circle/Circle collision detector
+    function CheckCollision(var a, b: TCircle): boolean;
+    function CheckCollision(var a: TCircle; var b: TSDL_Rect): boolean;
+
+    function DistanceSquared(x1, y1, x2, y2: integer):Double;
   end;
 
   TTimer = class(TObject)
@@ -167,6 +172,8 @@ var
   quit: boolean;
   e: TSDL_Event;
   dot, otherDot: TDot;
+  wall: TSDL_Rect;
+  tempDot: TCircle;
 begin
   // Start up SDL and create window
   if not Init then
@@ -190,9 +197,12 @@ begin
         // Event handler
         e := Default(TSDL_Event);
 
-        dot := TDot.Create(gWindow, gDotTexture, 0, 0);
+        dot := TDot.Create(gWindow, gDotTexture, TDot.DOT_WIDTH div 2, TDot.DOT_HEIGHT div 2);
         otherDot := TDot.Create(gWindow, gDotTexture, SCREEN_WIDTH div 4, SCREEN_HEIGHT div 4);
         try
+          wall := Default(TSDL_Rect);
+          wall := SDL_Rect(300, 40, 40, 400);
+
           // While application is running
           while not quit do
           begin
@@ -213,11 +223,17 @@ begin
             end;
 
             // Move the dot and check collision
-            dot.Move(otherDot.GetColliders);
+            tempDot := Default(TCircle);
+            tempDot := otherDot.GetCollider;
+            dot.Move(wall, tempDot);
 
             // Clear screen
             SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
             SDL_RenderClear(gRenderer);
+
+            // Render wall
+            SDL_SetRenderDrawColor(gRenderer, $00, $00, $00, $FF);
+            SDL_RenderDrawRect(gRenderer, @wall);
 
             //Render objects
             dot.Render();
@@ -307,7 +323,7 @@ end;
 
 function LoadMedia(): boolean;
 const
-  imgDot = '../Source/28_per_pixel_collision_detection/dot.bmp';
+  imgDot = '../Source/29_circular_collision_detection/dot.bmp';
 var
   success: boolean;
 begin
@@ -452,9 +468,6 @@ end;
 { TDot }
 
 constructor TDot.Create(aWindows: PSDL_Window; aTexture: TTexture; ax, ay: integer);
-var
-  p: PSDL_Rect;
-  i: integer;
 begin
   _ScreenWidth := aWindows^.w;
   _ScreenHeight := aWindows^.h;
@@ -464,118 +477,103 @@ begin
   _PosX := ax;
   _PosY := ay;
 
+  // Set collision circle size
+	_Collider.r := DOT_WIDTH div 2;
+
   // Initialize the velocity
   _VelX := 0;
   _VelY := 0;
-
-  // Create the necessary SDL_Rects
-  _Colliders := TList_PSDL_Rect.Create(11);
-  for i := 0 to _Colliders.Count - 1 do
-  begin
-    new(p);
-    p^ := Default(TSDL_Rect);
-    _Colliders[i] := p;
-  end;
-
-  // Initialize the collision boxes' width and height
-  _Colliders[0]^.w := 6;
-  _Colliders[0]^.h := 1;
-
-  _Colliders[1]^.w := 10;
-  _Colliders[1]^.h := 1;
-
-  _Colliders[2]^.w := 14;
-  _Colliders[2]^.h := 1;
-
-  _Colliders[3]^.w := 16;
-  _Colliders[3]^.h := 2;
-
-  _Colliders[4]^.w := 18;
-  _Colliders[4]^.h := 2;
-
-  _Colliders[5]^.w := 20;
-  _Colliders[5]^.h := 6;
-
-  _Colliders[6]^.w := 18;
-  _Colliders[6]^.h := 2;
-
-  _Colliders[7]^.w := 16;
-  _Colliders[7]^.h := 2;
-
-  _Colliders[8]^.w := 14;
-  _Colliders[8]^.h := 1;
-
-  _Colliders[9]^.w := 10;
-  _Colliders[9]^.h := 1;
-
-  _Colliders[10]^.w := 6;
-  _Colliders[10]^.h := 1;
 
   //Initialize colliders relative to position
   __ShiftColliders();
 end;
 
-function TDot.CheckCollision(a, b: IList_PSDL_Rect): boolean;
+function TDot.CheckCollision(var a, b: TCircle): boolean;
 var
-  leftA, leftB, rightA, topA, topB, bottomA, bottomB, rightB, Abox, Bbox: integer;
+  totalRadiusSquared: Integer;
 begin
-  leftA := integer(0);
-  leftB := integer(0);
-  rightA := integer(0);
-  rightB := integer(0);
-  topA := integer(0);
-  topB := integer(0);
-  bottomA := integer(0);
-  bottomB := integer(0);
+  //Calculate total radius squared
+	totalRadiusSquared := integer(0);
+  totalRadiusSquared := a.r + b.r;
+	totalRadiusSquared := totalRadiusSquared * totalRadiusSquared;
 
-  // Go through the A boxes
-  for Abox := 0 to a.Count - 1 do
+  //If the distance between the centers of the circles is less than the sum of their radii
+  if DistanceSquared(a.x, a.y, b.x, b.y) < totalRadiusSquared then
   begin
-    // Calculate the sides of rect A
-    leftA := a[Abox]^.x;
-    rightA := a[Abox]^.x + a[Abox]^.w;
-    topA := a[Abox]^.y;
-    bottomA := a[Abox]^.y + a[Abox]^.h;
-
-    // Go through the B boxes
-    for Bbox := 0 to b.Count - 1 do
-    begin
-      //Calculate the sides of rect B
-      leftB := b[Bbox]^.x;
-      rightB := b[Bbox]^.x + b[Bbox]^.w;
-      topB := b[Bbox]^.y;
-      bottomB := b[Bbox]^.y + b[Bbox]^.h;
-
-      // If no sides from A are outside of B
-      if ((bottomA <= topB) or (topA >= bottomB) or (rightA <= leftB)
-        or (leftA >= rightB)) = false then
-      begin
-        // A collision is detected
-        Exit(true);
-      end;
-    end;
+    //The circles have collided
+    Exit(true);
   end;
 
-  // If neither set of collision boxes touched
+  Result := false;
+end;
+
+function TDot.CheckCollision(var a: TCircle; var b: TSDL_Rect): boolean;
+var
+  cX, cY: Integer;
+begin
+  //Closest point on collision box
+  cX:=integer(0);
+  cY:=integer(0);
+
+  //Find closest x offset
+  if a.x < b.x then
+  begin
+    cX := b.x;
+  end
+  else if a.x > b.x + b.w then
+  begin
+    cX := b.x + b.w;
+  end
+  else
+  begin
+    cX := a.x;
+  end;
+
+  //Find closest y offset
+  if a.y < b.y then
+  begin
+    cY := b.y;
+  end
+  else if a.y > b.y + b.h then
+  begin
+    cY := b.y + b.h;
+  end
+  else
+  begin
+    cY := a.y;
+  end;
+
+  //If the closest point is inside the circle
+  if DistanceSquared(a.x, a.y, cX, cY) < (a.r * a.r) then
+  begin
+    //This box and the circle have collided
+    Exit(true);
+  end;
+
   Result := false;
 end;
 
 destructor TDot.Destroy;
-var
-  i: integer;
 begin
-  for i := _Colliders.Count - 1 downto 0 do
-  begin
-    Dispose(_Colliders[i]);
-    _Colliders[i] := nil;
-  end;
-
   inherited Destroy;
 end;
 
-function TDot.GetColliders: IList_PSDL_Rect;
+function TDot.DistanceSquared(x1, y1, x2, y2: integer): double;
+var
+  deltaX, deltaY: integer;
 begin
-  Result := _Colliders;
+  deltaX := integer(0);
+  deltaY := integer(0);
+
+  deltaX := x2 - x1;
+  deltaY := y2 - y1;
+
+  Result := deltaX * deltaX + deltaY * deltaY;
+end;
+
+function TDot.GetCollider: TCircle;
+begin
+  Result := _Collider;
 end;
 
 procedure TDot.HandleEvent(var e: TSDL_Event);
@@ -603,60 +601,46 @@ begin
   end;
 end;
 
-procedure TDot.Move(otherColliders: IList_PSDL_Rect);
+procedure TDot.Move(var square: TSDL_Rect; var circle: TCircle);
 begin
   // Move the dot left or right
   _PosX += _VelX;
   __ShiftColliders;
 
   // If the dot collided or went too far to the left or right
-  if (_PosX < 0) or (_PosX + DOT_WIDTH > _ScreenWidth)
-    or CheckCollision(_Colliders, otherColliders) then
+  if (_PosX - _Collider.r < 0) or (_PosX + _Collider.r > SCREEN_WIDTH)
+    or checkCollision(_Collider, square) or checkCollision(_Collider, circle) then
   begin
     //Move back
     _PosX -= _VelX;
-    __ShiftColliders;
+    __ShiftColliders();
   end;
 
   // Move the dot up or down
   _PosY += _VelY;
   __ShiftColliders;
 
-  // If the dot went too far up or down
-  if (_PosY < 0) or (_PosY + DOT_HEIGHT > _ScreenHeight)
-    or CheckCollision(_Colliders, otherColliders) then
+  //If the dot collided or went too far up or down
+  if (_PosX - _Collider.r < 0) or (_PosX + _Collider.r > SCREEN_HEIGHT)
+    or CheckCollision(_Collider, square) or CheckCollision(_Collider, circle) then
   begin
-    // Move back
+    //Move back
     _PosY -= _VelY;
-    __ShiftColliders;
+    __ShiftColliders();
   end;
 end;
 
 procedure TDot.Render();
 begin
   // Show the dot
-  _Texture.render(_PosX, _PosY);
+  _Texture.render(_PosX - _Collider.r, _PosY - _Collider.r);
 end;
 
 procedure TDot.__ShiftColliders();
-var
-  r, set_: integer;
 begin
-  // The row offset
-  r := integer(0);
-
-  // Go through the dot's collision boxes
-  for set_ := 0 to _Colliders.Count - 1 do
-  begin
-    // Center the collision box
-    _Colliders[set_]^.x := _PosX + (DOT_WIDTH - _Colliders[set_]^.w) div 2;
-
-    //Set_ the collision box at its row offset
-    _Colliders[set_]^.y := _PosY + r;
-
-    //Move the row offset down the height of the collision box
-    r += _Colliders[set_]^.h;
-  end;
+  //Align collider to center of dot
+	_Collider.x := _PosX;
+	_Collider.y := _PosY;
 end;
 
 { TTexture }

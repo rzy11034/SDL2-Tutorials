@@ -25,7 +25,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events;Source\18_key_states;Source\19_gamepads_and_joysticks;Source\20_force_feedback;Source\21_sound_effects_and_music;Source\22_timing;Source\23_advanced_timers;Source\24_calculating_frame_rate;Source\25_capping_frame_rate;Source\26_motion;Source\Units;Source\27_collision_detection;Source\28_per_pixel_collision_detection"/>
+            <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events;Source\18_key_states;Source\19_gamepads_and_joysticks;Source\20_force_feedback;Source\21_sound_effects_and_music;Source\22_timing;Source\23_advanced_timers;Source\24_calculating_frame_rate;Source\25_capping_frame_rate;Source\26_motion;Source\Units;Source\27_collision_detection;Source\28_per_pixel_collision_detection;Source\29_circular_collision_detection;Source\30_scrolling"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -190,6 +190,14 @@
         <Filename Value="Source\28_per_pixel_collision_detection\Case28_per_pixel_collision_detection.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\29_circular_collision_detection\Case29_circular_collision_detection.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -200,7 +208,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events;Source\18_key_states;Source\19_gamepads_and_joysticks;Source\20_force_feedback;Source\21_sound_effects_and_music;Source\22_timing;Source\23_advanced_timers;Source\24_calculating_frame_rate;Source\25_capping_frame_rate;Source\26_motion;Source\Units;Source\27_collision_detection;Source\28_per_pixel_collision_detection"/>
+      <OtherUnitFiles Value="Source;Source\01_hello_SDL;Source\02_getting_an_image_on_the_screen;Source\03_event_driven_programming;Source\04_key_presses;Source\05_optimized_surface_loading_and_soft_stretching;Source\06_extension_libraries_and_loading_other_image_formats;Source\07_texture_loading_and_rendering;Source\08_geometry_rendering;Source\09_the_viewport;Source\10_color_keying;Source\11_clip_rendering_and_sprite_sheets;Source\12_color_modulation;Source\13_alpha_blending;Source\14_animated_sprites_and_vsync;Source\15_rotation_and_flipping;Source\16_true_type_fonts;Source\17_mouse_events;Source\18_key_states;Source\19_gamepads_and_joysticks;Source\20_force_feedback;Source\21_sound_effects_and_music;Source\22_timing;Source\23_advanced_timers;Source\24_calculating_frame_rate;Source\25_capping_frame_rate;Source\26_motion;Source\Units;Source\27_collision_detection;Source\28_per_pixel_collision_detection;Source\29_circular_collision_detection;Source\30_scrolling"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
