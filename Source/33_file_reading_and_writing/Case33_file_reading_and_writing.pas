@@ -1,4 +1,4 @@
-﻿unit Case31_scrolling_backgrounds;
+﻿unit Case33_file_reading_and_writing;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -16,10 +16,11 @@ implementation
 uses
   libSDL2,
   libSDL2_image,
-  libSDL2_ttf,
   libSDL2_mixer,
+  libSDL2_ttf,
   DeepStar.Utils,
-  DeepStar.UString;
+  DeepStar.UString,
+  SDL2_Tutorials.Utils;
 
 type
   // A circle stucture
@@ -33,12 +34,12 @@ type
     _Renderer: PSDL_Renderer;
     _Font: PTTF_Font;
 
-    _height: integer;
-    _width: integer;
-    _texture: PSDL_Texture;
+    _Height: integer;
+    _Width: integer;
+    _Texture: PSDL_Texture;
 
   public
-    constructor Create(aRenderer: PSDL_Renderer; aFont: PTTF_Font = nil);
+    constructor Create(aRenderer: PSDL_Renderer);
     destructor Destroy; override;
 
     // Loads image at specified path
@@ -63,8 +64,10 @@ type
     //Set alpha modulation
     procedure SetAlpha(alpha: byte);
 
-    property Width: integer read _width;
-    property Height: integer read _height;
+    function GetHeight: integer;
+    function GetWidth: integer;
+
+    property Font: PTTF_Font read _Font write _Font;
   end;
 
   TDot = class(TObject)
@@ -75,7 +78,7 @@ type
     //Maximum axis velocity of the dot
     DOT_VEL = 1;
 
-  private
+  strict private
     _Texture: TTexture;
 
     _ScreenWidth, _ScreenHeight: integer;
@@ -101,7 +104,7 @@ type
   end;
 
   TTimer = class(TObject)
-  private
+  strict private
     // The clock time when the timer started
     _StartTicks: integer;
 
@@ -139,6 +142,9 @@ const
   SCREEN_WIDTH = 640;
   SCREEN_HEIGHT = 480;
 
+  // Number of data integers
+  TOTAL_DATA = 10;
+
 var
   // The window we'll be rendering to
   gWindow: PSDL_Window = nil;
@@ -146,8 +152,15 @@ var
   // The window renderer
   gRenderer: PSDL_Renderer = nil;
 
+  // Globally used font
+  gFont: PTTF_Font = nil;
+
   // Scene texture
-  gDotTexture, gBGTexture: TTexture;
+  gPromptTextTexture: TTexture;
+  gDataTextures: array[0..TOTAL_DATA - 1] of TTexture;
+
+  // Data points
+  gData: array[0.. TOTAL_DATA - 1] of Sint32;
 
 // Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -158,10 +171,12 @@ procedure Close(); forward;
 
 procedure Main;
 var
-  quit: boolean;
+  quit, renderText: boolean;
   e: TSDL_Event;
-  dot: TDot;
-  scrollingOffset: Integer;
+  textColor: TSDL_Color;
+  inputText: string;
+  tempText: PAnsiChar;
+  i: integer;
 begin
   // Start up SDL and create window
   if not Init then
@@ -170,75 +185,105 @@ begin
   end
   else
   begin
-    gDotTexture := TTexture.Create(gRenderer);
-    gBGTexture := TTexture.Create(gRenderer);
-    try
-      // Load media
-      if not loadMedia then
+    gPromptTextTexture := TTexture.Create(gRenderer);
+
+    for i := 0 to TOTAL_DATA - 1 do
+      gDataTextures[i] := TTexture.Create(gRenderer);
+
+    // Load media
+    if not loadMedia then
+    begin
+      WriteLn('Failed to load media!');
+    end
+    else
+    begin
+      // Main loop flag
+      quit := boolean(false);
+
+      // Event handler
+      e := Default(TSDL_Event);
+
+      // Set text color as black
+      textColor := SDL_Color(0, 0, 0, $FF);
+
+      //The current input text.
+      inputText := 'Some Text';
+
+      // Enable text input
+      SDL_StartTextInput;
+
+      // While application is running
+      while not quit do
       begin
-        WriteLn('Failed to load media!');
-      end
-      else
-      begin
-        // Main loop flag
-        quit := boolean(false);
+        // The rerender text flag
+        renderText := false;
 
-        // Event handler
-        e := Default(TSDL_Event);
-
-        // The background scrolling offset
-        scrollingOffset := integer(0);
-
-        dot := TDot.Create(gWindow, gDotTexture, TDot.DOT_WIDTH div 2, TDot.DOT_HEIGHT div 2);
-        try
-          // While application is running
-          while not quit do
+        while SDL_PollEvent(@e) <> 0 do
+        begin
+          if e.type_ = SDL_QUIT_EVENT then
           begin
-            while SDL_PollEvent(@e) <> 0 do
-            begin
-              if e.type_ = SDL_QUIT_EVENT then
-              begin
-                quit := true;
-              end
-              else if e.type_ = SDL_KEYDOWN then
-              begin
-                case e.key.keysym.sym of
-                  SDLK_ESCAPE: quit := true;
-                end;
-              end;
-
-              dot.HandleEvent(e);
+            quit := true;
+          end
+          else if e.type_ = SDL_KEYDOWN then
+          begin
+            case e.key.keysym.sym of
+              SDLK_ESCAPE: quit := true;
             end;
 
-            // Move the dot and check collision
-            dot.Move();
+            // Handle backspace
+            if (e.key.keysym.sym = SDLK_BACKSPACE) and (inputText.Length > 0) then
+            begin
+              //lop off character
+              inputText := inputText + Chr(SDLK_BACKSPACE);
+              renderText := true;
+            end
+            // Handle copy
+            else if (e.key.keysym.sym = SDLK_c) and (SDL_GetModState() and KMOD_CTRL <> 0) then
+            begin
+              SDL_SetClipboardText(inputText.ToPAnsiChar);
+            end
+            // Handle paste
+            else if (e.key.keysym.sym = SDLK_v) and (SDL_GetModState() and KMOD_CTRL <> 0) then
+            begin
+              //Copy text from temporary buffer
+              tempText := Default(PAnsiChar);
+              tempText := SDL_GetClipboardText();
+              inputText := tempText;
+              SDL_free(tempText);
 
-            //Scroll background
-				    scrollingOffset -= 1;
-				    if scrollingOffset < -gBGTexture.Width then
-					    scrollingOffset := 0;
-
-            // Clear screen
-            SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
-            SDL_RenderClear(gRenderer);
-
-            // Render background
-            gBGTexture.render(scrollingOffset, 0);
-            gBGTexture.render(scrollingOffset + gBGTexture.Width, 0);
-
-            //Render objects
-            dot.Render();
-
-            // Update screen
-            SDL_RenderPresent(gRenderer);
+              renderText := true;
+            end;
+          end
+          // Special text input event
+          else if e.type_ = SDL_TEXTINPUT then
+          begin
+            //Not copy or pasting
+            if not ((SDL_GetModState() and KMOD_CTRL <> 0)
+              and (e.Text.Text[0] = 'c')
+              or (e.Text.Text[0] = 'C')
+              or (e.Text.Text[0] = 'v')
+              or (e.Text.Text[0] = 'V')) then
+            begin
+              //Append character
+              inputText += e.Text.Text;
+              renderText := true;
+            end;
           end;
-        finally
-          dot.Free;
         end;
+
+        // Clear screen
+        SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
+        SDL_RenderClear(gRenderer);
+
+        //Render text textures
+        gPromptTextTexture.Render((SCREEN_WIDTH - gPromptTextTexture.GetWidth()) div 2, 0);
+
+        // Update screen
+        SDL_RenderPresent(gRenderer);
       end;
-    finally
-      gBGTexture.Free;
-      gDotTexture.Free;
+
+      // Disable text input
+      SDL_StopTextInput();
     end;
   end;
 
@@ -313,26 +358,87 @@ end;
 
 function LoadMedia(): boolean;
 const
-  imgDot = '../Source/31_scrolling_backgrounds/dot.bmp';
-  imgBG = '../Source/31_scrolling_backgrounds/bg.png';
+  ttfLazy = '../Source/33_file_reading_and_writing/lazy.ttf';
+  fileName = '../Source/33_file_reading_and_writing/nums.bin';
 var
   success: boolean;
+  textColor, highlightColor: TSDL_Color;
+  file_: PSDL_RWops;
+  i: integer;
 begin
+  // Text rendering color
+  textColor := SDL_Color(0, 0, 0, 0);
+  highlightColor := SDL_Color(0, 0, 0, 0);
+
   // Loading success flag
   success := boolean(true);
 
   // Open the font
-  if not gDotTexture.LoadFromFile(imgDot) then
+  gFont := TTF_OpenFont(CrossFixFileName(ttfLazy).ToPAnsiChar, 28);
+  if gFont = nil then
   begin
-    WriteLn('Failed to load dot texture!');
+    WriteLnF('Failed to load lazy font! SDL_ttf Error: %s\', [SDL_GetError()]);
     success := false;
+  end
+  else
+  begin
+    gPromptTextTexture.Font := gFont;
+    if not gPromptTextTexture.LoadFromRenderedText('Enter Text:', textColor) then
+    begin
+      WriteLn('Failed to render prompt text!');
+      success := false;
+    end;
   end;
 
-  //Load background texture
-	if not gBGTexture.loadFromFile(imgBG) then
+  //Open file for reading in binary
+  file_ := PSDL_RWops(nil);
+  file_ := SDL_RWFromFile(CrossFixFileName(fileName).ToPAnsiChar, 'r+b'.ToPAnsiChar);
+
+  // File does not exist
+  if file_ = nil then
   begin
-    WriteLn('Failed to load background texture!');
-		success := false;
+    WriteLnF('Warning: Unable to open file! SDL Error: %s', [SDL_GetError()]);
+
+    // Create file for writing
+    file_ := SDL_RWFromFile(CrossFixFileName(fileName).ToPAnsiChar, 'w+b'.ToPAnsiChar);
+    if file_ <> nil then
+    begin
+      WriteLn('New file created!');
+
+      // Initialize data
+      for i := 0 to TOTAL_DATA - 1 do
+      begin
+        gData[i] := 0;
+        SDL_RWwrite(file_, &gData[i], sizeof(Sint32), 1);
+      end;
+
+      //Close file handler
+      SDL_RWclose(file_);
+    end
+    else
+    begin
+      WriteLnF('Error: Unable to create file! SDL Error: %s', [SDL_GetError()]);
+      success := false;
+    end;
+  end
+  else // File exists
+  begin
+    //Load data
+    WriteLn('Reading file...!');
+    for i := 0 to TOTAL_DATA - 1 do
+      SDL_RWread(file_, @gData[i], SizeOf(SInt32), 1);
+
+    // Close file handler
+    SDL_RWclose(file_);
+  end;
+
+  // Initialize data textures
+  gDataTextures[0].Font := gFont;
+  gDataTextures[0].LoadFromRenderedText(gData[0].ToString, highlightColor);
+  for i := 1 to TOTAL_DATA - 1 do
+  begin
+    gDataTextures[i].Font := gFont;
+    gDataTextures[i].LoadFromRenderedText(gData[i].ToString, textColor);
   end;
 
   Result := success;
@@ -340,6 +446,17 @@ end;
 
 procedure Close();
 begin
+
+
+  for i := 0 to TOTAL_DATA - 1 do
+    gDataTextures[i].Free;
+
+  gPromptTextTexture.Free;
+
+  // Free global font
+  TTF_CloseFont(gFont);
+  gFont := nil;
+
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
   SDL_DestroyWindow(gWindow);
@@ -478,7 +595,6 @@ begin
   // Initialize the velocity
   _VelX := 0;
   _VelY := 0;
-
 end;
 
 destructor TDot.Destroy;
@@ -542,21 +658,20 @@ end;
 
 { TTexture }
 
-constructor TTexture.Create(aRenderer: PSDL_Renderer; aFont: PTTF_Font);
+constructor TTexture.Create(aRenderer: PSDL_Renderer);
 begin
   _Renderer := aRenderer;
-  _Font := aFont;
 end;
 
 procedure TTexture.Clean;
 begin
   // Free texture if it exists
-  if _texture <> nil then
+  if _Texture <> nil then
   begin
-    SDL_DestroyTexture(_texture);
-    _texture := nil;
-    _width := 0;
-    _height := 0;
+    SDL_DestroyTexture(_Texture);
+    _Texture := nil;
+    _Width := 0;
+    _Height := 0;
   end;
 end;
 
@@ -565,6 +680,16 @@ begin
   Clean;
 
   inherited Destroy;
+end;
+
+function TTexture.GetHeight: integer;
+begin
+  Result := _Height;
+end;
+
+function TTexture.GetWidth: integer;
+begin
+  Result := _Width;
 end;
 
 function TTexture.LoadFromFile(path: string): boolean;
@@ -599,15 +724,15 @@ begin
     end
     else
     begin
-      _width := loadedSurface^.w;
-      _height := loadedSurface^.h;
+      _Width := loadedSurface^.w;
+      _Height := loadedSurface^.h;
     end;
 
     SDL_FreeSurface(loadedSurface);
   end;
 
-  _texture := newTexture;
-  Result := _texture <> nil;
+  _Texture := newTexture;
+  Result := _Texture <> nil;
 end;
 
 function TTexture.LoadFromRenderedText(textureText: string; textColor: TSDL_Color): boolean;
@@ -627,21 +752,21 @@ begin
   else
   begin
     // Create texture from surface pixels
-    _texture := SDL_CreateTextureFromSurface(_Renderer, textSurface);
-    if _texture = nil then
+    _Texture := SDL_CreateTextureFromSurface(_Renderer, textSurface);
+    if _Texture = nil then
     begin
       WriteLnF('Unable to create texture from rendered text! SDL Error: %s', [SDL_GetError()]);
     end
     else
     begin
       // Get image dimensions
-      _width := textSurface^.w;
-      _height := textSurface^.h;
+      _Width := textSurface^.w;
+      _Height := textSurface^.h;
     end;
   end;
 
   // Return success
-  Result := _texture <> nil;
+  Result := _Texture <> nil;
 end;
 
 procedure TTexture.Render(x, y: integer; clip: PSDL_Rect; angle: double;
@@ -653,8 +778,8 @@ begin
   renderQuad := Default(TSDL_Rect);
   renderQuad.x := x;
   renderQuad.y := y;
-  renderQuad.w := _width;
-  renderQuad.h := _height;
+  renderQuad.w := _Width;
+  renderQuad.h := _Height;
 
   // Set clip rendering dimensions
   if clip <> nil then
@@ -663,25 +788,25 @@ begin
     renderQuad.h := clip^.h;
   end;
 
-  SDL_RenderCopyEx(_Renderer, _texture, clip, @renderQuad, angle, center, flip);
+  SDL_RenderCopyEx(_Renderer, _Texture, clip, @renderQuad, angle, center, flip);
 end;
 
 procedure TTexture.SetAlpha(alpha: byte);
 begin
   // Modulate texture alpha
-  SDL_SetTextureAlphaMod(_texture, alpha);
+  SDL_SetTextureAlphaMod(_Texture, alpha);
 end;
 
 procedure TTexture.SetBlendMode(blending: TSDL_BlendMode);
 begin
   // Set blending function
-  SDL_SetTextureBlendMode(_texture, blending);
+  SDL_SetTextureBlendMode(_Texture, blending);
 end;
 
 procedure TTexture.SetColor(red, green, blue: byte);
 begin
   // Modulate texture
-  SDL_SetTextureColorMod(_texture, red, green, blue);
+  SDL_SetTextureColorMod(_Texture, red, green, blue);
 end;
 
 end.

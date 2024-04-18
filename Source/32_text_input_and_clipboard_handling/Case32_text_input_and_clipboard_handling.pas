@@ -7,8 +7,7 @@ interface
 
 uses
   Classes,
-  SysUtils,
-  libSDL2_ttf;
+  SysUtils;
 
 procedure Main;
 
@@ -18,6 +17,7 @@ uses
   libSDL2,
   libSDL2_image,
   libSDL2_mixer,
+  libSDL2_ttf,
   DeepStar.Utils,
   DeepStar.UString,
   SDL2_Tutorials.Utils;
