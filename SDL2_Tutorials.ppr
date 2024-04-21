@@ -42,7 +42,11 @@ uses
   Case27_collision_detection,
   Case28_per_pixel_collision_detection,
   Case29_circular_collision_detection,
-  Case30_scrolling, Case31_scrolling_backgrounds, Case32_text_input_and_clipboard_handling, Case33_file_reading_and_writing;
+  Case30_scrolling,
+  Case31_scrolling_backgrounds,
+  Case32_text_input_and_clipboard_handling,
+  Case33_file_reading_and_writing,
+  Case34_audio_recording, Case35_window_events, Case35_window_events.Texture, Case35_window_events.Windows;
 
 var
   gLoaderSDL2: TLoaderSDL2;

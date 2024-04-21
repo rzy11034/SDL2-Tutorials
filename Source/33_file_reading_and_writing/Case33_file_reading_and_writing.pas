@@ -2,7 +2,7 @@
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
-
+{$WARN 4104 off : Implicit string type conversion from "$1" to "$2"}
 interface
 
 uses
@@ -171,12 +171,10 @@ procedure Close(); forward;
 
 procedure Main;
 var
-  quit, renderText: boolean;
+  quit: boolean;
   e: TSDL_Event;
-  textColor: TSDL_Color;
-  inputText: string;
-  tempText: PAnsiChar;
-  i: integer;
+  textColor, highlightColor: TSDL_Color;
+  i, currentData: integer;
 begin
   // Start up SDL and create window
   if not Init then
@@ -205,19 +203,14 @@ begin
 
       // Set text color as black
       textColor := SDL_Color(0, 0, 0, $FF);
+      highlightColor := SDL_Color($FF, 0, 0, $FF);
 
-      //The current input text.
-      inputText := 'Some Text';
-
-      // Enable text input
-      SDL_StartTextInput;
+      //Current input point
+      currentData := integer(0);
 
       // While application is running
       while not quit do
       begin
-        // The rerender text flag
-        renderText := false;
-
         while SDL_PollEvent(@e) <> 0 do
         begin
           if e.type_ = SDL_QUIT_EVENT then
@@ -228,45 +221,57 @@ begin
           begin
             case e.key.keysym.sym of
               SDLK_ESCAPE: quit := true;
-            end;
 
-            // Handle backspace
-            if (e.key.keysym.sym = SDLK_BACKSPACE) and (inputText.Length > 0) then
-            begin
-              //lop off character
-              inputText := inputText + Chr(SDLK_BACKSPACE);
-              renderText := true;
-            end
-            // Handle copy
-            else if (e.key.keysym.sym = SDLK_c) and (SDL_GetModState() and KMOD_CTRL <> 0) then
-            begin
-              SDL_SetClipboardText(inputText.ToPAnsiChar);
-            end
-            // Handle paste
-            else if (e.key.keysym.sym = SDLK_v) and (SDL_GetModState() and KMOD_CTRL <> 0) then
-            begin
-              //Copy text from temporary buffer
-              tempText := Default(PAnsiChar);
-              tempText := SDL_GetClipboardText();
-              inputText := tempText;
-              SDL_free(tempText);
+              // Previous data entry
+              SDLK_UP:
+              begin
+                // Rerender previous entry input point
+                gDataTextures[currentData].Font := gFont;
+                gDataTextures[currentData].loadFromRenderedText(
+                  gData[currentData].ToString, textColor);
+                currentData -= 1;
 
-              renderText := true;
-            end;
-          end
-          // Special text input event
-          else if e.type_ = SDL_TEXTINPUT then
-          begin
-            //Not copy or pasting
-            if not ((SDL_GetModState() and KMOD_CTRL <> 0)
-              and (e.Text.Text[0] = 'c')
-              or (e.Text.Text[0] = 'C')
-              or (e.Text.Text[0] = 'v')
-              or (e.Text.Text[0] = 'V')) then
-            begin
-              //Append character
-              inputText += e.Text.Text;
-              renderText := true;
+                if currentData < 0 then
+                  currentData := TOTAL_DATA - 1;
+
+                // Rerender current entry input point
+                gDataTextures[currentData].loadFromRenderedText(
+                  gData[currentData].ToString, highlightColor);
+              end;
+
+              // Next data entry
+              SDLK_DOWN:
+              begin
+                // Rerender previous entry input point
+                gDataTextures[currentData].loadFromRenderedText(
+                  gData[currentData].ToString, textColor);
+                currentData += 1;
+
+                if currentData = TOTAL_DATA then
+                  currentData := 0;
+
+                // Rerender current entry input point
+                gDataTextures[currentData].loadFromRenderedText(
+                  gData[currentData].ToString, highlightColor);
+              end;
+
+
+              //Decrement input point
+              SDLK_LEFT:
+              begin
+                gData[currentData] -= 1;
+                gDataTextures[currentData].loadFromRenderedText(
+                  gData[currentData].ToString, highlightColor);
+              end;
+
+
+              //Increment input point
+              SDLK_RIGHT:
+              begin
+                gData[currentData] += 1;
+                gDataTextures[currentData].loadFromRenderedText(
+                  gData[currentData].ToString, highlightColor);
+              end;
             end;
           end;
         end;
@@ -277,13 +282,16 @@ begin
 
         //Render text textures
         gPromptTextTexture.Render((SCREEN_WIDTH - gPromptTextTexture.GetWidth()) div 2, 0);
+        for i := 0 to TOTAL_DATA - 1 do
+        begin
+          gDataTextures[i].Font := gFont;
+          gDataTextures[i].render((SCREEN_WIDTH - gDataTextures[i].GetWidth) div 2,
+            gPromptTextTexture.GetHeight + gDataTextures[0].GetHeight * i);
+        end;
 
         // Update screen
         SDL_RenderPresent(gRenderer);
       end;
-
-      // Disable text input
-      SDL_StopTextInput();
     end;
   end;
 
@@ -377,7 +385,7 @@ begin
   gFont := TTF_OpenFont(CrossFixFileName(ttfLazy).ToPAnsiChar, 28);
   if gFont = nil then
   begin
-    WriteLnF('Failed to load lazy font! SDL_ttf Error: %s\', [SDL_GetError()]);
+    WriteLnF('Failed to load lazy font! SDL_ttf Error: %s', [SDL_GetError()]);
     success := false;
   end
   else
@@ -409,7 +417,7 @@ begin
       for i := 0 to TOTAL_DATA - 1 do
       begin
         gData[i] := 0;
-        SDL_RWwrite(file_, &gData[i], sizeof(Sint32), 1);
+        SDL_RWwrite(file_, @gData[i], sizeof(Sint32), 1);
       end;
 
       //Close file handler
@@ -445,8 +453,28 @@ begin
 end;
 
 procedure Close();
+const
+  fileName = '../Source/33_file_reading_and_writing/nums.bin';
+var
+  i: integer;
+  file_: PSDL_RWops;
 begin
+  //Open data for writing
+  file_ := PSDL_RWops(nil);
+  file_ := SDL_RWFromFile(fileName, 'w+b');
+  if file_ <> nil then
+  begin
+    //Save data
+    for i := 0 to TOTAL_DATA - 1 do
+      SDL_RWwrite(file_, @gData[i], sizeof(Sint32), 1);
 
+    //Close file handler
+    SDL_RWclose(file_);
+  end
+  else
+  begin
+    WriteLnF('Error: Unable to save file! %s', [SDL_GetError()]);
+  end;
 
   for i := 0 to TOTAL_DATA - 1 do
     gDataTextures[i].Free;
