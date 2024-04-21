@@ -22,6 +22,8 @@ type
     //Window data
     _Window: PSDL_Window;
 
+    _Renderer: PSDL_Renderer;
+
     //Window dimensions
     _Width: integer;
     _Height: integer;
@@ -81,6 +83,7 @@ end;
 
 destructor TWindows.Destroy;
 begin
+  SDL_DestroyWindow(_Window);
   inherited Destroy;
 end;
 
@@ -111,13 +114,13 @@ begin
       begin
         _Width := e.window.data1;
 			  _Height := e.window.data2;
-			  SDL_RenderPresent( gRenderer );
+			  SDL_RenderPresent( _Renderer );
       end;
 
 			//Repaint on exposure
 			SDL_WINDOWEVENT_EXPOSED:
       begin
-        SDL_RenderPresent( gRenderer );
+        SDL_RenderPresent( _Renderer );
       end;
 
 
@@ -163,7 +166,7 @@ begin
       end;
 
 			//Window restored
-			 SDL_WINDOWEVENT_RESTORED:;
+			 SDL_WINDOWEVENT_RESTORED:
        begin
          	_Minimized := false;
        end;
@@ -190,36 +193,33 @@ begin
       finally
         caption.Free;
       end;
-
     end;
-
   end
   //Enter exit full screen on return key
-	else if( e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_RETURN )
-	{
-		if( mFullScreen )
-		{
-			SDL_SetWindowFullscreen( mWindow, 0 );
-			mFullScreen = false;
-		}
+	else if ( e.type_ = SDL_KEYDOWN) and( e.key.keysym.sym = SDLK_RETURN )then
+  begin
+    if _FullScreen then
+    begin
+      SDL_SetWindowFullscreen( _Window, 0 );
+			_FullScreen := false;
+    end
 		else
-		{
-			SDL_SetWindowFullscreen( mWindow, SDL_WINDOW_FULLSCREEN_DESKTOP );
-			mFullScreen = true;
-			mMinimized = false;
-		}
-  end
-	{
-
-	}
+    begin
+      SDL_SetWindowFullscreen( _Window, SDL_WINDOW_FULLSCREEN_DESKTOP );
+			_FullScreen := true;
+			_Minimized := false;
+    end;
+  end;
 end;
 
 function TWindows.HasKeyboardFocus(): boolean;
 begin
+  Result := _KeyboardFocus;
 end;
 
 function TWindows.HasMouseFocus(): boolean;
 begin
+  Result := _MouseFocus;
 end;
 
 function TWindows.Init(): boolean;
@@ -245,6 +245,7 @@ end;
 
 function TWindows.IsMinimized(): boolean;
 begin
+  Result := _Minimized;
 end;
 
 end.

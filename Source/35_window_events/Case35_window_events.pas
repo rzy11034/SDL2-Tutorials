@@ -15,9 +15,9 @@ implementation
 
 uses
   libSDL2,
+  libSDL2_ttf,
   libSDL2_image,
   libSDL2_mixer,
-  libSDL2_ttf,
   DeepStar.Utils,
   DeepStar.UString,
   Case35_window_events.Windows,
@@ -25,13 +25,13 @@ uses
 
 var
   // The window we'll be rendering to
-  gWindow: PSDL_Window = nil;
+  gWindow: TWindows = nil;
 
   // The window renderer
   gRenderer: PSDL_Renderer = nil;
 
   // Scene texture
-  gSceneTexture: TTexture;
+  gSceneTexture: TTexture = nil;
 
 // Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -52,7 +52,7 @@ begin
   end
   else
   begin
-    gPromptTexture := TTexture.Create(gRenderer);
+    gSceneTexture := TTexture.Create(gRenderer);
 
     // Load media
     if not loadMedia then
@@ -82,17 +82,24 @@ begin
               SDLK_ESCAPE: quit := true;
             end;
           end;
+
+          //Handle window events
+          gWindow.HandleEvent(e);
         end;
 
-        // Clear screen
-        SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
-        SDL_RenderClear(gRenderer);
+        //Only draw when not minimized
+        if not gWindow.IsMinimized then
+        begin
+          // Clear screen
+          SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
+          SDL_RenderClear(gRenderer);
 
-        //Render prompt centered at the top of the screen
-        gPromptTexture.render((SCREEN_WIDTH - gPromptTexture.GetWidth) div 2, 0);
+          //Render prompt centered at the top of the screen
+          gSceneTexture.render((SCREEN_WIDTH - gSceneTexture.GetWidth) div 2, 0);
 
-        // Update screen
-        SDL_RenderPresent(gRenderer);
+          // Update screen
+          SDL_RenderPresent(gRenderer);
+        end;
       end;
     end;
   end;
@@ -109,7 +116,7 @@ begin
   success := boolean(true);
 
   // Initialize SDL
-  if SDL_Init(SDL_INIT_VIDEO or SDL_INIT_AUDIO) < 0 then
+  if SDL_Init(SDL_INIT_VIDEO) < 0 then
   begin
     WriteLnF('SDL could not initialize! SDL_Error: %s', [SDL_GetError()]);
     success := false;
@@ -123,9 +130,9 @@ begin
     end;
 
     // Create window
-    gWindow := SDL_CreateWindow('SDL Tutorial', SDL_WINDOWPOS_UNDEFINED,
-      SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    if gWindow = nil then
+    gWindow := TWindows.Create;
+
+    if not gWindow.Init then
     begin
       WriteLn('Window could not be created! SDL_Error: ', SDL_GetError);
       success := false;
@@ -133,7 +140,7 @@ begin
     else
     begin
       // Create renderer for window
-      gRenderer := SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+      gRenderer := gWindow.createRenderer;
       if gRenderer = nil then
       begin
         WriteLn('Renderer could not be created! SDL Error:', SDL_GetError);
@@ -168,26 +175,18 @@ end;
 
 function LoadMedia(): boolean;
 const
-  ttfLazy = '../Source/34_audio_recording/lazy.ttf';
+  imgWindow = '../Source/35_window_events/window.png';
 var
   success: boolean;
 begin
   // Loading success flag
   success := boolean(true);
 
-  // Open the font
-  gFont := TTF_OpenFont(CrossFixFileName(ttfLazy).ToPAnsiChar, 24);
-  if gFont = nil then
+  //Load scene texture
+  if not gSceneTexture.LoadFromFile(CrossFixFileName(imgWindow).ToPAnsiChar) then
   begin
-    WriteLnF('Failed to load lazy font! SDL_ttf Error: %s', [SDL_GetError()]);
+    WriteLn('Failed to load window texture!');
     success := false;
-  end
-  else
-  begin
-    gPromptTexture.Font := gFont;
-
-    //Set starting prompt
-    gPromptTexture.LoadFromRenderedText('Select your recording device:', gTextColor);
   end;
 
   Result := success;
@@ -195,17 +194,13 @@ end;
 
 procedure Close();
 begin
-  gPromptTexture.Free;
-
-  // Free global font
-  TTF_CloseFont(gFont);
-  gFont := nil;
+  gSceneTexture.Free;
 
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
-  SDL_DestroyWindow(gWindow);
-  gWindow := nil;
   gRenderer := nil;
+
+  gWindow.Free;
 
   // Quit SDL subsystems
   TTF_Quit();

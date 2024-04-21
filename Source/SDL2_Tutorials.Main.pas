@@ -18,7 +18,7 @@ procedure Run;
 implementation
 
 uses
-  Case34_audio_recording;
+  Case35_window_events;
 
 procedure Text;
 begin
