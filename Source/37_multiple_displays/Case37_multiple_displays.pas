@@ -1,4 +1,4 @@
-﻿unit Case36_multiple_windows;
+﻿unit Case37_multiple_displays;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -16,14 +16,15 @@ implementation
 uses
   libSDL2,
   DeepStar.Utils,
-  Case36_multiple_windows.Windows;
-
-const
-  TOTAL_WINDOWS = 3;
+  Case37_multiple_displays.Windows;
 
 var
-  //Our custom windows
-  gWindows: array[0..TOTAL_WINDOWS - 1] of TWindows;
+  //Our custom window
+  gWindow: TWindows;
+
+  //Display data
+  gTotalDisplays: integer;
+  gDisplayBounds: TWindows.TArr_TSDL_Rect;
 
 // Starts up SDL and creates window
 function Init(): boolean; forward;
@@ -32,9 +33,8 @@ procedure Close(); forward;
 
 procedure Main;
 var
-  quit, allWindowsClosed: boolean;
+  quit: boolean;
   e: TSDL_Event;
-  i: integer;
 begin
   // Start up SDL and create window
   if not Init then
@@ -66,38 +66,11 @@ begin
         end;
 
         //Handle window events
-        for i := 0 to TOTAL_WINDOWS - 1 do
-          gWindows[i].HandleEvent(e);
+        gWindow.HandleEvent(e);
 
-        //Pull up window
-        if e.type_ = SDL_KEYDOWN then
-        begin
-          case e.key.keysym.sym of
-            SDLK_1: gWindows[0].Focus();
-            SDLK_2: gWindows[1].Focus();
-            SDLK_3: gWindows[2].Focus();
-          end;
-        end;
+        //Update window
+        gWindow.Render();
       end;
-
-      //Update all windows
-      for i := 0 to TOTAL_WINDOWS - 1 do
-        gWindows[i].Render();
-
-      //Check all windows
-      allWindowsClosed := true;
-      for i := 0 to TOTAL_WINDOWS - 1 do
-      begin
-        if gWindows[i].IsShown() then
-        begin
-          allWindowsClosed := false;
-          Break;
-        end;
-      end;
-
-      //Application closed all windows
-      if allWindowsClosed then
-        quit := true;
     end;
   end;
 
@@ -107,7 +80,7 @@ end;
 
 function Init(): boolean;
 var
-  success, flag: boolean;
+  success: boolean;
   i: integer;
 begin
   success := boolean(true);
@@ -126,18 +99,22 @@ begin
       WriteLn('Warning: Linear texture filtering not enabled!');
     end;
 
-    // Create window
-    for i := 0 to High(gWindows) do
-    begin
-      gWindows[i] := TWindows.Create;
-      flag := gWindows[i].Init;
+    //Get number of displays
+    gTotalDisplays := SDL_GetNumVideoDisplays();
+    if gTotalDisplays < 2 then
+      WriteLn('Warning: Only one display connected!');
 
-      if not flag then
-      begin
-        WriteLn('Window 0 could not be created!');
-        success := false;
-        Break;
-      end;
+    //Get bounds of each display
+    SetLength(gDisplayBounds, gTotalDisplays);
+    for i := 0 to gTotalDisplays - 1 do
+      SDL_GetDisplayBounds(i, @gDisplayBounds[i]);
+
+    //Create window
+    gWindow := TWindows.Create;
+    if not gWindow.Init then
+    begin
+      WriteLn('Window could not be created!');
+      success := false;
     end;
   end;
 
@@ -145,13 +122,8 @@ begin
 end;
 
 procedure Close();
-var
-  i: Integer;
 begin
-  for i := 0 to TOTAL_WINDOWS - 1 do
-  begin
-    gWindows[i].Free;
-  end;
+  gWindow.Free;
 
   // Quit SDL subsystems
   SDL_Quit();

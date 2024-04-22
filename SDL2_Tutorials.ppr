@@ -51,7 +51,12 @@ uses
   Case35_window_events.Texture,
   Case35_window_events.Windows,
   Case36_multiple_windows,
-  Case36_multiple_windows.Windows;
+  Case36_multiple_windows.Windows,
+  Case37_multiple_displays,
+  Case37_multiple_displays.Windows,
+  Case38_particle_engines,
+  Case38_particle_engines.Texture,
+  Case38_particle_engines.Dot, Case38_particle_engines.Particle;
 
 var
   gLoaderSDL2: TLoaderSDL2;
