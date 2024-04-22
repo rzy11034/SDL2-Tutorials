@@ -46,7 +46,12 @@ uses
   Case31_scrolling_backgrounds,
   Case32_text_input_and_clipboard_handling,
   Case33_file_reading_and_writing,
-  Case34_audio_recording, Case35_window_events, Case35_window_events.Texture, Case35_window_events.Windows;
+  Case34_audio_recording,
+  Case35_window_events,
+  Case35_window_events.Texture,
+  Case35_window_events.Windows,
+  Case36_multiple_windows,
+  Case36_multiple_windows.Windows;
 
 var
   gLoaderSDL2: TLoaderSDL2;

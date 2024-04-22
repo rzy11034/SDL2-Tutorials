@@ -22,6 +22,27 @@ uses
 
 procedure Text;
 begin
+  begin
+    begin
+      begin
+        begin
+          begin
+            begin
+              begin
+                begin
+                  begin
+                    begin
+
+                    end;
+                  end;
+                end;
+              end;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
   Exit;
 end;
 
