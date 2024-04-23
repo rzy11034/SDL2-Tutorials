@@ -1,4 +1,4 @@
-﻿unit Case38_particle_engines.Texture;
+unit Case39_tiling.Texture;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -63,11 +63,6 @@ begin
   inherited;
 end;
 
-destructor TTexture.Done;
-begin
-  Free;
-end;
-
 procedure TTexture.Free;
 begin
   // Free texture if it exists
@@ -78,6 +73,13 @@ begin
     _Width := 0;
     _Height := 0;
   end;
+end;
+
+destructor TTexture.Done;
+begin
+  Self.Free;
+
+  inherited;
 end;
 
 function TTexture.GetHeight: integer;
@@ -96,7 +98,7 @@ var
   loadedSurface: PSDL_Surface;
 begin
   // Get rid of preexisting texture
-  Free;
+  Self.Free;
 
   // The final texture
   newTexture := PSDL_Texture(nil);
@@ -111,8 +113,8 @@ begin
   else
   begin
     // Color key image
-    SDL_SetColorKey(loadedSurface, Ord(SDL_TRUE),
-      SDL_MapRGB(loadedSurface^.format, 0, $FF, $FF));
+    SDL_SetColorKey(       loadedSurface,      Ord(SDL_TRUE),
+      SDL_MapRGB(loadedSurface^.format, 0, $FF, $FF)    );
 
     // Create texture from surface pixels
     newTexture := SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
@@ -138,7 +140,7 @@ var
   textSurface: PSDL_Surface;
 begin
   // Get rid of preexisting texture
-  Free;
+  Self.Free();
 
   // Render text surface
   textSurface := PSDL_Surface(nil);
@@ -209,3 +211,4 @@ begin
 end;
 
 end.
+

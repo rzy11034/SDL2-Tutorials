@@ -1,4 +1,4 @@
-﻿unit Case38_particle_engines;
+﻿unit Case39_tiling;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -12,8 +12,7 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  Case38_particle_engines.Texture,
-  Case38_particle_engines.Dot;
+  Case39_tiling.Texture;
 
 const
   //Screen dimension constants
@@ -54,7 +53,6 @@ var
   success: boolean;
   imgFlags: integer;
 begin
-
   success := boolean(true);
 
   // Initialize SDL
@@ -119,6 +117,11 @@ var
 begin
   //Loading success flag
   success := true;
+  //gDotTexture := TTexture.Create;
+  //gRedTexture := TTexture.Create;
+  //gGreenTexture := TTexture.Create;
+  //gBlueTexture := TTexture.Create;
+  //gShimmerTexture := TTexture.Create;
 
   //Load dot texture
   if not gDotTexture.loadFromFile('../Source/38_particle_engines/dot.bmp') then
@@ -189,7 +192,6 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  dot: TDot;
 begin
   // Start up SDL and create window
   if not Init then
@@ -211,43 +213,35 @@ begin
       // Event handler
       e := Default(TSDL_Event);
 
-      dot := TDot.Create;
-      try
-        // While application is running
-        while not quit do
+      // While application is running
+      while not quit do
+      begin
+        while SDL_PollEvent(@e) <> 0 do
         begin
-          while SDL_PollEvent(@e) <> 0 do
+          if e.type_ = SDL_QUIT_EVENT then
           begin
-            if e.type_ = SDL_QUIT_EVENT then
-            begin
-              quit := true;
-            end
-            else if e.type_ = SDL_KEYDOWN then
-            begin
-              case e.key.keysym.sym of
-                SDLK_ESCAPE: quit := true;
-              end;
+            quit := true;
+          end
+          else if e.type_ = SDL_KEYDOWN then
+          begin
+            case e.key.keysym.sym of
+              SDLK_ESCAPE: quit := true;
             end;
-
-            //Handle input for the dot
-            dot.HandleEvent(e);
           end;
 
-          //Move the dot
-          dot.Move();
-
-          //Clear screen
-          SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
-          SDL_RenderClear(gRenderer);
-
-          //Render objects
-          dot.Render();
-
-          //Update screen
-          SDL_RenderPresent(gRenderer);
+          //Handle input for the dot
         end;
-      finally
-        FreeAndNil(dot);
+
+        //Move the dot
+
+        //Clear screen
+        SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
+        SDL_RenderClear(gRenderer);
+
+        //Render objects
+
+        //Update screen
+        SDL_RenderPresent(gRenderer);
       end;
     end;
   end;
