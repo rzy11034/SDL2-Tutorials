@@ -16,7 +16,7 @@ uses
   Case39_tiling.Tile;
 
 type
-  TArr_Tile = array of TTile;
+  TArr_Tile = array of PTile;
 
 const
   //Screen dimension constants
@@ -190,13 +190,66 @@ begin
 end;
 
 function CheckCollision(a, b: TSDL_Rect): boolean;
+var
+  bottomB, leftA, leftB, rightA, rightB, topA, topB, bottomA: Integer;
 begin
+  //The sides of the rectangles
+  leftA := integer(0);
+  leftB := integer(0);
+  rightA := integer(0);
+  rightB := integer(0);
+  topA := integer(0);
+  topB := integer(0);
+  bottomA := integer(0);
+  bottomB := integer(0);
 
+  //Calculate the sides of rect A
+  leftA := a.x;
+  rightA := a.x + a.w;
+  topA := a.y;
+  bottomA := a.y + a.h;
+
+  //Calculate the sides of rect B
+  leftB := b.x;
+  rightB := b.x + b.w;
+  topB := b.y;
+  bottomB := b.y + b.h;
+
+  //If any of the sides from A are outside of B
+  if bottomA <= topB then
+    Exit(false);
+
+  if topA >= bottomB then
+    Exit(false);
+
+  if rightA <= leftB then
+    Exit(false);
+
+  if leftA >= rightB then
+    Exit(false);
+
+  //If none of the sides from A are outside B
+  Result := true;
 end;
 
 function TouchesWall(box: TSDL_Rect; tiles: TArr_Tile): boolean;
+var
+  i: Integer;
 begin
+  //Go through the tiles
+  for i := 0 to TOTAL_TILES - 1 do
+  begin
+    //If the tile is a wall type tile
+    if (tiles[i]^.GetType >= TILE_CENTER) and (tiles[i]^.GetType <= TILE_TOPLEFT) then
+    begin
+      //If the collision box touches the wall tile
+      if checkCollision(box, tiles[i]^.GetBox) then
+        Exit(true);
+    end;
+  end;
 
+  //If no wall tiles were touched
+  Result := false;
 end;
 
 function SetTiles(tiles: TArr_Tile): boolean;
@@ -208,6 +261,7 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
+  tileSet: TArr_Tile;
 begin
   // Start up SDL and create window
   if not Init then
@@ -216,8 +270,11 @@ begin
   end
   else
   begin
+    tileSet := TArr_Tile(nil);
+    SetLength(tileSet, TOTAL_TILES);
+
     //Load media
-    if not loadMedia then
+    if not loadMedia(tileSet) then
     begin
       WriteLn('Failed to load media!');
     end
@@ -263,7 +320,7 @@ begin
   end;
 
   // Free resources and close SDL
-  Close();
+  Close(tileSet);
 end;
 
 end.

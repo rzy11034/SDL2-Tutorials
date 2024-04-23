@@ -15,7 +15,7 @@ type
   PDot = ^TDot;
   TDot = object
   public type
-    TArr_Tile = array of TTile;
+    TArr_Tile = array of PTile;
 
   public const
     //The dimensions of the dot
@@ -133,8 +133,8 @@ end;
 procedure TDot.SetCamera(var camera: TSDL_Rect);
 begin
   //Center the camera over the dot
-  camera.x := (mBox.x + DOT_WIDTH div 2) - SCREEN_WIDTH div 2;
-  camera.y := (mBox.y + DOT_HEIGHT div 2) - SCREEN_HEIGHT div 2;
+  camera.x := (_Box.x + DOT_WIDTH div 2) - SCREEN_WIDTH div 2;
+  camera.y := (_Box.y + DOT_HEIGHT div 2) - SCREEN_HEIGHT div 2;
 
   //Keep the camera in bounds
   if camera.x < 0 then
@@ -153,26 +153,6 @@ begin
   begin
     camera.y := LEVEL_HEIGHT - camera.h;
   end;
-end;
-
-procedure TDot.__RenderParticles();
-var
-  i: integer;
-begin
-  //Go through particles
-  for i := 0 to TOTAL_PARTICLES - 1 do
-  begin
-    //Delete and replace dead particles
-    if _Particles[i].IsDead() then
-    begin
-      FreeAndNil(_Particles[i]);
-      _Particles[i] := TParticle.Create(_PosX, _PosY);
-    end;
-  end;
-
-  //Show particles
-  for i := 0 to TOTAL_PARTICLES - 1 do
-    _Particles[i].Render();
 end;
 
 end.

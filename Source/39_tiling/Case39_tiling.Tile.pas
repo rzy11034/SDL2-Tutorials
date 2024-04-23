@@ -74,7 +74,7 @@ end;
 procedure TTile.Render(var camera: TSDL_Rect);
 begin
   //If the tile is on screen
-  if CheckCollision(camera, mBox) then
+  if CheckCollision(camera, _Box) then
   begin
     //Show the tile
     gTileTexture.Render(_Box.x - camera.x, _Box.y - camera.y, @gTileClips[_Type]);
