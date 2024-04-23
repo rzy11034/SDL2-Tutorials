@@ -12,15 +12,40 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  Case39_tiling.Texture;
+  Case39_tiling.Texture,
+  Case39_tiling.Tile;
+
+type
+  TArr_Tile = array of TTile;
 
 const
   //Screen dimension constants
   SCREEN_WIDTH = 640;
   SCREEN_HEIGHT = 480;
 
-  //Particle count
-  TOTAL_PARTICLES = 20;
+  //The dimensions of the level
+  LEVEL_WIDTH = 1280;
+  LEVEL_HEIGHT = 960;
+
+  //Tile constants
+  TILE_WIDTH = 80;
+  TILE_HEIGHT = 80;
+  TOTAL_TILES = 192;
+  TOTAL_TILE_SPRITES = 12;
+
+  //The different tile sprites
+  TILE_RED = 0;
+  TILE_GREEN = 1;
+  TILE_BLUE = 2;
+  TILE_CENTER = 3;
+  TILE_TOP = 4;
+  TILE_TOPRIGHT = 5;
+  TILE_RIGHT = 6;
+  TILE_BOTTOMRIGHT = 7;
+  TILE_BOTTOM = 8;
+  TILE_BOTTOMLEFT = 9;
+  TILE_LEFT = 10;
+  TILE_TOPLEFT = 11;
 
 var
   //The window we'll be rendering to
@@ -34,17 +59,22 @@ var
 
   //Scene textures
   gDotTexture: TTexture;
-  gRedTexture: TTexture;
-  gGreenTexture: TTexture;
-  gBlueTexture: TTexture;
-  gShimmerTexture: TTexture;
+  gTileTexture: TTexture;
+  gTileClips: array[0.. TOTAL_TILE_SPRITES - 1] of TSDL_Rect;
 
 procedure Main;
-
 // Starts up SDL and creates window
 function Init(): boolean;
+//Loads media
+function LoadMedia(tiles: TArr_Tile): boolean;
 // Frees media and shuts down SDL
-procedure Close();
+procedure Close(tiles: TArr_Tile);
+//Box collision detector
+function CheckCollision(a, b: TSDL_Rect): boolean;
+//Checks collision box against set of tiles
+function TouchesWall(box: TSDL_Rect; tiles: TArr_Tile): boolean;
+//Sets tiles from tile map
+function SetTiles(tiles: TArr_Tile): boolean;
 
 implementation
 
@@ -111,70 +141,41 @@ begin
   Result := success;
 end;
 
-function LoadMedia(): boolean;
+function LoadMedia(tiles: TArr_Tile): boolean;
 var
   success: boolean;
 begin
   //Loading success flag
   success := true;
-  //gDotTexture := TTexture.Create;
-  //gRedTexture := TTexture.Create;
-  //gGreenTexture := TTexture.Create;
-  //gBlueTexture := TTexture.Create;
-  //gShimmerTexture := TTexture.Create;
 
   //Load dot texture
-  if not gDotTexture.loadFromFile('../Source/38_particle_engines/dot.bmp') then
+  if not gDotTexture.LoadFromFile('../Source/9_tiling/dot.bmp') then
   begin
     WriteLn('Failed to load dot texture!');
     success := false;
   end;
 
-  //Load red texture
-  if not gRedTexture.loadFromFile('../Source/38_particle_engines/red.bmp') then
+  //Load tile texture
+  if not gTileTexture.LoadFromFile('../Source/39_tiling/tiles.png') then
   begin
-    WriteLn('Failed to load red texture!');
+    WriteLn('Failed to load tile set texture!');
     success := false;
   end;
 
-  //Load green texture
-  if not gGreenTexture.loadFromFile('../Source/38_particle_engines/green.bmp') then
+  //Load tile map
+  if not SetTiles(tiles) then
   begin
-    WriteLn('Failed to load green texture!');
+    WriteLn('Failed to load tile set!');
     success := false;
   end;
-
-  //Load blue texture
-  if not gBlueTexture.loadFromFile('../Source/38_particle_engines/blue.bmp') then
-  begin
-    WriteLn('Failed to load blue texture!');
-    success := false;
-  end;
-
-  //Load shimmer texture
-  if not gShimmerTexture.loadFromFile('../Source/38_particle_engines/shimmer.bmp') then
-  begin
-    WriteLn('Failed to load shimmer texture!');
-    success := false;
-  end;
-
-  //Set texture transparency
-  gRedTexture.SetAlpha(192);
-  gGreenTexture.SetAlpha(192);
-  gBlueTexture.SetAlpha(192);
-  gShimmerTexture.SetAlpha(192);
 
   Result := success;
 end;
 
-procedure Close();
+procedure Close(tiles: TArr_Tile);
 begin
   //Free loaded images
-  gDotTexture.Free();
-  gRedTexture.Free();
-  gGreenTexture.Free();
-  gBlueTexture.Free();
-  gShimmerTexture.Free();
+
 
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
@@ -186,6 +187,21 @@ begin
   TTF_Quit();
   IMG_Quit();
   SDL_Quit();
+end;
+
+function CheckCollision(a, b: TSDL_Rect): boolean;
+begin
+
+end;
+
+function TouchesWall(box: TSDL_Rect; tiles: TArr_Tile): boolean;
+begin
+
+end;
+
+function SetTiles(tiles: TArr_Tile): boolean;
+begin
+
 end;
 
 procedure Main;

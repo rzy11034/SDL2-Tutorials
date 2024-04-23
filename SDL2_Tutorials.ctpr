@@ -269,6 +269,14 @@
         <Filename Value="Source\39_tiling\Case39_tiling.Texture.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\39_tiling\Case39_tiling.Dot.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\39_tiling\Case39_tiling.Tile.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

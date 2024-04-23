@@ -56,7 +56,12 @@ uses
   Case37_multiple_displays.Windows,
   Case38_particle_engines,
   Case38_particle_engines.Texture,
-  Case38_particle_engines.Dot, Case38_particle_engines.Particle, Case39_tiling, Case39_tiling.Texture;
+  Case38_particle_engines.Dot,
+  Case38_particle_engines.Particle,
+  Case39_tiling,
+  Case39_tiling.Texture,
+  Case39_tiling.Dot,
+  Case39_tiling.Tile;
 
 var
   gLoaderSDL2: TLoaderSDL2;
