@@ -61,7 +61,9 @@ uses
   Case39_tiling,
   Case39_tiling.Texture,
   Case39_tiling.Dot,
-  Case39_tiling.Tile;
+  Case39_tiling.Tile,
+  Case40_texture_manipulation,
+  Case40_texture_manipulation.Texture;
 
 var
   gLoaderSDL2: TLoaderSDL2;

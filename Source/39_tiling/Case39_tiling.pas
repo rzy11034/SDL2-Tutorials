@@ -63,17 +63,21 @@ procedure Main;
 // Starts up SDL and creates window
 function Init(): boolean;
 //Loads media
-function LoadMedia(tiles: TArr_PTile): boolean;
+function LoadMedia(var tiles: TArr_PTile): boolean;
 // Frees media and shuts down SDL
-procedure Close(tiles: TArr_PTile);
+procedure Close(var tiles: TArr_PTile);
 //Box collision detector
 function CheckCollision(a, b: TSDL_Rect): boolean;
 //Checks collision box against set of tiles
-function TouchesWall(box: TSDL_Rect; tiles: TArr_PTile): boolean;
+function TouchesWall(box: TSDL_Rect; var tiles: TArr_PTile): boolean;
 //Sets tiles from tile map
-function SetTiles(tiles: TArr_PTile): boolean;
+function SetTiles(var tiles: TArr_PTile): boolean;
 
 implementation
+
+uses
+  Case39_tiling.Dot,
+  SDL2_Tutorials.Utils;
 
 function Init(): boolean;
 var
@@ -138,7 +142,7 @@ begin
   Result := success;
 end;
 
-function LoadMedia(tiles: TArr_PTile): boolean;
+function LoadMedia(var tiles: TArr_PTile): boolean;
 var
   success: boolean;
 begin
@@ -169,10 +173,19 @@ begin
   Result := success;
 end;
 
-procedure Close(tiles: TArr_PTile);
+procedure Close(var tiles: TArr_PTile);
+var
+  i: integer;
 begin
-  //Free loaded images
-
+  //Deallocate tiles
+  for i := 0 to TOTAL_TILES - 1 do
+  begin
+    if tiles[i] <> nil then
+    begin
+      Dispose(tiles[i], Done);
+      tiles[i] := nil;
+    end;
+  end;
 
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
@@ -188,7 +201,7 @@ end;
 
 function CheckCollision(a, b: TSDL_Rect): boolean;
 var
-  bottomB, leftA, leftB, rightA, rightB, topA, topB, bottomA: Integer;
+  bottomB, leftA, leftB, rightA, rightB, topA, topB, bottomA: integer;
 begin
   //The sides of the rectangles
   leftA := integer(0);
@@ -229,9 +242,9 @@ begin
   Result := true;
 end;
 
-function TouchesWall(box: TSDL_Rect; tiles: TArr_PTile): boolean;
+function TouchesWall(box: TSDL_Rect; var tiles: TArr_PTile): boolean;
 var
-  i: Integer;
+  i: integer;
 begin
   //Go through the tiles
   for i := 0 to TOTAL_TILES - 1 do
@@ -249,28 +262,148 @@ begin
   Result := false;
 end;
 
-function SetTiles(tiles: TArr_PTile): boolean;
+function SetTiles(var tiles: TArr_PTile): boolean;
 var
-  tilesLoaded: Boolean;
+  tilesLoaded: boolean;
   list: TStringList;
-  x, y: Integer;
-
+  x, y, i, tileType: integer;
+  map: IList_str;
+  tempS: TArr_str;
 begin
   //Success flag
-	tilesLoaded := true;
+  tilesLoaded := true;
 
   //The tile offsets
   x := 0;
   y := 0;
 
+  map := TArrayList_str.Create;
+
   list := TStringList.Create();
   try
     list.LoadFromFile('../Source/39_tiling/lazy.map');
 
-
+    for i := 0 to list.Count - 1 do
+    begin
+      tempS := string(list[i]).Split([' ']);
+      map.AddRange(tempS, 0, 16);
+    end;
   finally
     list.Free;
   end;
+
+  //If the map couldn't be loaded
+  if map.IsEmpty then
+  begin
+    WriteLn('Unable to load map file!');
+    tilesLoaded := false;
+  end
+  else
+  begin
+    //Initialize the tiles
+    for i := 0 to TOTAL_TILES - 1 do
+    begin
+      //Determines what kind of tile will be made
+      tileType := -1;
+
+      //Read tile from map file
+      tileType := map[i].ToInteger;
+
+      //If the number is a valid tile number
+      if (tileType >= 0) and (tileType < TOTAL_TILE_SPRITES) then
+      begin
+        new(tiles[i], Init(x, y, tileType));
+      end
+      //If we don't recognize the tile type
+      else
+      begin
+        //Stop loading map
+        WriteLn('Error loading map: Invalid tile type at %d!', i);
+        tilesLoaded := false;
+        Break;
+      end;
+
+      //Move to next tile spot
+      x += TILE_WIDTH;
+
+      //If we've gone too far
+      if x >= LEVEL_WIDTH then
+      begin
+        //Move back
+        x := 0;
+
+        //Move to the next row
+        y += TILE_HEIGHT;
+      end;
+    end;
+
+    //Clip the sprite sheet
+    if tilesLoaded then
+    begin
+      gTileClips[TILE_RED].x := 0;
+      gTileClips[TILE_RED].y := 0;
+      gTileClips[TILE_RED].w := TILE_WIDTH;
+      gTileClips[TILE_RED].h := TILE_HEIGHT;
+
+      gTileClips[TILE_GREEN].x := 0;
+      gTileClips[TILE_GREEN].y := 80;
+      gTileClips[TILE_GREEN].w := TILE_WIDTH;
+      gTileClips[TILE_GREEN].h := TILE_HEIGHT;
+
+      gTileClips[TILE_BLUE].x := 0;
+      gTileClips[TILE_BLUE].y := 160;
+      gTileClips[TILE_BLUE].w := TILE_WIDTH;
+      gTileClips[TILE_BLUE].h := TILE_HEIGHT;
+
+      gTileClips[TILE_TOPLEFT].x := 80;
+      gTileClips[TILE_TOPLEFT].y := 0;
+      gTileClips[TILE_TOPLEFT].w := TILE_WIDTH;
+      gTileClips[TILE_TOPLEFT].h := TILE_HEIGHT;
+
+      gTileClips[TILE_LEFT].x := 80;
+      gTileClips[TILE_LEFT].y := 80;
+      gTileClips[TILE_LEFT].w := TILE_WIDTH;
+      gTileClips[TILE_LEFT].h := TILE_HEIGHT;
+
+      gTileClips[TILE_BOTTOMLEFT].x := 80;
+      gTileClips[TILE_BOTTOMLEFT].y := 160;
+      gTileClips[TILE_BOTTOMLEFT].w := TILE_WIDTH;
+      gTileClips[TILE_BOTTOMLEFT].h := TILE_HEIGHT;
+
+      gTileClips[TILE_TOP].x := 160;
+      gTileClips[TILE_TOP].y := 0;
+      gTileClips[TILE_TOP].w := TILE_WIDTH;
+      gTileClips[TILE_TOP].h := TILE_HEIGHT;
+
+      gTileClips[TILE_CENTER].x := 160;
+      gTileClips[TILE_CENTER].y := 80;
+      gTileClips[TILE_CENTER].w := TILE_WIDTH;
+      gTileClips[TILE_CENTER].h := TILE_HEIGHT;
+
+      gTileClips[TILE_BOTTOM].x := 160;
+      gTileClips[TILE_BOTTOM].y := 160;
+      gTileClips[TILE_BOTTOM].w := TILE_WIDTH;
+      gTileClips[TILE_BOTTOM].h := TILE_HEIGHT;
+
+      gTileClips[TILE_TOPRIGHT].x := 240;
+      gTileClips[TILE_TOPRIGHT].y := 0;
+      gTileClips[TILE_TOPRIGHT].w := TILE_WIDTH;
+      gTileClips[TILE_TOPRIGHT].h := TILE_HEIGHT;
+
+      gTileClips[TILE_RIGHT].x := 240;
+      gTileClips[TILE_RIGHT].y := 80;
+      gTileClips[TILE_RIGHT].w := TILE_WIDTH;
+      gTileClips[TILE_RIGHT].h := TILE_HEIGHT;
+
+      gTileClips[TILE_BOTTOMRIGHT].x := 240;
+      gTileClips[TILE_BOTTOMRIGHT].y := 160;
+      gTileClips[TILE_BOTTOMRIGHT].w := TILE_WIDTH;
+      gTileClips[TILE_BOTTOMRIGHT].h := TILE_HEIGHT;
+    end;
+  end;
+
+  //If the map was loaded fine
+  Result := tilesLoaded;
 end;
 
 procedure Main;
@@ -278,6 +411,9 @@ var
   quit: boolean;
   e: TSDL_Event;
   tileSet: TArr_PTile;
+  dot: TDot;
+  camera: TSDL_Rect;
+  i: Integer;
 begin
   // Start up SDL and create window
   if not Init then
@@ -302,6 +438,13 @@ begin
       // Event handler
       e := Default(TSDL_Event);
 
+      //The dot that will be moving around on the screen
+      dot := Default(TDot);
+      dot.Init;
+
+      //Level camera
+      camera := SDL_Rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
       // While application is running
       while not quit do
       begin
@@ -319,15 +462,23 @@ begin
           end;
 
           //Handle input for the dot
+          dot.HandleEvent(e);
         end;
 
         //Move the dot
+        dot.Move(tileSet);
+        dot.SetCamera(camera);
 
         //Clear screen
         SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
         SDL_RenderClear(gRenderer);
 
-        //Render objects
+        //Render level
+        for i := 0 to TOTAL_TILES - 1 do
+          tileSet[i]^.Render(camera);
+
+        //Render dot
+        dot.Render(camera);
 
         //Update screen
         SDL_RenderPresent(gRenderer);

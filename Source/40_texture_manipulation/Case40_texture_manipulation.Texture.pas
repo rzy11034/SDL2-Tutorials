@@ -1,4 +1,4 @@
-﻿unit Case39_tiling.Texture;
+﻿unit Case40_texture_manipulation.Texture;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -21,6 +21,7 @@ type
     _Height: integer;
     _Width: integer;
     _Texture: PSDL_Texture;
+    _SurfacePixels: PSDL_Surface;
 
   public
     constructor Init;
@@ -28,6 +29,12 @@ type
 
     // Loads image at specified path
     function LoadFromFile(path: string): boolean;
+
+    //Loads image into pixel buffer
+    function loadPixelsFromFile(path: string): boolean;
+
+    //Creates image from preloaded pixels
+    function loadFromPixels(): boolean;
 
     // Creates image from font string
     function LoadFromRenderedText(textureText: string; textColor: TSDL_Color): boolean;
@@ -48,15 +55,21 @@ type
     //Set alpha modulation
     procedure SetAlpha(alpha: byte);
 
+    //Gets image dimensions
     function GetHeight: integer;
     function GetWidth: integer;
+
+    //Pixel accessors
+    function GetPixels32(): PUInt32;
+    function GetPitch32(): uint32;
+    function MapRGBA(r, g, b, a: uint8): uint32;
   end;
 
 
 implementation
 
 uses
-  Case39_tiling;
+  Case40_texture_manipulation;
 
 constructor TTexture.Init;
 begin
@@ -73,12 +86,18 @@ begin
     _Width := 0;
     _Height := 0;
   end;
+
+  //Free surface if it exists
+  if _SurfacePixels <> nil then
+  begin
+    SDL_FreeSurface(_SurfacePixels);
+    _SurfacePixels := nil;
+  end;
 end;
 
 destructor TTexture.Done;
 begin
   Self.Free;
-
   inherited;
 end;
 
@@ -87,51 +106,88 @@ begin
   Result := _Height;
 end;
 
+function TTexture.GetPitch32(): uint32;
+var
+  pitch: integer;
+begin
+  pitch := 0;
+
+  if _SurfacePixels <> nil then
+  begin
+    pitch := _SurfacePixels^.pitch div 4;
+  end;
+
+  Result := pitch;
+end;
+
+function TTexture.GetPixels32(): PUInt32;
+var
+  pixels: PUInt32;
+begin
+  pixels := PUInt32(nil);
+
+  if _SurfacePixels <> nil then
+  begin
+    pixels := PUInt32(_SurfacePixels^.pixels);
+  end;
+
+  Result := pixels;
+end;
+
 function TTexture.GetWidth: integer;
 begin
   Result := _Width;
 end;
 
 function TTexture.LoadFromFile(path: string): boolean;
-var
-  newTexture: PSDL_Texture;
-  loadedSurface: PSDL_Surface;
 begin
-  // Get rid of preexisting texture
-  Self.Free;
-
-  // The final texture
-  newTexture := PSDL_Texture(nil);
-
-  // Load image at specified path
-  loadedSurface := PSDL_Surface(nil);
-  loadedSurface := IMG_Load(CrossFixFileName(path).ToPAnsiChar);
-  if loadedSurface = nil then
+  //Load pixels
+  if not loadPixelsFromFile(path) then
   begin
-    WriteLn('Unable to load image %s! SDL_image Error: ', path);
+    WriteLnF('Failed to load pixels for %s!', [path]);
   end
   else
   begin
-    // Color key image
-    SDL_SetColorKey(loadedSurface, Ord(SDL_TRUE),
-      SDL_MapRGB(loadedSurface^.format, 0, $FF, $FF));
+    //Load texture from pixels
+    if not loadFromPixels() then
+      WriteLnF('Failed to texture from pixels from %s!', [path]);
+  end;
 
-    // Create texture from surface pixels
-    newTexture := SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
-    if newTexture = nil then
+  Result := _Texture <> nil;
+end;
+
+function TTexture.loadFromPixels(): boolean;
+begin
+  //Only load if pixels exist
+  if _SurfacePixels = nil then
+  begin
+    WriteLn('No pixels loaded!');
+  end
+  else
+  begin
+    //Color key image
+    SDL_SetColorKey(_SurfacePixels, Ord(SDL_TRUE),
+      SDL_MapRGB(_SurfacePixels^.format, 0, $FF, $FF));
+
+    //Create texture from surface pixels
+    _Texture := SDL_CreateTextureFromSurface(gRenderer, _SurfacePixels);
+    if _Texture = nil then
     begin
-      WriteLnF('Unable to create texture from %s! SDL Error: %s', [path, SDL_GetError()]);
+      WriteLnF('Unable to create texture from loaded pixels! SDL Error: %s', [SDL_GetError()]);
     end
     else
     begin
-      _Width := loadedSurface^.w;
-      _Height := loadedSurface^.h;
+      //Get image dimensions
+      _Width := _SurfacePixels^.w;
+      _Height := _SurfacePixels^.h;
     end;
 
-    SDL_FreeSurface(loadedSurface);
+    //Get rid of old loaded surface
+    SDL_FreeSurface(_SurfacePixels);
+    _SurfacePixels := nil;
   end;
 
-  _Texture := newTexture;
+  //Return success
   Result := _Texture <> nil;
 end;
 
@@ -168,6 +224,56 @@ begin
 
   // Return success
   Result := _Texture <> nil;
+end;
+
+function TTexture.loadPixelsFromFile(path: string): boolean;
+var
+  loadedSurface: PSDL_Surface;
+begin
+  //Free preexisting assets
+  Free();
+
+  //Load image at specified path
+  loadedSurface := PSDL_Surface(nil);
+  loadedSurface := IMG_Load(CrossFixFileName(path).ToPAnsiChar);
+  if loadedSurface = nil then
+  begin
+    WriteLnF('Unable to load image %s! SDL_image Error: %s', [path, SDL_GetError()]);
+  end
+  else
+  begin
+    //Convert surface to display format
+    _SurfacePixels := SDL_ConvertSurfaceFormat(loadedSurface, SDL_GetWindowPixelFormat(gWindow), 0);
+    if _SurfacePixels = nil then
+    begin
+      WriteLnF('Unable to convert loaded surface to display format! SDL Error: %s', [SDL_GetError()]);
+    end
+    else
+    begin
+      //Get image dimensions
+      _Width := _SurfacePixels^.w;
+      _Height := _SurfacePixels^.h;
+    end;
+
+    //Get rid of old loaded surface
+    SDL_FreeSurface(loadedSurface);
+  end;
+
+  Result := _SurfacePixels <> nil;
+end;
+
+function TTexture.MapRGBA(r, g, b, a: uint8): uint32;
+var
+  pixel: uint32;
+begin
+  pixel := uint32(0);
+
+  if _SurfacePixels <> nil then
+  begin
+    pixel := SDL_MapRGBA(_SurfacePixels^.format, r, g, b, a);
+  end;
+
+  Result := pixel;
 end;
 
 procedure TTexture.Render(x, y: integer; clip: PSDL_Rect; angle: double;
