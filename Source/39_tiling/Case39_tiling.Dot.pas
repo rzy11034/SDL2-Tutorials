@@ -14,9 +14,6 @@ uses
 type
   PDot = ^TDot;
   TDot = object
-  public type
-    TArr_Tile = array of PTile;
-
   public const
     //The dimensions of the dot
     DOT_WIDTH = 20;
@@ -40,7 +37,7 @@ type
     procedure HandleEvent(var e: TSDL_Event);
 
     //Moves the dot
-    procedure Move(tiles: TArr_Tile);
+    procedure Move(tiles: TArr_PTile);
 
     //Centers the camera over the dot
     procedure SetCamera(var camera: TSDL_Rect);
@@ -101,7 +98,7 @@ begin
   end;
 end;
 
-procedure TDot.Move(tiles: TArr_Tile);
+procedure TDot.Move(tiles: TArr_PTile);
 begin
   //Move the dot left or right
   _Box.x += _VelX;

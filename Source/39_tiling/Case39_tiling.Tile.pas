@@ -33,6 +33,9 @@ type
 		function GetBox(): TSDL_Rect;
   end;
 
+type
+  TArr_PTile = array of PTile;
+
 
 implementation
 

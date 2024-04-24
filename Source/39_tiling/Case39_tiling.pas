@@ -15,9 +15,6 @@ uses
   Case39_tiling.Texture,
   Case39_tiling.Tile;
 
-type
-  TArr_Tile = array of PTile;
-
 const
   //Screen dimension constants
   SCREEN_WIDTH = 640;
@@ -66,15 +63,15 @@ procedure Main;
 // Starts up SDL and creates window
 function Init(): boolean;
 //Loads media
-function LoadMedia(tiles: TArr_Tile): boolean;
+function LoadMedia(tiles: TArr_PTile): boolean;
 // Frees media and shuts down SDL
-procedure Close(tiles: TArr_Tile);
+procedure Close(tiles: TArr_PTile);
 //Box collision detector
 function CheckCollision(a, b: TSDL_Rect): boolean;
 //Checks collision box against set of tiles
-function TouchesWall(box: TSDL_Rect; tiles: TArr_Tile): boolean;
+function TouchesWall(box: TSDL_Rect; tiles: TArr_PTile): boolean;
 //Sets tiles from tile map
-function SetTiles(tiles: TArr_Tile): boolean;
+function SetTiles(tiles: TArr_PTile): boolean;
 
 implementation
 
@@ -141,7 +138,7 @@ begin
   Result := success;
 end;
 
-function LoadMedia(tiles: TArr_Tile): boolean;
+function LoadMedia(tiles: TArr_PTile): boolean;
 var
   success: boolean;
 begin
@@ -149,7 +146,7 @@ begin
   success := true;
 
   //Load dot texture
-  if not gDotTexture.LoadFromFile('../Source/9_tiling/dot.bmp') then
+  if not gDotTexture.LoadFromFile('../Source/39_tiling/dot.bmp') then
   begin
     WriteLn('Failed to load dot texture!');
     success := false;
@@ -172,7 +169,7 @@ begin
   Result := success;
 end;
 
-procedure Close(tiles: TArr_Tile);
+procedure Close(tiles: TArr_PTile);
 begin
   //Free loaded images
 
@@ -232,7 +229,7 @@ begin
   Result := true;
 end;
 
-function TouchesWall(box: TSDL_Rect; tiles: TArr_Tile): boolean;
+function TouchesWall(box: TSDL_Rect; tiles: TArr_PTile): boolean;
 var
   i: Integer;
 begin
@@ -252,7 +249,7 @@ begin
   Result := false;
 end;
 
-function SetTiles(tiles: TArr_Tile): boolean;
+function SetTiles(tiles: TArr_PTile): boolean;
 begin
 
 end;
@@ -261,7 +258,7 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  tileSet: TArr_Tile;
+  tileSet: TArr_PTile;
 begin
   // Start up SDL and create window
   if not Init then
@@ -270,7 +267,7 @@ begin
   end
   else
   begin
-    tileSet := TArr_Tile(nil);
+    tileSet := TArr_PTile(nil);
     SetLength(tileSet, TOTAL_TILES);
 
     //Load media
