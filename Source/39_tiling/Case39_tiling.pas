@@ -250,8 +250,27 @@ begin
 end;
 
 function SetTiles(tiles: TArr_PTile): boolean;
-begin
+var
+  tilesLoaded: Boolean;
+  list: TStringList;
+  x, y: Integer;
 
+begin
+  //Success flag
+	tilesLoaded := true;
+
+  //The tile offsets
+  x := 0;
+  y := 0;
+
+  list := TStringList.Create();
+  try
+    list.LoadFromFile('../Source/39_tiling/lazy.map');
+
+
+  finally
+    list.Free;
+  end;
 end;
 
 procedure Main;

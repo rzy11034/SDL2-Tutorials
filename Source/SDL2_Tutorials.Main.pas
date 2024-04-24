@@ -24,35 +24,45 @@ uses
 
 procedure Text;
 var
-  list: TStringList;
+  //list: TStringList;
   i, j: Integer;
   str:string;
   s1, s2: TArr_str;
-  temp:TArrayList_str;
+  temp: IList_str;
+  ff: TextFile;
+  c:char;
 begin
-  list := TStringList.Create;
+  //list := TStringList.Create;
+  temp := IList_str(nil);
   temp := TArrayList_str.Create;
 
-  list.LoadFromFile('../Source/39_tiling/lazy.map');
+  //ff := TextFile);
+  AssignFile(ff, '../Source\39_tiling/lazy.map');
+  Reset(ff);
 
-  //SetLength(s1, list.Count);
-  for i := 0 to list.Count-1 do
+  str := '' ;
+  while not EOF(ff) do
   begin
-    str := string(list[i]);
-    s1 := str.Split([' ']);
-
-    for j := 0 to 15 do
-    begin
-      temp.AddLast(s1[j]);
-    end;
+    Readln(ff, str);
+    str += c;
   end;
 
+  //list.LoadFromFile('..\Source\39_tiling\lazy.map');
+  //SetLength(s1, list.Count);
+  //for i := 0 to list.Count-1 do
+  //begin
+  //  str := string(list[i]);
+  //  s1 := str.Split([' ']);
+  //
+  //  s2 := temp.ToArray;
+  //end;
 
-  s2 := temp.ToArray;
 
 
-  temp.Free;
-  list.Free;
+
+
+
+  //list.Free;
   Exit;
 end;
 
