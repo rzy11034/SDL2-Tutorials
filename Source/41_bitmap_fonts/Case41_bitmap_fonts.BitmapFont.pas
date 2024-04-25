@@ -10,6 +10,7 @@ uses
   SysUtils,
   libSDL2,
   DeepStar.Utils,
+  DeepStar.UString,
   Case41_bitmap_fonts.Texture;
 
 type
@@ -54,7 +55,7 @@ end;
 
 function TBitmapFont.BuildFont(path: string): boolean;
 var
-  success: boolean;
+  success, breakLoops: boolean;
   bgColor: uint32;
   cellW, cellH, top, baseA, currentChar, rows, cols: integer;
   pCol, pRow, pX, pY, pColW, pRowW, i: integer;
@@ -85,6 +86,8 @@ begin
 
     //The current character we're setting
     currentChar := 0;
+
+    breakLoops := false;
 
     //Go through the cell rows
     for rows := 0 to 15 do
@@ -118,11 +121,16 @@ begin
               _Chars[currentChar].x := pX;
 
               //Break the loops
-              pCol := cellW;
-              pRow := cellH;
+              breakLoops := true;
             end;
+
+            if breakLoops then Break;
           end;
+
+          if breakLoops then Break;
         end;
+
+        breakLoops := false;
 
         //Find Right Side
         //Go through pixel columns
@@ -141,12 +149,16 @@ begin
               //Set the width
               _Chars[currentChar].w := (pX - _Chars[currentChar].x) + 1;
 
-              //Break the loops
-              pColW := -1;
-              pRowW := cellH;
+              breakLoops := true;
             end;
+
+            if breakLoops then Break;
           end;
+
+          if breakLoops then Break;
         end;
+
+        breakLoops := false;
 
         //Find Top
         //Go through pixel rows
@@ -168,15 +180,19 @@ begin
                 top := pRow;
               end;
 
-              //Break the loops
-              pCol := cellW;
-              pRow := cellH;
+              breakLoops := true;
             end;
+
+            if breakLoops then Break;
           end;
+
+          if breakLoops then Break;
         end;
 
+        breakLoops := false;
+
         //Find Bottom of A
-        if currentChar = 'A' then
+        if currentChar = Ord('A') then
         begin
           //Go through pixel rows
           for pRow := cellH - 1 downto 0 do
@@ -194,12 +210,14 @@ begin
                 //Bottom of a is found
                 baseA := pRow;
 
-                //Break the loops
-                pCol := cellW;
-                pRow := -1;
+                breakLoops := true;
               end;
             end;
+
+            if breakLoops then Break;
           end;
+
+          if breakLoops then Break;
         end;
 
         //Go to the next character
@@ -267,7 +285,7 @@ begin
       else if Text.Chars[i] = #$10 then
       begin
         //Move down
-        curY += mNewLine;
+        curY += _NewLine;
 
         //Move back
         curX := x;
@@ -275,7 +293,7 @@ begin
       else
       begin
         //Get the ASCII value of the character
-        ascii := Ord(Text[i]);
+        ascii := Ord(Text.Chars[i]);
 
         //Show the character
         _FontTexture.Render(curX, curY, @_Chars[ascii]);

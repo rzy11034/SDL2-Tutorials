@@ -12,7 +12,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="47"/>
-        <CursorPos X="40" Y="55"/>
+        <CursorPos X="28" Y="55"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,8 +21,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="19"/>
-        <CursorPos X="30" Y="23"/>
+        <TopLine Value="16"/>
+        <CursorPos X="6" Y="26"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -240,7 +240,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="41" Y="334"/>
-        <UsageCount Value="199"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
@@ -249,7 +249,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="207"/>
         <CursorPos X="62" Y="265"/>
-        <UsageCount Value="199"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="Source\25_capping_frame_rate\Case25_capping_frame_rate.pas"/>
@@ -258,7 +258,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="431"/>
         <CursorPos X="41" Y="436"/>
-        <UsageCount Value="199"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="Source\26_motion\Case26_motion.pas"/>
@@ -267,7 +267,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="421"/>
         <CursorPos X="5" Y="438"/>
-        <UsageCount Value="199"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="Source\27_collision_detection\Case27_collision_detection.pas"/>
@@ -276,7 +276,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="668"/>
         <CursorPos X="5" Y="708"/>
-        <UsageCount Value="187"/>
+        <UsageCount Value="193"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Utils.pas"/>
@@ -285,7 +285,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="49" Y="15"/>
-        <UsageCount Value="185"/>
+        <UsageCount Value="191"/>
       </Unit>
       <Unit>
         <Filename Value="Source\28_per_pixel_collision_detection\Case28_per_pixel_collision_detection.pas"/>
@@ -294,7 +294,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="768"/>
         <CursorPos X="23" Y="784"/>
-        <UsageCount Value="161"/>
+        <UsageCount Value="167"/>
       </Unit>
       <Unit>
         <Filename Value="Source\29_circular_collision_detection\Case29_circular_collision_detection.pas"/>
@@ -302,7 +302,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="23"/>
-        <UsageCount Value="152"/>
+        <UsageCount Value="158"/>
       </Unit>
       <Unit>
         <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
@@ -311,7 +311,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="785"/>
         <CursorPos X="5" Y="820"/>
-        <UsageCount Value="149"/>
+        <UsageCount Value="155"/>
       </Unit>
       <Unit>
         <Filename Value="Source\31_scrolling_backgrounds\Case31_scrolling_backgrounds.pas"/>
@@ -320,7 +320,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="394"/>
         <CursorPos X="34" Y="671"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="154"/>
       </Unit>
       <Unit>
         <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
@@ -329,7 +329,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="121"/>
         <CursorPos X="34" Y="139"/>
-        <UsageCount Value="146"/>
+        <UsageCount Value="152"/>
       </Unit>
       <Unit>
         <Filename Value="Source\33_file_reading_and_writing\Case33_file_reading_and_writing.pas"/>
@@ -338,7 +338,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="805"/>
         <CursorPos X="5" Y="840"/>
-        <UsageCount Value="142"/>
+        <UsageCount Value="148"/>
       </Unit>
       <Unit>
         <Filename Value="Source\34_audio_recording\Case34_audio_recording.pas"/>
@@ -347,7 +347,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
         <CursorPos X="55" Y="99"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="127"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.pas"/>
@@ -356,7 +356,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="171"/>
         <CursorPos X="30" Y="180"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="94"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.Texture.pas"/>
@@ -364,7 +364,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="68"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="94"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.Windows.pas"/>
@@ -373,7 +373,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
         <CursorPos X="3" Y="81"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="94"/>
       </Unit>
       <Unit>
         <Filename Value="Source\36_multiple_windows\Case36_multiple_windows.pas"/>
@@ -382,7 +382,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="133"/>
         <CursorPos X="51" Y="137"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="Source\36_multiple_windows\Case36_multiple_windows.Windows.pas"/>
@@ -391,7 +391,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="275"/>
         <CursorPos X="5" Y="309"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.pas"/>
@@ -400,7 +400,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="103"/>
         <CursorPos X="5" Y="132"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.Windows.pas"/>
@@ -409,7 +409,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="52" Y="134"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.pas"/>
@@ -418,7 +418,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="115"/>
         <CursorPos X="39" Y="123"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="71"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Texture.pas"/>
@@ -427,7 +427,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="81"/>
         <CursorPos X="33" Y="127"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="71"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Dot.pas"/>
@@ -436,7 +436,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="78"/>
         <CursorPos Y="141"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="71"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Particle.pas"/>
@@ -445,7 +445,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos Y="55"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="71"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.pas"/>
@@ -454,7 +454,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="68"/>
         <CursorPos X="34" Y="79"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="60"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Texture.pas"/>
@@ -463,7 +463,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="16" Y="6"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="60"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Dot.pas"/>
@@ -472,7 +472,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="130"/>
         <CursorPos X="3" Y="132"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="58"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Tile.pas"/>
@@ -481,7 +481,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="53"/>
         <CursorPos X="40" Y="57"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="58"/>
       </Unit>
       <Unit>
         <Filename Value="Source\40_texture_manipulation\Case40_texture_manipulation.pas"/>
@@ -490,7 +490,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="189"/>
         <CursorPos X="5" Y="229"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="38"/>
       </Unit>
       <Unit>
         <Filename Value="Source\40_texture_manipulation\Case40_texture_manipulation.Texture.pas"/>
@@ -499,17 +499,37 @@
         <WindowIndex Value="0"/>
         <TopLine Value="279"/>
         <CursorPos X="5" Y="319"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="38"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="102"/>
-        <CursorPos X="53" Y="106"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="52"/>
+        <CursorPos X="8" Y="4"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="205"/>
+        <CursorPos X="69" Y="215"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="283"/>
+        <CursorPos X="33" Y="266"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -518,7 +538,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="187"/>
         <CursorPos X="7" Y="201"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
@@ -526,7 +546,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="6" Y="174"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Timer.pas"/>
@@ -534,7 +554,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="111"/>
         <CursorPos Y="118"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
@@ -542,7 +562,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="23" Y="70"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="59"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
@@ -552,7 +572,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="923"/>
         <CursorPos X="7" Y="941"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="37"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
@@ -561,7 +581,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="106"/>
         <CursorPos X="3" Y="125"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
@@ -570,7 +590,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="518"/>
         <CursorPos X="30" Y="532"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
@@ -580,16 +600,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="515"/>
         <CursorPos X="3" Y="515"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="84"/>
-        <CursorPos X="42" Y="114"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="26"/>
+        <CursorPos X="40" Y="45"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
@@ -597,15 +617,16 @@
         <UnitName Value="SysUtils"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="3" Y="6"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="124"/>
+        <CursorPos X="14" Y="512"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Dot"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="10" Y="13"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -615,7 +636,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="29" Y="42"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.ArrayList.pas"/>
@@ -624,7 +645,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="121"/>
         <CursorPos X="26" Y="142"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
@@ -633,7 +654,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1112"/>
         <CursorPos X="3" Y="1099"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\classes.pp"/>
@@ -643,7 +664,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="112"/>
         <CursorPos X="3" Y="112"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\types.pp"/>
@@ -653,7 +674,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="63"/>
         <CursorPos X="3" Y="83"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\typshrdh.inc"/>
@@ -662,7 +683,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="129"/>
         <CursorPos X="17" Y="149"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\windows.pp"/>
@@ -671,7 +692,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="76"/>
         <CursorPos X="10" Y="76"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-generics\src\generics.defaults.pas"/>
@@ -681,7 +702,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="52"/>
         <CursorPos X="29" Y="69"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-generics\src\generics.collections.pas"/>
@@ -691,7 +712,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="221"/>
         <CursorPos X="17" Y="315"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysutils.inc"/>
@@ -700,7 +721,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="163"/>
         <CursorPos X="7" Y="174"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\heap.inc"/>
@@ -709,7 +730,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="323"/>
         <CursorPos X="3" Y="326"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\heaph.inc"/>
@@ -718,7 +739,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="5" Y="42"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\wininc\func.inc"/>
@@ -727,7 +748,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1413"/>
         <CursorPos X="11" Y="1434"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\lazunicode.pas"/>
@@ -737,7 +758,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="28" Y="33"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Math\mevmatrix.pas"/>
@@ -746,7 +767,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="85"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Math\memathfn.pas"/>
@@ -755,7 +776,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Math\meobjmatrix.pas"/>
@@ -764,7 +785,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="40"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\System\sysfontsutils.pas"/>
@@ -774,7 +795,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="89"/>
         <CursorPos X="28" Y="94"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\lazutf8.pas"/>
@@ -783,7 +804,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="44" Y="19"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Math.pas"/>
@@ -791,14 +812,14 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="2"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\winlazutf8.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\ctypes.pp"/>
@@ -807,7 +828,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="43"/>
         <CursorPos X="42" Y="83"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_ttf.pas"/>
@@ -817,7 +838,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="68"/>
         <CursorPos X="4" Y="86"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_Box2D\source\UPhysics2D.pas"/>
@@ -825,7 +846,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="6501"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -834,7 +855,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="16"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -843,7 +864,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="42"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -851,7 +872,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -859,7 +880,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -867,7 +888,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -877,7 +898,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="258"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SimpleBLE\source\libsimpleble_loader.pas"/>
@@ -887,7 +908,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="31" Y="47"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\objpas.inc"/>
@@ -896,7 +917,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="395"/>
         <CursorPos X="9" Y="402"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\objpash.inc"/>
@@ -905,14 +926,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
         <CursorPos X="21" Y="33"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.cpp"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="19" Y="11"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
         <DefaultSyntaxHighlighter Value="C_2B_2B"/>
       </Unit>
       <Unit>
@@ -922,7 +943,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="70"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-extra\src\inc\matrix.pp"/>
@@ -931,7 +952,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="64"/>
         <CursorPos X="44" Y="86"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-extra\src\inc\mvecimp.inc"/>
@@ -939,7 +960,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="5" Y="7"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\Users\Administrator\AppData\Local\Temp\360zip$Temp\360$2\39_tiling.cpp"/>
@@ -948,7 +969,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="748"/>
         <CursorPos X="16" Y="771"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
         <DefaultSyntaxHighlighter Value="C_2B_2B"/>
       </Unit>
       <Unit>
@@ -958,7 +979,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1356"/>
         <CursorPos X="3" Y="1372"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelps.inc"/>
@@ -967,7 +988,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1113"/>
         <CursorPos X="64" Y="1113"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelph.inc"/>
@@ -975,14 +996,14 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="6"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysstrh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.LinkedList.pas"/>
@@ -991,7 +1012,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="158"/>
         <CursorPos X="43" Y="178"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\objpas.pp"/>
@@ -1000,7 +1021,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="128"/>
         <CursorPos X="33" Y="148"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\streams.inc"/>
@@ -1009,7 +1030,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1354"/>
         <CursorPos Y="1365"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\filutil.inc"/>
@@ -1018,7 +1039,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="256"/>
         <CursorPos X="3" Y="265"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\wininc\unifun.inc"/>
@@ -1027,7 +1048,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="100"/>
         <CursorPos X="10" Y="117"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\packages\rtl-generics\src\generics.defaults.pas"/>
@@ -1037,7 +1058,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="52"/>
         <CursorPos X="30" Y="69"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.DoubleLinkedList.pas"/>
@@ -1046,148 +1067,129 @@
         <WindowIndex Value="0"/>
         <TopLine Value="190"/>
         <CursorPos X="53" Y="194"/>
-        <UsageCount Value="9"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <WindowIndex Value="0"/>
-        <CursorPos X="45" Y="129"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="231"/>
-        <CursorPos X="11" Y="69"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="8"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="224" Column="17" TopLine="206"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="36" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="39" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="40" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="32" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="34" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="36" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="39" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="40" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="32" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="34" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="36" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="39" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="40" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="32" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="34" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="36" TopLine="25"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="58" Column="3" TopLine="47"/>
+        <Caret Line="4" Column="3"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="63" Column="31" TopLine="31"/>
+        <Caret Line="213" Column="54" TopLine="195"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
+        <Caret Line="69" Column="50" TopLine="49"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="126" Column="3" TopLine="122"/>
+        <Caret Line="250" Column="50" TopLine="230"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="63" Column="14" TopLine="45"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="126" Column="3" TopLine="122"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="64" Column="31" TopLine="45"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="133" Column="3" TopLine="127"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="63" Column="27" TopLine="40"/>
+        <Caret Line="215" Column="69" TopLine="205"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="76" Column="9" TopLine="50"/>
+        <Caret Line="279" TopLine="270"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="77" Column="7" TopLine="57"/>
+        <Caret Line="280" Column="22" TopLine="260"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="78" Column="4" TopLine="56"/>
+        <Caret Line="279" Column="25" TopLine="259"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="81" Column="5" TopLine="59"/>
+        <Caret Line="280" TopLine="271"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="103" Column="10" TopLine="84"/>
+        <Caret Line="282" TopLine="271"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="106" Column="10" TopLine="87"/>
+        <Caret Line="280" TopLine="271"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="127" Column="9" TopLine="108"/>
+        <Caret Line="282" TopLine="271"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="130" Column="10" TopLine="111"/>
+        <Caret Line="288" TopLine="272"/>
       </Position>
       <Position>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="215" Column="7" TopLine="196"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="229" Column="11" TopLine="196"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="123" Column="9" TopLine="109"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="161" Column="59" TopLine="143"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="164" Column="27" TopLine="146"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="63" Column="21" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="132" Column="33" TopLine="107"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="110" TopLine="90"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
-        <Caret Line="19" Column="79" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
-        <Caret Line="34" Column="27" TopLine="8"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
-        <Caret Line="155" Column="14" TopLine="132"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
-        <Caret Line="119" Column="53" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="67" Column="58" TopLine="49"/>
+        <Caret Line="280" TopLine="272"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -1221,5 +1223,13 @@
         <Line Value="1365"/>
       </Item>
     </BreakPoints>
+    <Watches>
+      <Item ClassAutoCast="True">
+        <Expression Value="Text"/>
+      </Item>
+      <Item ClassAutoCast="True">
+        <Expression Value="Text.Chars[i]"/>
+      </Item>
+    </Watches>
   </Debugging>
 </CONFIG>

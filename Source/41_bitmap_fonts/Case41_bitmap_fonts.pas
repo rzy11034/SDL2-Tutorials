@@ -12,7 +12,6 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  Case41_bitmap_fonts.Texture,
   Case41_bitmap_fonts.BitmapFont;
 
 const
@@ -186,10 +185,12 @@ begin
         SDL_SetRenderDrawColor(gRenderer, $FF, $FF, $FF, $FF);
         SDL_RenderClear(gRenderer);
 
-        //Render stick figure
-        gFooTexture.render(
-          (SCREEN_WIDTH - gFooTexture.GetWidth()) div 2,
-          (SCREEN_HEIGHT - gFooTexture.GetHeight()) div 2);
+        //Render test text
+        gBitmapFont.RenderText(0, 0,
+          'Bitmap Font:'#$10 +
+          'ABDCEFGHIJKLMNOPQRSTUVWXYZ'#$10 +
+          'abcdefghijklmnopqrstuvwxyz'#$10 +
+          '0123456789');
 
         //Update screen
         SDL_RenderPresent(gRenderer);
