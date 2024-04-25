@@ -1,4 +1,4 @@
-﻿unit Case40_texture_manipulation;
+﻿unit Case41_bitmap_fonts;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -12,7 +12,8 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  Case40_texture_manipulation.Texture;
+  Case41_bitmap_fonts.Texture,
+  Case41_bitmap_fonts.BitmapFont;
 
 const
   //Screen dimension constants
@@ -30,7 +31,7 @@ var
   gFont: PTTF_Font;
 
   //Scene textures
-  gFooTexture: TTexture;
+  gBitmapFont: TBitmapFont;
 
 procedure Main;
 // Starts up SDL and creates window
@@ -108,41 +109,15 @@ end;
 function LoadMedia: boolean;
 var
   success: boolean;
-  pixels: PUInt32;
-  pixelCount, i: integer;
-  colorKey, transparent: uint32;
 begin
   //Loading success flag
   success := true;
 
-  //Load dot texture
-  if not gFooTexture.loadPixelsFromFile('../Source/40_texture_manipulation/foo.png') then
+  //Load font texture
+  if not gBitmapFont.BuildFont('../Source/41_bitmap_fonts/lazyfont.png') then
   begin
-    WriteLn('Failed to load Foo'' texture!');
+    WriteLn('Failed to load bitmap font!');
     success := false;
-  end
-  else
-  begin
-    //Get pixel data
-    pixels := gFooTexture.GetPixels32();
-    pixelCount := gFooTexture.GetPitch32() * gFooTexture.GetHeight();
-
-    //Map colors
-    colorKey := gFooTexture.MapRGBA($FF, $00, $FF, $FF);
-    transparent := gFooTexture.MapRGBA($FF, $FF, $FF, $00);
-
-    //Color key pixels
-    for i := 0 to pixelCount - 1 do
-    begin
-      if pixels[i] = colorKey then
-        pixels[i] := transparent;
-    end;
-
-    //Create texture from manually color keyed pixels
-    if not gFooTexture.loadFromPixels() then
-    begin
-      WriteLn('Unable to load Foo'' texture from surface!');
-    end;
   end;
 
   Result := success;
@@ -151,7 +126,7 @@ end;
 procedure Close();
 begin
   //Free loaded images
-  gFooTexture.Free();
+  gBitmapFont.Free();
 
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
