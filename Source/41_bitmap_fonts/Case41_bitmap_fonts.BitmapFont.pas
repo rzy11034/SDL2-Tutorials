@@ -59,6 +59,7 @@ var
   bgColor: uint32;
   cellW, cellH, top, baseA, currentChar, rows, cols: integer;
   pCol, pRow, pX, pY, pColW, pRowW, i: integer;
+
 begin
   //Get rid of preexisting texture
   Self.Free();

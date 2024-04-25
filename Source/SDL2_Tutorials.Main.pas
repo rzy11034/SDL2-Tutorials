@@ -20,7 +20,7 @@ procedure Run;
 implementation
 
 uses
-  Case41_bitmap_fonts;
+  Case42_texture_streaming;
 
 procedure Text;
 begin

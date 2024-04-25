@@ -11,8 +11,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="47"/>
-        <CursorPos X="28" Y="55"/>
+        <TopLine Value="19"/>
+        <CursorPos X="55" Y="33"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -22,7 +22,7 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="16"/>
-        <CursorPos X="6" Y="26"/>
+        <CursorPos X="28" Y="23"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -41,8 +41,9 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="22"/>
-        <CursorPos X="23" Y="32"/>
+        <TopLine Value="107"/>
+        <CursorPos X="35" Y="131"/>
+        <SyntaxHighlighter Value="PO"/>
         <UsageCount Value="210"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -142,7 +143,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="164"/>
-        <CursorPos X="34" Y="162"/>
+        <CursorPos X="79" Y="165"/>
         <UsageCount Value="201"/>
       </Unit>
       <Unit>
@@ -276,7 +277,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="668"/>
         <CursorPos X="5" Y="708"/>
-        <UsageCount Value="193"/>
+        <UsageCount Value="197"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Utils.pas"/>
@@ -285,7 +286,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="49" Y="15"/>
-        <UsageCount Value="191"/>
+        <UsageCount Value="195"/>
       </Unit>
       <Unit>
         <Filename Value="Source\28_per_pixel_collision_detection\Case28_per_pixel_collision_detection.pas"/>
@@ -294,7 +295,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="768"/>
         <CursorPos X="23" Y="784"/>
-        <UsageCount Value="167"/>
+        <UsageCount Value="171"/>
       </Unit>
       <Unit>
         <Filename Value="Source\29_circular_collision_detection\Case29_circular_collision_detection.pas"/>
@@ -302,7 +303,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="23"/>
-        <UsageCount Value="158"/>
+        <UsageCount Value="162"/>
       </Unit>
       <Unit>
         <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
@@ -311,7 +312,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="785"/>
         <CursorPos X="5" Y="820"/>
-        <UsageCount Value="155"/>
+        <UsageCount Value="159"/>
       </Unit>
       <Unit>
         <Filename Value="Source\31_scrolling_backgrounds\Case31_scrolling_backgrounds.pas"/>
@@ -320,7 +321,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="394"/>
         <CursorPos X="34" Y="671"/>
-        <UsageCount Value="154"/>
+        <UsageCount Value="158"/>
       </Unit>
       <Unit>
         <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
@@ -329,7 +330,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="121"/>
         <CursorPos X="34" Y="139"/>
-        <UsageCount Value="152"/>
+        <UsageCount Value="156"/>
       </Unit>
       <Unit>
         <Filename Value="Source\33_file_reading_and_writing\Case33_file_reading_and_writing.pas"/>
@@ -338,7 +339,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="805"/>
         <CursorPos X="5" Y="840"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="152"/>
       </Unit>
       <Unit>
         <Filename Value="Source\34_audio_recording\Case34_audio_recording.pas"/>
@@ -347,7 +348,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
         <CursorPos X="55" Y="99"/>
-        <UsageCount Value="127"/>
+        <UsageCount Value="131"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.pas"/>
@@ -356,7 +357,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="171"/>
         <CursorPos X="30" Y="180"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="98"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.Texture.pas"/>
@@ -364,7 +365,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="68"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="98"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.Windows.pas"/>
@@ -373,7 +374,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
         <CursorPos X="3" Y="81"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="98"/>
       </Unit>
       <Unit>
         <Filename Value="Source\36_multiple_windows\Case36_multiple_windows.pas"/>
@@ -382,7 +383,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="133"/>
         <CursorPos X="51" Y="137"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="88"/>
       </Unit>
       <Unit>
         <Filename Value="Source\36_multiple_windows\Case36_multiple_windows.Windows.pas"/>
@@ -391,7 +392,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="275"/>
         <CursorPos X="5" Y="309"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="88"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.pas"/>
@@ -400,7 +401,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="103"/>
         <CursorPos X="5" Y="132"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="80"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.Windows.pas"/>
@@ -409,7 +410,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="52" Y="134"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="80"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.pas"/>
@@ -418,7 +419,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="115"/>
         <CursorPos X="39" Y="123"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Texture.pas"/>
@@ -427,7 +428,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="81"/>
         <CursorPos X="33" Y="127"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Dot.pas"/>
@@ -436,7 +437,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="78"/>
         <CursorPos Y="141"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Particle.pas"/>
@@ -445,7 +446,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos Y="55"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.pas"/>
@@ -454,7 +455,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="68"/>
         <CursorPos X="34" Y="79"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="64"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Texture.pas"/>
@@ -463,7 +464,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="16" Y="6"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="64"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Dot.pas"/>
@@ -472,7 +473,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="130"/>
         <CursorPos X="3" Y="132"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="62"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Tile.pas"/>
@@ -481,7 +482,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="53"/>
         <CursorPos X="40" Y="57"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="62"/>
       </Unit>
       <Unit>
         <Filename Value="Source\40_texture_manipulation\Case40_texture_manipulation.pas"/>
@@ -490,7 +491,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="189"/>
         <CursorPos X="5" Y="229"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="42"/>
       </Unit>
       <Unit>
         <Filename Value="Source\40_texture_manipulation\Case40_texture_manipulation.Texture.pas"/>
@@ -499,38 +500,34 @@
         <WindowIndex Value="0"/>
         <TopLine Value="279"/>
         <CursorPos X="5" Y="319"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="42"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="52"/>
-        <CursorPos X="8" Y="4"/>
-        <UsageCount Value="28"/>
-        <Loaded Value="True"/>
+        <TopLine Value="172"/>
+        <CursorPos X="50" Y="173"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="205"/>
-        <CursorPos X="69" Y="215"/>
-        <UsageCount Value="28"/>
-        <Loaded Value="True"/>
+        <TopLine Value="322"/>
+        <CursorPos X="28" Y="217"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="283"/>
-        <CursorPos X="33" Y="266"/>
-        <UsageCount Value="28"/>
-        <Loaded Value="True"/>
+        <TopLine Value="126"/>
+        <CursorPos X="48" Y="125"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Texture.pas"/>
@@ -570,8 +567,8 @@
         <UnitName Value="libSDL2"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="923"/>
-        <CursorPos X="7" Y="941"/>
+        <TopLine Value="1534"/>
+        <CursorPos X="4" Y="1551"/>
         <UsageCount Value="37"/>
       </Unit>
       <Unit>
@@ -662,9 +659,9 @@
         <UnitName Value="Classes"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="112"/>
-        <CursorPos X="3" Y="112"/>
-        <UsageCount Value="8"/>
+        <TopLine Value="105"/>
+        <CursorPos Y="112"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\types.pp"/>
@@ -1030,7 +1027,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1354"/>
         <CursorPos Y="1365"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\filutil.inc"/>
@@ -1069,127 +1066,128 @@
         <CursorPos X="53" Y="194"/>
         <UsageCount Value="8"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming.cpp\Case42_texture_streaming.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="190"/>
+        <CursorPos Y="197"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming.cpp\Case42_texture_streaming.Texture.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="86"/>
+        <CursorPos Y="98"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming.cpp\Case42_texture_streaming.DataStream.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="96"/>
+        <CursorPos X="49" Y="100"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="19"/>
+        <CursorPos X="31" Y="105"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="190"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="35" Y="377"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="16">
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="36" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
+        <Caret Line="106" TopLine="104"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="39" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
+        <Caret Line="106" TopLine="104"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="40" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
+        <Caret Line="107" TopLine="104"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="32" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
+        <Caret Line="106" TopLine="98"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="34" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="84" Column="47" TopLine="393"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="36" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="410" Column="34" TopLine="393"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="39" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="101" TopLine="281"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="40" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="406" Column="53" TopLine="393"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="32" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="329" TopLine="322"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="34" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="337" Column="8" TopLine="321"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="36" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="338" TopLine="332"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="39" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="339" TopLine="332"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="40" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="338" TopLine="332"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="32" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="339" TopLine="326"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="34" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="330" Column="12" TopLine="326"/>
       </Position>
       <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="36" TopLine="25"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="339" TopLine="333"/>
       </Position>
       <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="4" Column="3"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="213" Column="54" TopLine="195"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="69" Column="50" TopLine="49"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="250" Column="50" TopLine="230"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
-        <Caret Line="215" Column="69" TopLine="205"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="279" TopLine="270"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="280" Column="22" TopLine="260"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="279" Column="25" TopLine="259"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="280" TopLine="271"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="282" TopLine="271"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="280" TopLine="271"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="282" TopLine="271"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="288" TopLine="272"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
-        <Caret Line="280" TopLine="272"/>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Caret Line="346" TopLine="334"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -1213,23 +1211,4 @@
       </List>
     </HistoryLists>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\streams.inc"/>
-        <Line Value="1365"/>
-      </Item>
-    </BreakPoints>
-    <Watches>
-      <Item ClassAutoCast="True">
-        <Expression Value="Text"/>
-      </Item>
-      <Item ClassAutoCast="True">
-        <Expression Value="Text.Chars[i]"/>
-      </Item>
-    </Watches>
-  </Debugging>
 </CONFIG>
