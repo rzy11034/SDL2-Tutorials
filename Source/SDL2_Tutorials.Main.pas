@@ -20,7 +20,9 @@ procedure Run;
 implementation
 
 uses
-  Case43_render_to_texture;
+  Case45_timer_callbacks;
+
+type
 
 procedure Text;
 begin

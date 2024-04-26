@@ -69,7 +69,17 @@ uses
   Case41_bitmap_fonts.BitmapFont,
   Case42_texture_streaming,
   Case42_texture_streaming.DataStream,
-  Case42_texture_streaming.Texture, Case43_render_to_texture, Case43_render_to_texture.Texture;
+  Case42_texture_streaming.Texture,
+  Case43_render_to_texture,
+  Case43_render_to_texture.Texture,
+  Case44_frame_independent_movement,
+  Case44_frame_independent_movement.Texture,
+  Case44_frame_independent_movement.Dot,
+  Case44_frame_independent_movement.Timer,
+  Case45_timer_callbacks,
+  Case45_timer_callbacks.Texture,
+  Case46_multithreading,
+  Case46_multithreading.Texture;
 
 var
   gLoaderSDL2: TLoaderSDL2;
