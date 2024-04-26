@@ -11,8 +11,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="19"/>
-        <CursorPos X="55" Y="33"/>
+        <TopLine Value="59"/>
+        <CursorPos X="21" Y="33"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,8 +21,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="16"/>
-        <CursorPos X="28" Y="23"/>
+        <TopLine Value="13"/>
+        <CursorPos X="6" Y="26"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -277,7 +277,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="668"/>
         <CursorPos X="5" Y="708"/>
-        <UsageCount Value="197"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Utils.pas"/>
@@ -286,7 +286,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="49" Y="15"/>
-        <UsageCount Value="195"/>
+        <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="Source\28_per_pixel_collision_detection\Case28_per_pixel_collision_detection.pas"/>
@@ -295,7 +295,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="768"/>
         <CursorPos X="23" Y="784"/>
-        <UsageCount Value="171"/>
+        <UsageCount Value="178"/>
       </Unit>
       <Unit>
         <Filename Value="Source\29_circular_collision_detection\Case29_circular_collision_detection.pas"/>
@@ -303,7 +303,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="23"/>
-        <UsageCount Value="162"/>
+        <UsageCount Value="169"/>
       </Unit>
       <Unit>
         <Filename Value="Source\30_scrolling\Case30_scrolling.pas"/>
@@ -312,7 +312,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="785"/>
         <CursorPos X="5" Y="820"/>
-        <UsageCount Value="159"/>
+        <UsageCount Value="166"/>
       </Unit>
       <Unit>
         <Filename Value="Source\31_scrolling_backgrounds\Case31_scrolling_backgrounds.pas"/>
@@ -321,7 +321,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="394"/>
         <CursorPos X="34" Y="671"/>
-        <UsageCount Value="158"/>
+        <UsageCount Value="165"/>
       </Unit>
       <Unit>
         <Filename Value="Source\32_text_input_and_clipboard_handling\Case32_text_input_and_clipboard_handling.pas"/>
@@ -330,7 +330,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="121"/>
         <CursorPos X="34" Y="139"/>
-        <UsageCount Value="156"/>
+        <UsageCount Value="163"/>
       </Unit>
       <Unit>
         <Filename Value="Source\33_file_reading_and_writing\Case33_file_reading_and_writing.pas"/>
@@ -339,7 +339,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="805"/>
         <CursorPos X="5" Y="840"/>
-        <UsageCount Value="152"/>
+        <UsageCount Value="159"/>
       </Unit>
       <Unit>
         <Filename Value="Source\34_audio_recording\Case34_audio_recording.pas"/>
@@ -348,7 +348,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
         <CursorPos X="55" Y="99"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="138"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.pas"/>
@@ -357,7 +357,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="171"/>
         <CursorPos X="30" Y="180"/>
-        <UsageCount Value="98"/>
+        <UsageCount Value="105"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.Texture.pas"/>
@@ -365,7 +365,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="68"/>
-        <UsageCount Value="98"/>
+        <UsageCount Value="105"/>
       </Unit>
       <Unit>
         <Filename Value="Source\35_window_events\Case35_window_events.Windows.pas"/>
@@ -374,7 +374,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
         <CursorPos X="3" Y="81"/>
-        <UsageCount Value="98"/>
+        <UsageCount Value="105"/>
       </Unit>
       <Unit>
         <Filename Value="Source\36_multiple_windows\Case36_multiple_windows.pas"/>
@@ -383,7 +383,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="133"/>
         <CursorPos X="51" Y="137"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="95"/>
       </Unit>
       <Unit>
         <Filename Value="Source\36_multiple_windows\Case36_multiple_windows.Windows.pas"/>
@@ -392,7 +392,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="275"/>
         <CursorPos X="5" Y="309"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="95"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.pas"/>
@@ -401,7 +401,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="103"/>
         <CursorPos X="5" Y="132"/>
-        <UsageCount Value="80"/>
+        <UsageCount Value="87"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.Windows.pas"/>
@@ -410,7 +410,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="52" Y="134"/>
-        <UsageCount Value="80"/>
+        <UsageCount Value="87"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.pas"/>
@@ -419,7 +419,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="115"/>
         <CursorPos X="39" Y="123"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="82"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Texture.pas"/>
@@ -428,7 +428,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="81"/>
         <CursorPos X="33" Y="127"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="82"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Dot.pas"/>
@@ -437,7 +437,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="78"/>
         <CursorPos Y="141"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="82"/>
       </Unit>
       <Unit>
         <Filename Value="Source\38_particle_engines\Case38_particle_engines.Particle.pas"/>
@@ -446,7 +446,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos Y="55"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="82"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.pas"/>
@@ -455,7 +455,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="68"/>
         <CursorPos X="34" Y="79"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="71"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Texture.pas"/>
@@ -464,7 +464,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="16" Y="6"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="71"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Dot.pas"/>
@@ -473,7 +473,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="130"/>
         <CursorPos X="3" Y="132"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="69"/>
       </Unit>
       <Unit>
         <Filename Value="Source\39_tiling\Case39_tiling.Tile.pas"/>
@@ -482,7 +482,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="53"/>
         <CursorPos X="40" Y="57"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="69"/>
       </Unit>
       <Unit>
         <Filename Value="Source\40_texture_manipulation\Case40_texture_manipulation.pas"/>
@@ -491,7 +491,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="189"/>
         <CursorPos X="5" Y="229"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="Source\40_texture_manipulation\Case40_texture_manipulation.Texture.pas"/>
@@ -500,7 +500,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="279"/>
         <CursorPos X="5" Y="319"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.pas"/>
@@ -509,7 +509,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="172"/>
         <CursorPos X="50" Y="173"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="39"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.Texture.pas"/>
@@ -518,7 +518,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="322"/>
         <CursorPos X="28" Y="217"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="39"/>
       </Unit>
       <Unit>
         <Filename Value="Source\41_bitmap_fonts\Case41_bitmap_fonts.BitmapFont.pas"/>
@@ -527,7 +527,33 @@
         <WindowIndex Value="0"/>
         <TopLine Value="126"/>
         <CursorPos X="48" Y="125"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="39"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="19"/>
+        <CursorPos X="31" Y="105"/>
+        <UsageCount Value="28"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="175"/>
+        <UsageCount Value="28"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="127"/>
+        <CursorPos X="44" Y="9"/>
+        <UsageCount Value="28"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Texture.pas"/>
@@ -535,7 +561,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="187"/>
         <CursorPos X="7" Y="201"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Dot.pas"/>
@@ -543,7 +569,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="6" Y="174"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Timer.pas"/>
@@ -551,7 +577,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="111"/>
         <CursorPos Y="118"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\10_color_keying\Case10_color_keying.LTexture.pas"/>
@@ -559,7 +585,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="23" Y="70"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="58"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
@@ -569,7 +595,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1534"/>
         <CursorPos X="4" Y="1551"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="36"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
@@ -578,7 +604,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="106"/>
         <CursorPos X="3" Y="125"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
@@ -587,7 +613,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="518"/>
         <CursorPos X="30" Y="532"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\system.pp"/>
@@ -597,7 +623,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="515"/>
         <CursorPos X="3" Y="515"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
@@ -606,7 +632,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="26"/>
         <CursorPos X="40" Y="45"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
@@ -616,14 +642,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="124"/>
         <CursorPos X="14" Y="512"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Dot"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="10" Y="13"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -633,7 +659,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="29" Y="42"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.ArrayList.pas"/>
@@ -642,7 +668,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="121"/>
         <CursorPos X="26" Y="142"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
@@ -651,7 +677,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1112"/>
         <CursorPos X="3" Y="1099"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\classes.pp"/>
@@ -661,7 +687,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="105"/>
         <CursorPos Y="112"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\types.pp"/>
@@ -671,7 +697,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="63"/>
         <CursorPos X="3" Y="83"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\typshrdh.inc"/>
@@ -680,7 +706,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="129"/>
         <CursorPos X="17" Y="149"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win64\windows.pp"/>
@@ -689,7 +715,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="76"/>
         <CursorPos X="10" Y="76"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-generics\src\generics.defaults.pas"/>
@@ -699,7 +725,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="52"/>
         <CursorPos X="29" Y="69"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-generics\src\generics.collections.pas"/>
@@ -709,7 +735,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="221"/>
         <CursorPos X="17" Y="315"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysutils.inc"/>
@@ -718,7 +744,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="163"/>
         <CursorPos X="7" Y="174"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\heap.inc"/>
@@ -727,7 +753,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="323"/>
         <CursorPos X="3" Y="326"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\heaph.inc"/>
@@ -736,7 +762,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="5" Y="42"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\wininc\func.inc"/>
@@ -745,7 +771,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1413"/>
         <CursorPos X="11" Y="1434"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\lazunicode.pas"/>
@@ -755,7 +781,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="25"/>
         <CursorPos X="28" Y="33"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Math\mevmatrix.pas"/>
@@ -764,7 +790,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="85"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Math\memathfn.pas"/>
@@ -773,7 +799,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\Math\meobjmatrix.pas"/>
@@ -782,7 +808,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="40"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseEngines\System\sysfontsutils.pas"/>
@@ -792,7 +818,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="89"/>
         <CursorPos X="28" Y="94"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\lazutf8.pas"/>
@@ -801,7 +827,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="44" Y="19"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Math.pas"/>
@@ -809,14 +835,14 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="2"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\winlazutf8.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\ctypes.pp"/>
@@ -825,7 +851,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="43"/>
         <CursorPos X="42" Y="83"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2_ttf.pas"/>
@@ -835,7 +861,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="68"/>
         <CursorPos X="4" Y="86"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_Box2D\source\UPhysics2D.pas"/>
@@ -843,7 +869,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="6501"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -852,7 +878,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="16"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -861,7 +887,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="42"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -869,7 +895,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -877,7 +903,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -885,7 +911,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -895,7 +921,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="258"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_SimpleBLE\source\libsimpleble_loader.pas"/>
@@ -905,7 +931,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="31" Y="47"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\objpas.inc"/>
@@ -914,7 +940,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="395"/>
         <CursorPos X="9" Y="402"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\objpash.inc"/>
@@ -923,14 +949,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
         <CursorPos X="21" Y="33"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="Source\37_multiple_displays\Case37_multiple_displays.cpp"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="19" Y="11"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
         <DefaultSyntaxHighlighter Value="C_2B_2B"/>
       </Unit>
       <Unit>
@@ -940,7 +966,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="70"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-extra\src\inc\matrix.pp"/>
@@ -949,7 +975,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="64"/>
         <CursorPos X="44" Y="86"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-extra\src\inc\mvecimp.inc"/>
@@ -957,7 +983,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="5" Y="7"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\Users\Administrator\AppData\Local\Temp\360zip$Temp\360$2\39_tiling.cpp"/>
@@ -966,7 +992,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="748"/>
         <CursorPos X="16" Y="771"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="C_2B_2B"/>
       </Unit>
       <Unit>
@@ -976,7 +1002,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1356"/>
         <CursorPos X="3" Y="1372"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelps.inc"/>
@@ -985,7 +1011,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1113"/>
         <CursorPos X="64" Y="1113"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syshelph.inc"/>
@@ -993,14 +1019,14 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="6"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysstrh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.LinkedList.pas"/>
@@ -1009,7 +1035,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="158"/>
         <CursorPos X="43" Y="178"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\objpas.pp"/>
@@ -1018,7 +1044,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="128"/>
         <CursorPos X="33" Y="148"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\streams.inc"/>
@@ -1027,7 +1053,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1354"/>
         <CursorPos Y="1365"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\filutil.inc"/>
@@ -1036,7 +1062,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="256"/>
         <CursorPos X="3" Y="265"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\wininc\unifun.inc"/>
@@ -1045,7 +1071,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="100"/>
         <CursorPos X="10" Y="117"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\fpcsrc\packages\rtl-generics\src\generics.defaults.pas"/>
@@ -1055,7 +1081,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="52"/>
         <CursorPos X="30" Y="69"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.DoubleLinkedList.pas"/>
@@ -1064,7 +1090,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="190"/>
         <CursorPos X="53" Y="194"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="Source\42_texture_streaming.cpp\Case42_texture_streaming.pas"/>
@@ -1072,7 +1098,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="190"/>
         <CursorPos Y="197"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="22"/>
       </Unit>
       <Unit>
         <Filename Value="Source\42_texture_streaming.cpp\Case42_texture_streaming.Texture.pas"/>
@@ -1080,7 +1106,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="86"/>
         <CursorPos Y="98"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="Source\42_texture_streaming.cpp\Case42_texture_streaming.DataStream.pas"/>
@@ -1088,106 +1114,110 @@
         <WindowIndex Value="0"/>
         <TopLine Value="96"/>
         <CursorPos X="49" Y="100"/>
-        <UsageCount Value="22"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="19"/>
-        <CursorPos X="31" Y="105"/>
         <UsageCount Value="21"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.pas"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="190"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="230"/>
+        <CursorPos Y="233"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.Texture.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="35" Y="377"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="409"/>
+        <CursorPos X="23" Y="397"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="16">
+    <JumpHistory HistoryIndex="19">
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
-        <Caret Line="106" TopLine="104"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.Texture.pas"/>
+        <Caret Line="69" Column="51" TopLine="63"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
-        <Caret Line="106" TopLine="104"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.Texture.pas"/>
+        <Caret Line="113" Column="21" TopLine="102"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
-        <Caret Line="107" TopLine="104"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.Texture.pas"/>
+        <Caret Line="52" Column="76" TopLine="33"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.DataStream.pas"/>
-        <Caret Line="106" TopLine="98"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.Texture.pas"/>
+        <Caret Line="114" Column="37" TopLine="104"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="84" Column="47" TopLine="393"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.Texture.pas"/>
+        <Caret Line="62" Column="35" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="410" Column="34" TopLine="393"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="39" Column="17" TopLine="19"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="101" TopLine="281"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="36" Column="14" TopLine="13"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="406" Column="53" TopLine="393"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="240" TopLine="218"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="329" TopLine="322"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="121" Column="7" TopLine="210"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="337" Column="8" TopLine="321"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="129" Column="21" TopLine="109"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="338" TopLine="332"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="230" Column="9" TopLine="208"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="339" TopLine="332"/>
+        <Filename Value="Source\43_render_to_texture\Case43_render_to_texture.pas"/>
+        <Caret Line="233" TopLine="224"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="338" TopLine="332"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="27" Column="4" TopLine="16"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="339" TopLine="326"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="29" Column="3" TopLine="7"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="330" Column="12" TopLine="326"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="33" Column="10" TopLine="21"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="339" TopLine="333"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="31" TopLine="21"/>
       </Position>
       <Position>
-        <Filename Value="Source\42_texture_streaming\Case42_texture_streaming.Texture.pas"/>
-        <Caret Line="346" TopLine="334"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="40" Column="8" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="43" Column="20" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="31" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="33" TopLine="17"/>
       </Position>
     </JumpHistory>
     <RunParams>

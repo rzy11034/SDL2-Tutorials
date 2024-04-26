@@ -69,7 +69,7 @@ uses
   Case41_bitmap_fonts.BitmapFont,
   Case42_texture_streaming,
   Case42_texture_streaming.DataStream,
-  Case42_texture_streaming.Texture;
+  Case42_texture_streaming.Texture, Case43_render_to_texture, Case43_render_to_texture.Texture;
 
 var
   gLoaderSDL2: TLoaderSDL2;

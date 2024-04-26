@@ -20,7 +20,7 @@ procedure Run;
 implementation
 
 uses
-  Case42_texture_streaming;
+  Case43_render_to_texture;
 
 procedure Text;
 begin
