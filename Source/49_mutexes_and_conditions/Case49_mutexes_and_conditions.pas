@@ -1,4 +1,4 @@
-﻿unit Case45_timer_callbacks;
+﻿unit Case49_mutexes_and_conditions;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -13,12 +13,13 @@ uses
   libSDL2_image,
   DeepStar.Utils,
   DeepStar.UString,
-  Case45_timer_callbacks.Texture;
+  Case49_mutexes_and_conditions.Texture;
 
 const
   //Screen dimension constants
   SCREEN_WIDTH = 640;
   SCREEN_HEIGHT = 480;
+  SCREEN_FPS = 60;
 
 var
   //The window we'll be rendering to
@@ -33,6 +34,16 @@ var
   //Scene textures
   gSplashTexture: TTexture;
 
+  //The protective mutex
+  gBufferLock: PSDL_Mutex = nil;
+
+  //The conditions
+  gCanProduce: PSDL_Cond = nil;
+  gCanConsume: PSDL_Cond = nil;
+
+  //The "data buffer"
+  gData: integer = -1;
+
 procedure Main;
 // Starts up SDL and creates window
 function Init(): boolean;
@@ -40,6 +51,12 @@ function Init(): boolean;
 function LoadMedia(): boolean;
 // Frees media and shuts down SDL
 procedure Close();
+
+//Our worker functions
+function producer(Data: Pointer): integer; cdecl;
+function consumer(Data: Pointer): integer; cdecl;
+procedure produce();
+procedure consume();
 
 implementation
 
@@ -110,11 +127,18 @@ function LoadMedia: boolean;
 var
   success: boolean;
 begin
+  //Create the mutex
+  gBufferLock := SDL_CreateMutex();
+
+  //Create conditions
+  gCanProduce := SDL_CreateCond();
+  gCanConsume := SDL_CreateCond();
+
   //Loading success flag
   success := true;
 
   //Load blank texture
-  if not gSplashTexture.LoadFromFile('../Source/45_timer_callbacks/splash.png') then
+  if not gSplashTexture.LoadFromFile('../Source/49_mutexes_and_conditions/splash.png') then
   begin
     WriteLn('Failed to load dot texture!');
     success := false;
@@ -128,6 +152,16 @@ begin
   //Free loaded images
   gSplashTexture.Free();
 
+  //Destroy the mutex
+  SDL_DestroyMutex(gBufferLock);
+  gBufferLock := nil;
+
+  //Destroy conditions
+  SDL_DestroyCond(gCanProduce);
+  SDL_DestroyCond(gCanConsume);
+  gCanProduce := nil;
+  gCanConsume := nil;
+
   //Destroy window
   SDL_DestroyRenderer(gRenderer);
   SDL_DestroyWindow(gWindow);
@@ -140,20 +174,114 @@ begin
   SDL_Quit();
 end;
 
-function Callback(interval: UInt32; param: Pointer): UInt32; cdecl;
+function producer(Data: Pointer): integer; cdecl;
+var
+  i: integer;
 begin
-  //Print callback message
-  WriteLnF('Callback called back with message: %s', [PString(param)^]);
+  WriteLn;
+  WriteLn('Producer started...');
+
+  RandSeed := SDL_GetTicks();
+
+  //Produce
+  for i := 0 to 4 do
+  begin
+    //Wait
+    SDL_Delay(Random(MaxInt) mod 1000);
+
+    //Produce
+    produce();
+  end;
+
+  WriteLn;
+  WriteLn('Producer finished!');
 
   Result := 0;
+end;
+
+function consumer(Data: Pointer): integer; cdecl;
+var
+  i: integer;
+begin
+  WriteLn;
+  WriteLn('Consumer started...');
+
+  //Seed thread random
+  RandSeed := SDL_GetTicks();
+
+  for i := 0 to 4 do
+  begin
+    //Wait
+    SDL_Delay(Random(MaxInt) mod 1000);
+
+    //Consume
+    consume;
+  end;
+
+  WriteLn;
+  WriteLn('Consumer finished!');
+
+  Result := 0;
+end;
+
+procedure produce();
+begin
+  //Lock
+  SDL_LockMutex(gBufferLock);
+
+  //If the buffer is full
+  if gData <> -1 then
+  begin
+    //Wait for buffer to be cleared
+    Write(LineEnding);
+    WriteLn('Producer encountered full buffer, waiting for consumer to empty buffer...');
+    SDL_CondWait(gCanProduce, gBufferLock);
+  end;
+
+  //Fill and show buffer
+  gData := Random(MaxInt) mod 255;
+  Write(LineEnding);
+  WriteLnF('Produced %d', [gData]);
+
+  //Unlock
+  SDL_UnlockMutex(gBufferLock);
+
+  //Signal consumer
+  SDL_CondSignal(gCanConsume);
+end;
+
+procedure consume();
+begin
+  //Lock
+  SDL_LockMutex(gBufferLock);
+
+  //If the buffer is empty
+  if gData = -1 then
+  begin
+    //Wait for buffer to be filled
+    Write(LineEnding);
+    WriteLn('Consumer encountered empty buffer, waiting for producer to fill buffer...');
+    SDL_CondWait(gCanConsume, gBufferLock);
+  end;
+
+  //Show and empty buffer
+  Write(LineEnding);
+  WriteLnF('Consumed %d', [gData]);
+  gData := -1;
+
+  //Unlock
+  SDL_UnlockMutex(gBufferLock);
+
+  //Signal producer
+  SDL_CondSignal(gCanProduce);
 end;
 
 procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  timerID: TSDL_TimerID;
-  str: String;
+  producerThread, consumerThread: PSDL_Thread;
+  strA, strB: string;
 begin
   // Start up SDL and create window
   if not Init then
@@ -174,9 +302,15 @@ begin
       //Event handler
       e := Default(TSDL_Event);
 
-      str := '3 seconds waited!';
-      timerID := Default(TSDL_TimerID);
-      timerID := SDL_AddTimer(3 * 1000, @Callback, Pointer(@str));
+      RandSeed := SDL_GetTicks();
+
+      producerThread := PSDL_Thread(nil);
+      strA := 'Producer';
+      producerThread := SDL_CreateThread(@producer, strA.ToPAnsiChar, nil, nil, nil);
+
+      consumerThread := PSDL_Thread(nil);
+      strB := 'Consumer';
+      consumerThread := SDL_CreateThread(@consumer, strB.ToPAnsiChar, nil, nil, nil);
 
       // While application is running
       while not quit do
@@ -206,8 +340,9 @@ begin
         SDL_RenderPresent(gRenderer);
       end;
 
-      //Remove timer in case the call back was not called
-      SDL_RemoveTimer(timerID);
+      //Wait for threads to finish
+      SDL_WaitThread(consumerThread, nil);
+      SDL_WaitThread(producerThread, nil);
     end;
   end;
 

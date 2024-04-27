@@ -1,4 +1,4 @@
-﻿unit Case45_timer_callbacks;
+﻿unit Case48_atomic_operations;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
@@ -13,7 +13,8 @@ uses
   libSDL2_image,
   DeepStar.Utils,
   DeepStar.UString,
-  Case45_timer_callbacks.Texture;
+  SDL2_Tutorials.Header_file_supplement,
+  Case48_atomic_operations.Texture;
 
 const
   //Screen dimension constants
@@ -32,6 +33,12 @@ var
 
   //Scene textures
   gSplashTexture: TTexture;
+
+  //The "data buffer"
+  gDataLock: TSDL_SpinLock = 0;
+
+  //The "data buffer"
+  gData: integer = -1;
 
 procedure Main;
 // Starts up SDL and creates window
@@ -114,7 +121,7 @@ begin
   success := true;
 
   //Load blank texture
-  if not gSplashTexture.LoadFromFile('../Source/45_timer_callbacks/splash.png') then
+  if not gSplashTexture.LoadFromFile('../Source/48_atomic_operations/splash.png') then
   begin
     WriteLn('Failed to load dot texture!');
     success := false;
@@ -140,10 +147,41 @@ begin
   SDL_Quit();
 end;
 
-function Callback(interval: UInt32; param: Pointer): UInt32; cdecl;
+function Worker(Data: Pointer): integer; cdecl;
+var
+  i: integer;
 begin
-  //Print callback message
-  WriteLnF('Callback called back with message: %s', [PString(param)^]);
+  WriteLn('%s starting...', PString(Data)^);
+
+  //Pre thread random seeding
+  RandSeed := SDL_GetTicks();
+
+  //Work 5 times
+  for i := 0 to 4 do
+  begin
+    //Wait randomly
+    SDL_Delay(16 + Random(MaxInt) mod 32);
+
+    //Lock
+    SDL_AtomicLock(@gDataLock);
+
+    //Print pre work data
+    WriteLnF('%s gets %d', [PString(Data)^, gData]);
+
+    //'Work'
+    gData := Random(MaxInt) mod 256;
+
+    //Print post work data
+    WriteLnF('%s sets %d', [PString(Data)^, gData]);
+
+    //Unlock
+    SDL_AtomicUnlock(@gDataLock);
+
+    //Wait randomly
+    SDL_Delay(16 + Random(MaxInt) mod 640);
+  end;
+
+  WriteLnF('%s finished!', [PString(Data)^]);
 
   Result := 0;
 end;
@@ -152,8 +190,8 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  timerID: TSDL_TimerID;
-  str: String;
+  threadA, threadB: PSDL_Thread;
+  strA, strB: string;
 begin
   // Start up SDL and create window
   if not Init then
@@ -174,9 +212,17 @@ begin
       //Event handler
       e := Default(TSDL_Event);
 
-      str := '3 seconds waited!';
-      timerID := Default(TSDL_TimerID);
-      timerID := SDL_AddTimer(3 * 1000, @Callback, Pointer(@str));
+      RandSeed := SDL_GetTicks();
+
+      threadA := PSDL_Thread(nil);
+      strA := 'Thread A';
+      threadA := SDL_CreateThread(@Worker, strA.ToPAnsiChar, Pointer(@strA), nil, nil);
+
+      SDL_Delay(16 + Random(MaxInt) mod 32);
+
+      threadB := PSDL_Thread(nil);
+      strB := 'Thread B';
+      threadB := SDL_CreateThread(@Worker, strB.ToPAnsiChar, Pointer(@strB), nil, nil);
 
       // While application is running
       while not quit do
@@ -206,8 +252,9 @@ begin
         SDL_RenderPresent(gRenderer);
       end;
 
-      //Remove timer in case the call back was not called
-      SDL_RemoveTimer(timerID);
+      //Wait for threads to finish
+      SDL_WaitThread(threadA, nil);
+      SDL_WaitThread(threadB, nil);
     end;
   end;
 

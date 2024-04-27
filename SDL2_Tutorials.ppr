@@ -13,6 +13,7 @@ uses
   SDL2_Loader,
   SDL2_Tutorials.Main,
   SDL2_Tutorials.Utils,
+  SDL2_Tutorials.Header_file_supplement,
   Case01_hello_SDL,
   Case02_getting_an_image_on_the_screen,
   Case03_event_driven_programming,
@@ -79,15 +80,25 @@ uses
   Case45_timer_callbacks,
   Case45_timer_callbacks.Texture,
   Case46_multithreading,
-  Case46_multithreading.Texture;
+  Case46_multithreading.Texture,
+  Case47_semaphores,
+  Case47_semaphores.Texture,
+  Case48_atomic_operations,
+  Case48_atomic_operations.Texture,
+  Case49_mutexes_and_conditions,
+  Case49_mutexes_and_conditions.Texture, Case50_SDL_and_opengl_2, Case51_SDL_and_modern_opengl;
 
 var
   gLoaderSDL2: TLoaderSDL2;
 
 begin
   gLoaderSDL2 := TLoaderSDL2.Create(nil);
+
   try
     gLoaderSDL2.Active := true;
+
+    if gLoaderSDL2.IslibSDL2_Loaded then
+      SDL2_Tutorials.Header_file_supplement.Load_SDL_Header_File_Supplement;
 
     try
       Run;

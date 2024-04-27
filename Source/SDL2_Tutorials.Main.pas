@@ -20,9 +20,7 @@ procedure Run;
 implementation
 
 uses
-  Case45_timer_callbacks;
-
-type
+  Case51_SDL_and_modern_opengl;
 
 procedure Text;
 begin

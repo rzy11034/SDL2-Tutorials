@@ -140,12 +140,20 @@ begin
   SDL_Quit();
 end;
 
+function threadFunction(Data: Pointer): integer; cdecl;
+begin
+  //Print incoming data
+  WriteLnF('Running thread with value = %d', [PInteger(Data)^]);
+
+  Result := 0;
+end;
+
 procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  timerID: TSDL_TimerID;
-  str: String;
+  data: Integer;
+  threadID_: PSDL_Thread;
 begin
   // Start up SDL and create window
   if not Init then
@@ -166,6 +174,9 @@ begin
       //Event handler
 			e := Default(TSDL_Event);
 
+      data := 101;
+      threadID_ := Default(PSDL_Thread);
+      threadID_ := SDL_CreateThread2(@threadFunction, 'LazyThread'.ToPAnsiChar, pointer(@data));
 
       // While application is running
       while not quit do
@@ -195,7 +206,7 @@ begin
         SDL_RenderPresent(gRenderer);
       end;
 
-      SDL_RemoveTimer(timerID);
+      SDL_WaitThread(threadID_, nil);
     end;
   end;
 

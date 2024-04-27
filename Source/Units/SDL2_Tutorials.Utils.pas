@@ -8,7 +8,11 @@ interface
 uses
   Classes,
   SysUtils,
-  libSDL2;
+  libSDL2, ctGL;
+
+type
+  TArr_GLfloat = array of GLfloat;
+  TArr_GLuint = array of GLuint;
 
 function SDL_Point(aX, aY: integer): TSDL_Point;
 function SDL_Rect(aX, aY, aW, aH: integer): TSDL_Rect;
