@@ -13,6 +13,7 @@ uses
   libSDL2_image,
   DeepStar.Utils,
   DeepStar.UString,
+  SDL2_Tutorials.Header_file_supplement,
   Case49_mutexes_and_conditions.Texture;
 
 const
@@ -306,11 +307,11 @@ begin
 
       producerThread := PSDL_Thread(nil);
       strA := 'Producer';
-      producerThread := SDL_CreateThread(@producer, strA.ToPAnsiChar, nil, nil, nil);
+      producerThread := SDL_CreateThread(@producer, strA.ToPAnsiChar, nil);
 
       consumerThread := PSDL_Thread(nil);
       strB := 'Consumer';
-      consumerThread := SDL_CreateThread(@consumer, strB.ToPAnsiChar, nil, nil, nil);
+      consumerThread := SDL_CreateThread(@consumer, strB.ToPAnsiChar, nil);
 
       // While application is running
       while not quit do

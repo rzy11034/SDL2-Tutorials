@@ -216,13 +216,13 @@ begin
 
       threadA := PSDL_Thread(nil);
       strA := 'Thread A';
-      threadA := SDL_CreateThread(@Worker, strA.ToPAnsiChar, Pointer(@strA), nil, nil);
+      threadA := SDL_CreateThread(@Worker, strA.ToPAnsiChar, Pointer(@strA));
 
       SDL_Delay(16 + Random(MaxInt) mod 32);
 
       threadB := PSDL_Thread(nil);
       strB := 'Thread B';
-      threadB := SDL_CreateThread(@Worker, strB.ToPAnsiChar, Pointer(@strB), nil, nil);
+      threadB := SDL_CreateThread(@Worker, strB.ToPAnsiChar, Pointer(@strB));
 
       // While application is running
       while not quit do

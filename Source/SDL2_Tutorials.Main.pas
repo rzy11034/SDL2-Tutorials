@@ -2,8 +2,7 @@
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}{$J-}
-{$ModeSwitch advancedrecords}
-{$WARN 4104 off : Implicit string type conversion from "$1" to "$2"}
+
 interface
 
 uses
@@ -20,7 +19,7 @@ procedure Run;
 implementation
 
 uses
-  Case51_SDL_and_modern_opengl;
+  Case46_multithreading;
 
 procedure Text;
 begin

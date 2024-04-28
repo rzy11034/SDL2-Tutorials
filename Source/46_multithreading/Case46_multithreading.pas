@@ -13,6 +13,7 @@ uses
   libSDL2_image,
   DeepStar.Utils,
   DeepStar.UString,
+  SDL2_Tutorials.Header_file_supplement,
   Case46_multithreading.Texture;
 
 const
@@ -176,7 +177,7 @@ begin
 
       data := 101;
       threadID_ := Default(PSDL_Thread);
-      threadID_ := SDL_CreateThread2(@threadFunction, 'LazyThread'.ToPAnsiChar, pointer(@data));
+      threadID_ := SDL_CreateThread(@threadFunction, 'LazyThread'.ToPAnsiChar, pointer(@data));
 
       // While application is running
       while not quit do

@@ -24,6 +24,18 @@ var
   SDL_AtomicUnlock: TSDL_AtomicUnlock = nil;
 {$ENDREGION}
 
+{$REGION 'SDL_thread.h'}
+type
+  TSDL_CreateThread = function(
+    fn: TSDL_ThreadFunction;
+    Name: PAnsiChar;
+    Data: Pointer;
+    pfnBeginThread: TpfnSDL_CurrentBeginThread = nil;
+    pfnEndThread: TpfnSDL_CurrentEndThread = nil): PSDL_Thread; cdecl;
+var
+  SDL_CreateThread: TSDL_CreateThread;
+{$ENDREGION}
+
 procedure Load_SDL_Header_File_Supplement;
 
 implementation
@@ -51,6 +63,8 @@ procedure SDL_atomic_h;
 begin
   Pointer(SDL_AtomicLock) := GetProcAddress('SDL_AtomicLock');
   Pointer(SDL_AtomicUnlock) := GetProcAddress('SDL_AtomicUnlock');
+
+  Pointer(SDL_CreateThread) := GetProcAddress('SDL_CreateThread');
 end;
 
 end.
