@@ -18,8 +18,7 @@ uses
   libSDL2_image,
   libSDL2_ttf,
   libSDL2_mixer,
-  DeepStar.Utils,
-  DeepStar.UString;
+  DeepStar.Utils;
 
 type
   TTexture = class(TObject)
@@ -115,7 +114,7 @@ begin
         e := Default(TSDL_Event);
 
         // Current time start time
-        startTime:= Integer(0);
+        startTime:= 0;
 
         // Set text color as black
         textColor := Default(TSDL_Color);

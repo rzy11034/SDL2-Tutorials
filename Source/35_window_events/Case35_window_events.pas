@@ -19,7 +19,6 @@ uses
   libSDL2_image,
   libSDL2_mixer,
   DeepStar.Utils,
-  DeepStar.UString,
   Case35_window_events.Windows,
   Case35_window_events.Texture;
 

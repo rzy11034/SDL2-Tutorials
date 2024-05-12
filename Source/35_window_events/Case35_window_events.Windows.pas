@@ -8,7 +8,7 @@ interface
 uses
   Classes,
   SysUtils,
-  DeepStar.UString,
+  DeepStar.Utils,
   libSDL2;
 
 const

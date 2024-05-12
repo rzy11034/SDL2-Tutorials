@@ -18,8 +18,8 @@ uses
   libSDL2_image,
   libSDL2_ttf,
   libSDL2_mixer,
-  DeepStar.Utils,
-  DeepStar.UString;
+  SDL2_Tutorials.Utils,
+  DeepStar.Utils;
 
 type
   TTexture = class(TObject)
@@ -76,9 +76,9 @@ type
 
     // The various clock actions
     procedure Start();
-		procedure Stop();
-		procedure Pause();
-		procedure Unpause();
+    procedure Stop();
+    procedure Pause();
+    procedure Unpause();
 
     // Gets the timer's time
     function GetTicks(): integer;
@@ -117,8 +117,8 @@ var
   quit: boolean;
   e: TSDL_Event;
   timeText: TStringBuilder;
-  textColor: TSDL_Color;
   timer: TTimer;
+  textColor: TSDL_Color;
 begin
   // Start up SDL and create window
   if not Init then
@@ -133,7 +133,7 @@ begin
     timeText := TStringBuilder.Create;
 
     // The application timer
-	  timer := TTimer.Create;
+    timer := TTimer.Create;
     try
       // Load media
       if not loadMedia then
@@ -148,17 +148,8 @@ begin
         // Event handler
         e := Default(TSDL_Event);
 
-
-
         // Set text color as black
-        textColor := Default(TSDL_Color);
-        with textColor do
-        begin
-          r := 0;
-          g := 0;
-          b := 0;
-          a := 255;
-        end;
+        textColor := SDL_Color(0, 0, 0, $FF);
 
         // While application is running
         while not quit do
@@ -392,7 +383,7 @@ end;
 
 function TTimer.GetTicks: integer;
 var
-  time_: Integer;
+  time_: integer;
 begin
   // The actual timer time
   time_ := integer(0);

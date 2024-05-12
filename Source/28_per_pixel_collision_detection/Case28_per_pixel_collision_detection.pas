@@ -19,7 +19,6 @@ uses
   libSDL2_ttf,
   libSDL2_mixer,
   DeepStar.Utils,
-  DeepStar.UString,
   DeepStar.DSA.Interfaces,
   DeepStar.DSA.Linear.ArrayList;
 

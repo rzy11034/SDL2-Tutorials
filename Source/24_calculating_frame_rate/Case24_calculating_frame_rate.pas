@@ -17,9 +17,8 @@ uses
   libSDL2,
   libSDL2_image,
   libSDL2_ttf,
-  libSDL2_mixer,
-  DeepStar.Utils,
-  DeepStar.UString;
+  libSDL2_mixer, SDL2_Tutorials.Utils,
+  DeepStar.Utils;
 
 type
   TTexture = class(TObject)
@@ -76,9 +75,9 @@ type
 
     // The various clock actions
     procedure Start();
-		procedure Stop();
-		procedure Pause();
-		procedure Unpause();
+    procedure Stop();
+    procedure Pause();
+    procedure Unpause();
 
     // Gets the timer's time
     function GetTicks(): integer;
@@ -119,8 +118,8 @@ var
   timeText: TStringBuilder;
   textColor: TSDL_Color;
   fpsTimer: TTimer;
-  avgFPS: Single;
-  countedFrames: Integer;
+  avgFPS: single;
+  countedFrames: integer;
 begin
   // Start up SDL and create window
   if not Init then
@@ -133,7 +132,7 @@ begin
     timeText := TStringBuilder.Create;
 
     // The application timer
-	  fpsTimer := TTimer.Create;
+    fpsTimer := TTimer.Create;
     try
       // Load media
       if not loadMedia then
@@ -149,13 +148,9 @@ begin
         e := Default(TSDL_Event);
 
         // Set text color as black
-        textColor := Default(TSDL_Color);
-        with textColor do
-        begin
-          r := 0; g := 0; b := 0; a := 255;
-        end;
+        textColor := SDL_Color(0, 0, 0, $FF);
 
-        countedFrames := integer(0);
+        countedFrames := 0;
         fpsTimer.Start;
 
         // While application is running
@@ -176,7 +171,7 @@ begin
           end;
 
           // Calculate and correct fps
-				  avgFPS := Single(0);
+          avgFPS := single(0);
           avgFPS := countedFrames / (fpsTimer.GetTicks / 1000);
 
           //Set text to be rendered
@@ -338,7 +333,7 @@ end;
 
 function TTimer.GetTicks: integer;
 var
-  time_: Integer;
+  time_: integer;
 begin
   // The actual timer time
   time_ := integer(0);

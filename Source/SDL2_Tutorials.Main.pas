@@ -9,7 +9,6 @@ uses
   Classes,
   SysUtils,
   {%H-}DeepStar.Utils,
-  {%H-}DeepStar.UString,
   {%H-}libSDL2,
   {%H-}SDL2_Tutorials.Utils;
 
@@ -19,7 +18,7 @@ procedure Run;
 implementation
 
 uses
-  Case46_multithreading;
+  Case24_calculating_frame_rate;
 
 procedure Text;
 begin

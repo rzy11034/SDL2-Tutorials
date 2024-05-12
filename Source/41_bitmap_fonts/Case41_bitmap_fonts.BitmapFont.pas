@@ -10,7 +10,6 @@ uses
   SysUtils,
   libSDL2,
   DeepStar.Utils,
-  DeepStar.UString,
   Case41_bitmap_fonts.Texture;
 
 type

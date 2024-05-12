@@ -19,7 +19,6 @@ uses
   libSDL2_ttf,
   libSDL2_mixer,
   DeepStar.Utils,
-  DeepStar.UString,
   SDL2_Tutorials.Utils;
 
 type

@@ -12,7 +12,6 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  DeepStar.UString,
   Case45_timer_callbacks.Texture;
 
 const

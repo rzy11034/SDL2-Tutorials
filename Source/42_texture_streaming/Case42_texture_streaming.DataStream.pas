@@ -9,7 +9,6 @@ uses
   Classes,
   SysUtils,
   DeepStar.Utils,
-  DeepStar.UString,
   libSDL2,
   libSDL2_image;
 

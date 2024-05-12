@@ -12,7 +12,6 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  DeepStar.UString,
   SDL2_Tutorials.Header_file_supplement,
   Case47_semaphores.Texture;
 

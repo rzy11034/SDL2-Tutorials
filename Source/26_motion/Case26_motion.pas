@@ -18,8 +18,7 @@ uses
   libSDL2_image,
   libSDL2_ttf,
   libSDL2_mixer,
-  DeepStar.Utils,
-  DeepStar.UString;
+  DeepStar.Utils;
 
 type
   TTexture = class(TObject)

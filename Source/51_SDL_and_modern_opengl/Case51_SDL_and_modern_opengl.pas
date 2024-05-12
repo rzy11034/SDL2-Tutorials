@@ -14,7 +14,6 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  DeepStar.UString,
   SDL2_Tutorials.Utils;
 
 const
