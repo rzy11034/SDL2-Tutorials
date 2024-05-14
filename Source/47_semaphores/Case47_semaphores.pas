@@ -12,7 +12,7 @@ uses
   libSDL2_ttf,
   libSDL2_image,
   DeepStar.Utils,
-  SDL2_Tutorials.Header_file_supplement,
+  {%H-}SDL2_Tutorials.Header_file_supplement,
   Case47_semaphores.Texture;
 
 const

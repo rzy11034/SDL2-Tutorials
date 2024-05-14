@@ -19,9 +19,11 @@
       <Unit>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="35" Y="18"/>
+        <TopLine Value="7"/>
+        <CursorPos X="6" Y="24"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -180,7 +182,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
-        <CursorPos X="18" Y="20"/>
+        <CursorPos X="16" Y="12"/>
         <UsageCount Value="204"/>
       </Unit>
       <Unit>
@@ -240,13 +242,11 @@
       <Unit>
         <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="167"/>
-        <CursorPos Y="175"/>
+        <CursorPos X="26" Y="178"/>
         <UsageCount Value="203"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\25_capping_frame_rate\Case25_capping_frame_rate.pas"/>
@@ -613,7 +613,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="18" Y="14"/>
+        <CursorPos X="8" Y="15"/>
         <UsageCount Value="41"/>
       </Unit>
       <Unit>
@@ -629,7 +629,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="18" Y="14"/>
+        <CursorPos X="8" Y="15"/>
         <UsageCount Value="38"/>
       </Unit>
       <Unit>
@@ -661,8 +661,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="13"/>
-        <CursorPos X="21" Y="59"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="48"/>
         <UsageCount Value="33"/>
       </Unit>
       <Unit>
@@ -670,7 +670,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="18" Y="14"/>
+        <TopLine Value="220"/>
+        <CursorPos X="35" Y="88"/>
         <UsageCount Value="32"/>
       </Unit>
       <Unit>
@@ -737,7 +738,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="182"/>
-        <CursorPos X="197" Y="200"/>
+        <CursorPos X="49" Y="189"/>
         <UsageCount Value="38"/>
       </Unit>
       <Unit>
@@ -1379,8 +1380,18 @@
         <CursorPos X="3" Y="89"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\usr\local\codetyphon\typhon\components\packages_pl\pl_SDL\source\libsdl2.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="libSDL2"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="186"/>
+        <CursorPos X="24" Y="194"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="5">
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <Caret Line="11" Column="23"/>
@@ -1390,20 +1401,8 @@
         <Caret Line="22" Column="12"/>
       </Position>
       <Position>
-        <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
-        <Caret Line="151" Column="22" TopLine="165"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
-        <Caret Line="138" Column="31" TopLine="151"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
-        <Caret Line="175" TopLine="161"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\24_calculating_frame_rate\Case24_calculating_frame_rate.pas"/>
-        <Caret Line="178" TopLine="170"/>
+        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
+        <Caret Line="24" Column="7" TopLine="7"/>
       </Position>
     </JumpHistory>
     <RunParams>

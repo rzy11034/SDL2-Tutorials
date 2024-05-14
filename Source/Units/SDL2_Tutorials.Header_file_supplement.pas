@@ -15,25 +15,19 @@ type
   PSDL_SpinLock = ^TSDL_SpinLock;
   TSDL_SpinLock = integer;
 
-{$REGION 'SDL_atomic.h'}
+  {$REGION 'SDL_atomic.h'}
 type
   TSDL_AtomicLock = function(lock: PSDL_SpinLock): boolean; cdecl;
   TSDL_AtomicUnlock = procedure(lock: PSDL_SpinLock); cdecl;
 var
   SDL_AtomicLock: TSDL_AtomicLock = nil;
   SDL_AtomicUnlock: TSDL_AtomicUnlock = nil;
-{$ENDREGION}
+  {$ENDREGION}
 
-{$REGION 'SDL_thread.h'}
-type
-  TSDL_CreateThread = function(
-    fn: TSDL_ThreadFunction;
-    Name: PAnsiChar;
-    Data: Pointer;
-    pfnBeginThread: TpfnSDL_CurrentBeginThread = nil;
-    pfnEndThread: TpfnSDL_CurrentEndThread = nil): PSDL_Thread; cdecl;
-var
-  SDL_CreateThread: TSDL_CreateThread;
+  {$REGION 'SDL_thread.h'}
+{$IFDEF MSWINDOWS}
+function SDL_CreateThread(fn: TSDL_ThreadFunction; Name: PAnsiChar; Data: Pointer): PSDL_Thread;
+{$ENDIF}
 {$ENDREGION}
 
 procedure Load_SDL_Header_File_Supplement;
@@ -44,6 +38,13 @@ procedure SDL_atomic_h; forward;
 
 var
   VarSDL2LibHandle: TLibHandle;
+
+{$IFDEF MSWINDOWS}
+function SDL_CreateThread(fn: TSDL_ThreadFunction; Name: PAnsiChar; Data: Pointer): PSDL_Thread;
+begin
+  Result := libSDL2.SDL_CreateThread(fn, Name, Data, nil, nil);
+end;
+{$ENDIF}
 
 procedure Load_SDL_Header_File_Supplement;
 begin
@@ -63,9 +64,6 @@ procedure SDL_atomic_h;
 begin
   Pointer(SDL_AtomicLock) := GetProcAddress('SDL_AtomicLock');
   Pointer(SDL_AtomicUnlock) := GetProcAddress('SDL_AtomicUnlock');
-
-  Pointer(SDL_CreateThread) := GetProcAddress('SDL_CreateThread');
 end;
 
 end.
-
