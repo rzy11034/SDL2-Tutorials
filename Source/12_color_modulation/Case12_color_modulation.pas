@@ -70,7 +70,7 @@ procedure Main;
 var
   quit: boolean;
   e: TSDL_Event;
-  r, g, b: byte;
+  r, g, b, t: byte;
 begin
   // Start up SDL and create window
   if not Init then
@@ -98,6 +98,7 @@ begin
         r := byte(255);
         g := byte(255);
         b := byte(255);
+        t := byte(255);
 
         // While application is running
         while not quit do
@@ -114,28 +115,34 @@ begin
                 //Increase red
                 SDLK_q:
                 begin
+                  t := r;
+
                   if r + 32 >= 255 then
-                    r := r + 32 - 255
+                    r := t + 32 - 255
                   else
-                    r := r + 32;
+                    r := t + 32;
                 end;
 
                 //Increase green
                 SDLK_w:
                 begin
+                  t := g;
+
                   if g + 32 >= 255 then
-                    g := g + 32 - 255
+                    g := t + 32 - 255
                   else
-                    g := g + 32;
+                    g := t + 32;
                 end;
 
                 //Increase blue
                 SDLK_e:
                 begin
+                  t := b;
+
                   if b + 32 >= 255 then
-                    b := b + 32 - 255
+                    b := t + 32 - 255
                   else
-                    b := b + 32;
+                    b := t + 32;
                 end;
 
                 //Decrease red
