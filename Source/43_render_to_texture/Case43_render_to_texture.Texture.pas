@@ -24,8 +24,8 @@ type
     _SurfacePixels: PSDL_Surface;
 
     //Raw pixels
-	  _RawPixels: Pointer;
-	  _RawPitch: integer;
+    _RawPixels: Pointer;
+    _RawPitch: integer;
 
     //Image dimensions
     _Height: integer;
