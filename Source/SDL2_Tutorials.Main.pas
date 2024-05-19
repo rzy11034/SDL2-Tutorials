@@ -18,7 +18,7 @@ procedure Run;
 implementation
 
 uses
-  Case24_calculating_frame_rate;
+  Case26_motion;
 
 procedure Text;
 begin
