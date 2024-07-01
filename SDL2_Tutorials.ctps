@@ -19,7 +19,6 @@
       <Unit>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
@@ -205,11 +204,13 @@
       <Unit>
         <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3"/>
-        <CursorPos Y="21"/>
+        <TopLine Value="311"/>
+        <CursorPos X="28" Y="322"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
@@ -259,7 +260,7 @@
       <Unit>
         <Filename Value="Source\26_motion\Case26_motion.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="492"/>
         <CursorPos X="36" Y="511"/>
@@ -269,7 +270,7 @@
       <Unit>
         <Filename Value="Source\27_collision_detection\Case27_collision_detection.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="18" Y="21"/>
@@ -1292,8 +1293,8 @@
         <UnitName Value="Math"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3779"/>
-        <CursorPos X="25" Y="3781"/>
+        <TopLine Value="807"/>
+        <CursorPos X="50" Y="862"/>
         <UsageCount Value="11"/>
       </Unit>
       <Unit>
@@ -1375,16 +1376,25 @@
         <CursorPos X="3" Y="89"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\DeepStar-Lib\CodeTyphon\Package\Source\Utils\DeepStar.Math.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\DeepStar-Lib\CodeTyphon\Package\Source\Utils\DeepStar.Utils.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="30" Column="14" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
-        <Caret Line="46" Column="21" TopLine="22"/>
-      </Position>
       <Position>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <Caret Line="27" Column="19" TopLine="2"/>
@@ -1496,6 +1506,13 @@
       <Position>
         <Filename Value="Source\26_motion\Case26_motion.pas"/>
         <Caret Line="90" Column="15" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="..\DeepStar-Lib\CodeTyphon\Package\Source\Utils\DeepStar.Math.inc"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
+        <Caret Line="74" Column="39" TopLine="58"/>
       </Position>
     </JumpHistory>
     <RunParams>

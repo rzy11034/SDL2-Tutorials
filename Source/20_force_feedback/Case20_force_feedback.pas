@@ -71,7 +71,7 @@ var
   gSplashTexture: TTexture;
 
   // Game Controller 1 handler
-  gGameController: PSDL_Joystick = nil;
+  gGameController: PSDL_GameController = nil;
 
   // Joystick handler with haptic
   gJoystick: PSDL_Joystick = nil;
@@ -213,7 +213,7 @@ begin
       else
       begin
         // Load joystick
-        gGameController := SDL_JoystickOpen(0);
+        gGameController := SDL_GameControllerOpen(0);
         if gGameController = nil then
         begin
           WriteLnF('Warning: Unable to open game controller! SDL Error: %s', [SDL_GetError()]);
@@ -247,7 +247,7 @@ begin
             else
             begin
               // Initialize rumble
-              if SDL_HapticRumbleInit(gJoystick) < 0 then
+              if SDL_HapticRumbleInit(gJoyHaptic) < 0 then
               begin
                 WriteLnF('Warning: Unable to initialize haptic rumble!'
                   + ' SDL Error: %s', [SDL_GetError()]);
@@ -319,7 +319,7 @@ begin
   // Close game controller or joystick with haptics
   if gGameController <> nil then
   begin
-    SDL_JoystickClose(gGameController);
+    SDL_GameControllerClose(gGameController);
     gGameController := nil;
   end;
 
