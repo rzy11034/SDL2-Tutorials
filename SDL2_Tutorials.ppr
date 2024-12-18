@@ -86,7 +86,9 @@ uses
   Case48_atomic_operations,
   Case48_atomic_operations.Texture,
   Case49_mutexes_and_conditions,
-  Case49_mutexes_and_conditions.Texture, Case50_SDL_and_opengl_2, Case51_SDL_and_modern_opengl;
+  Case49_mutexes_and_conditions.Texture,
+  Case50_SDL_and_opengl_2,
+  Case51_SDL_and_modern_opengl;
 
 var
   gLoaderSDL2: TLoaderSDL2;

@@ -9,20 +9,21 @@
         <Filename Value="SDL2_Tutorials.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="0"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
-        <CursorPos X="77" Y="101"/>
+        <CursorPos X="3" Y="91"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="10"/>
-        <CursorPos X="35" Y="15"/>
+        <TopLine Value="7"/>
+        <CursorPos X="42" Y="16"/>
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit>
@@ -39,11 +40,12 @@
         <Filename Value="README.md"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="107"/>
-        <CursorPos X="35" Y="131"/>
+        <TopLine Value="62"/>
+        <CursorPos X="53" Y="89"/>
         <UsageCount Value="210"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -204,13 +206,11 @@
       <Unit>
         <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="311"/>
-        <CursorPos X="28" Y="322"/>
+        <TopLine Value="302"/>
+        <CursorPos X="31" Y="336"/>
         <UsageCount Value="201"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\21_sound_effects_and_music\Case21_sound_effects_and_music.pas"/>
@@ -260,22 +260,20 @@
       <Unit>
         <Filename Value="Source\26_motion\Case26_motion.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="492"/>
         <CursorPos X="36" Y="511"/>
         <UsageCount Value="203"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\27_collision_detection\Case27_collision_detection.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="18" Y="21"/>
         <UsageCount Value="203"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Units\SDL2_Tutorials.Utils.pas"/>
@@ -1379,22 +1377,20 @@
       <Unit>
         <Filename Value="..\DeepStar-Lib\CodeTyphon\Package\Source\Utils\DeepStar.Math.inc"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\CodeTyphon\Package\Source\Utils\DeepStar.Utils.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="37"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <Caret Line="27" Column="19" TopLine="2"/>
@@ -1404,115 +1400,8 @@
         <Caret Line="33" Column="11" TopLine="12"/>
       </Position>
       <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="205" Column="20" TopLine="188"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="93" Column="15" TopLine="76"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="515" Column="58" TopLine="489"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="236" Column="23" TopLine="224"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="534" Column="15" TopLine="514"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="98" Column="14" TopLine="81"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="47" Column="15" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="670" Column="3" TopLine="664"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="47" Column="15" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="98" Column="14" TopLine="81"/>
-      </Position>
-      <Position>
         <Filename Value="Source\SDL2_Tutorials.Main.pas"/>
         <Caret Line="21" Column="29" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="508" TopLine="497"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="511" TopLine="497"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="507" TopLine="500"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="511" TopLine="500"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="524" TopLine="516"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="188" TopLine="180"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="205" TopLine="197"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="208" TopLine="197"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="209" TopLine="197"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="212" Column="21" TopLine="207"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="96" Column="15" TopLine="79"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="507" TopLine="350"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="152" Column="11" TopLine="149"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="262" Column="105" TopLine="234"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\26_motion\Case26_motion.pas"/>
-        <Caret Line="90" Column="15" TopLine="73"/>
-      </Position>
-      <Position>
-        <Filename Value="..\DeepStar-Lib\CodeTyphon\Package\Source\Utils\DeepStar.Math.inc"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\20_force_feedback\Case20_force_feedback.pas"/>
-        <Caret Line="74" Column="39" TopLine="58"/>
       </Position>
     </JumpHistory>
     <RunParams>

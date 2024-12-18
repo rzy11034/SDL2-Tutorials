@@ -18,7 +18,7 @@ procedure Run;
 implementation
 
 uses
-  Case26_motion;
+  Case21_sound_effects_and_music;
 
 procedure Text;
 begin
